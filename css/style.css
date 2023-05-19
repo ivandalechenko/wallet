@@ -336,9 +336,22 @@ object {
 }
 #add_account_popup .add_account .content {
   display: flex;
+  margin: 0 auto;
   margin-top: 80px;
   height: 469px;
+  width: 90%;
   justify-content: space-around;
+}
+#add_account_popup .add_account .content .element_or {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #7C7C7C;
+  margin: auto 0;
+}
+#add_account_popup .add_account .content .element:hover {
+  opacity: 0.6;
+  cursor: pointer;
 }
 #add_account_popup .add_account .content .element {
   width: 325px;
