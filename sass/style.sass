@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;900&display=swap')
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section
@@ -25,6 +25,7 @@ time, mark, audio, video, button
     box-sizing: border-box
     color: white
     transition: .3s
+    font-family: 'Montserrat'
 img, svg
     transition: .3s
 body
@@ -33,11 +34,53 @@ body
     background-color: #F2F2F2
 .dnone
     display: none
+a
+    text-decoration: none
 
 .container
     width: 1100px
     margin: 0 auto
 
 header
-    height: 80px
     background-color: #00A068
+    .container
+        height: 80px
+        display: flex
+        justify-content: space-between
+        .logo_and_text
+            width: 25%
+            display: flex
+            margin: auto 0
+            .logo
+                margin: auto 0
+            .text
+                margin: auto 0
+                padding-left: 8px
+                font-weight: 900
+                font-size: 24px
+                line-height: 29px
+        .links
+            width: 50%
+            margin: auto 0
+            display: flex
+            justify-content: center
+            a
+                padding: 0px 15px
+                font-weight: 500
+                font-size: 18px
+                line-height: 22px
+            .active
+                font-weight: 700
+        .user
+            width: 25%
+            margin: auto 0
+            display: flex
+            justify-content: right
+            column-gap: 12px
+            .img
+                img
+                    width: 46px
+                    height: 46px
+                    border-radius: 24px
+            .img, .name, .arrow
+                margin: auto 0
