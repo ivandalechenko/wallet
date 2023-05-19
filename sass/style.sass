@@ -41,11 +41,13 @@ a
     text-decoration: none
 
 .container
-    width: 1100px
+    width: 1140px
+    padding: 0px 20px
     margin: 0 auto
 
 header
     background-color: #00A068
+    min-width: 1140px
     .container
         height: 80px
         display: flex
@@ -88,74 +90,118 @@ header
             .img, .name, .arrow
                 margin: auto 0
 
-.sort_add
-    margin-top: 40px
-    .container
-        display: flex
-        justify-content: space-between
-        .sort_by
-            width: 50%
+object
+    width: 100%
+
+@import account
+#add_account_popup
+    width: 100%
+    height: 100vh
+    position: absolute
+    top: 0px
+    left: 0px
+    background: rgba(18, 18, 18, 0.85)
+    .add_account
+        position: absolute
+        width: 861px
+        height: 549px
+        left: calc(50% - 861px/2 + 0.5px)
+        top: calc(50% - 549px/2)
+        background: #F2F2F2
+        .control
+            position: absolute
+            width: 861px
+            height: 80px
+            left: 0px
+            top: 0px
+            background: #FFFFFF
             display: flex
-            column-gap: 12px
-            .text
-                font-weight: 500
-                font-size: 18px
-                line-height: 22px
+            justify-content: space-between
+            padding: 0px 40px
+            .text, .cross
                 color: #7C7C7C
                 margin: auto 0
-            .dd
-                button
-                    display: flex
-                    width: 270px
-                    background-color: white
-                    justify-content: space-between
-                    padding: 0px 11px
-                    height: 46px
-                    border-radius: 16px
-                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
-                    .t
-                        color: black
-                        margin: auto 0
-                    img
-                        margin: auto 0
-        .add
-            button
-                width: 168px
-                height: 46px
-                background-color: #00A068
-                border-radius: 16px
+        .content
+            display: flex
+            margin-top: 80px
+            height: 469px
+            justify-content: space-around
+            .element
+                width: 325px
+                height: 325px
+                margin: auto 0
+                background: #FFFFFF
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
-
-.total_balance
-    margin-top: 40px
-    .total_balance_element
-        width: 83%
-        background-color: white
-        color: black
-        height: 80px
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
-        border-radius: 16px
-        display: flex
-        justify-content: space-between
-        .text, .count
-            margin: auto 0
-            color: black
-        .text
-            padding: 0px 40px
+                border-radius: 16px
+                padding: 40px
+                text-align: center
+                .name
+                    font-weight: 500
+                    font-size: 24px
+                    line-height: 29px
+                    color: #000000
+                    margin-top: 14px
+                .desc
+                    margin-top: 8px
+                    font-weight: 500
+                    font-size: 12px
+                    line-height: 15px
+                    color: #7C7C7C
+.reg
+    width: 640px
+    margin: 0 auto
+    h1
+        margin-top: 44px
+        font-style: normal
+        font-weight: 700
+        font-size: 64px
+        line-height: 77px
+        text-align: center
+        text-transform: uppercase
+        color: #00A068
+    .form
+        margin-top: 16px
+        padding: 40px
+        border: 3px solid #00A068
+        border-radius: 10px
+        label
+            color: #7C7C7C
             font-weight: 500
             font-size: 24px
-            line-height: 29px
-        .count
-            display: flex
-            justify-content: right
-            .text
-                padding: 0px 20px
-                margin: auto 0
-            button
-                height: 80px
-                background-color: #006EE6
-                width: 80px
-                border-radius: 0px 16px 16px 0px
-            button:hover
-                opacity: .7
-                cursor: pointer
+            line-height: 31px
+        input
+            margin: 18px 0px
+            width: 91%
+            background: none
+            border: 1px solid #7C7C7C
+            height: 55px
+            padding: 0px 20px
+            font-size: 24px
+            border-radius: 8px
+        a
+            font-weight: 500
+            font-size: 16px
+            line-height: 31px
+            color: #3E5DCD
+            display: block
+            margin-top: -10px
+        button
+            margin-top: 16px
+            width: 100%
+            height: 55px
+            font-weight: 500
+            font-size: 24px
+            line-height: 31px
+            background: #00A068
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+            border-radius: 8px
+
+.reg_dop_info
+    width: 950px
+    font-weight: 400
+    font-size: 24px
+    line-height: 30px
+    text-align: center
+    color: #00A068
+    margin: 0 auto
+    margin-top: 24px

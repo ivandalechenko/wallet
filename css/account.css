@@ -1,0 +1,184 @@
+.sort_add {
+  margin-top: 40px;
+}
+.sort_add .container {
+  display: flex;
+  justify-content: space-between;
+}
+.sort_add .container .sort_by {
+  width: 50%;
+  display: flex;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+}
+.sort_add .container .sort_by .text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #7C7C7C;
+  margin: auto 0;
+}
+.sort_add .container .sort_by .dd button {
+  display: flex;
+  width: 270px;
+  background-color: white;
+  justify-content: space-between;
+  padding: 0px 11px;
+  height: 46px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.sort_add .container .sort_by .dd button .t {
+  color: black;
+  margin: auto 0;
+}
+.sort_add .container .sort_by .dd button img {
+  margin: auto 0;
+}
+.sort_add .container .add button {
+  width: 168px;
+  height: 46px;
+  background-color: #00A068;
+  border-radius: 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.total_balance {
+  margin-top: 40px;
+}
+.total_balance .total_balance_element {
+  width: 81%;
+  background-color: white;
+  color: black;
+  height: 80px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.total_balance .total_balance_element .text, .total_balance .total_balance_element .count {
+  margin: auto 0;
+  color: black;
+}
+.total_balance .total_balance_element .text {
+  padding: 0px 40px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+}
+.total_balance .total_balance_element .count {
+  display: flex;
+  justify-content: right;
+}
+.total_balance .total_balance_element .count .text {
+  padding: 0px 20px;
+  margin: auto 0;
+}
+.total_balance .total_balance_element .count button {
+  height: 80px;
+  background-color: #006EE6;
+  width: 80px;
+  border-radius: 0px 16px 16px 0px;
+}
+.total_balance .total_balance_element .count button:hover {
+  cursor: pointer;
+}
+
+.accounts {
+  margin-top: 16px;
+}
+.accounts h1 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  color: #7C7C7C;
+}
+.accounts .account_element {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.accounts .account_element .info {
+  width: 81%;
+  background-color: white;
+  color: black;
+  height: 80px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.accounts .account_element .info .ico_and_name {
+  display: flex;
+  width: 40%;
+}
+.accounts .account_element .info .ico_and_name .green {
+  background-color: #00695C;
+}
+.accounts .account_element .info .ico_and_name .orange {
+  background-color: #FF6F00;
+}
+.accounts .account_element .info .ico_and_name .ico {
+  width: 80px;
+  display: flex;
+  border-radius: 16px 0px 0px 16px;
+}
+.accounts .account_element .info .ico_and_name .ico img {
+  margin: auto;
+}
+.accounts .account_element .info .name, .accounts .account_element .info .count .text, .accounts .account_element .info .type {
+  color: black;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  margin: auto 0;
+}
+.accounts .account_element .info .type {
+  color: #7C7C7C;
+}
+.accounts .account_element .info .name {
+  padding: 0px 18px;
+  font-weight: 500;
+  font-size: 24px;
+  width: 280px;
+  line-height: 29px;
+}
+.accounts .account_element .info .count {
+  display: flex;
+  justify-content: right;
+  width: 40%;
+}
+.accounts .account_element .info .count .text {
+  padding: 0px 20px;
+}
+.accounts .account_element .info .count button {
+  height: 80px;
+  background-color: #006EE6;
+  width: 80px;
+  border-radius: 0px 16px 16px 0px;
+}
+.accounts .account_element .info .count button:hover {
+  cursor: pointer;
+}
+.accounts .account_element .control {
+  width: 19%;
+  display: flex;
+  justify-content: right;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+}
+.accounts .account_element .edit, .accounts .account_element .del {
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  display: flex;
+}
+.accounts .account_element .edit img, .accounts .account_element .del img {
+  margin: auto;
+}
+.accounts .account_element .edit {
+  border: 2px solid #E0AC14;
+}
+.accounts .account_element .del {
+  border: 2px solid #A54F50;
+}
