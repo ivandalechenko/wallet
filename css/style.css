@@ -33,6 +33,11 @@ img, svg {
   transition: 0.3s;
 }
 
+a:hover, button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
 body {
   background-color: black;
   line-height: 1;
@@ -105,4 +110,91 @@ header .container .user .img img {
 }
 header .container .user .img, header .container .user .name, header .container .user .arrow {
   margin: auto 0;
+}
+
+.sort_add {
+  margin-top: 40px;
+}
+.sort_add .container {
+  display: flex;
+  justify-content: space-between;
+}
+.sort_add .container .sort_by {
+  width: 50%;
+  display: flex;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+}
+.sort_add .container .sort_by .text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #7C7C7C;
+  margin: auto 0;
+}
+.sort_add .container .sort_by .dd button {
+  display: flex;
+  width: 270px;
+  background-color: white;
+  justify-content: space-between;
+  padding: 0px 11px;
+  height: 46px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.sort_add .container .sort_by .dd button .t {
+  color: black;
+  margin: auto 0;
+}
+.sort_add .container .sort_by .dd button img {
+  margin: auto 0;
+}
+.sort_add .container .add button {
+  width: 168px;
+  height: 46px;
+  background-color: #00A068;
+  border-radius: 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.total_balance {
+  margin-top: 40px;
+}
+.total_balance .total_balance_element {
+  width: 83%;
+  background-color: white;
+  color: black;
+  height: 80px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.total_balance .total_balance_element .text, .total_balance .total_balance_element .count {
+  margin: auto 0;
+  color: black;
+}
+.total_balance .total_balance_element .text {
+  padding: 0px 40px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+}
+.total_balance .total_balance_element .count {
+  display: flex;
+  justify-content: right;
+}
+.total_balance .total_balance_element .count .text {
+  padding: 0px 20px;
+  margin: auto 0;
+}
+.total_balance .total_balance_element .count button {
+  height: 80px;
+  background-color: #006EE6;
+  width: 80px;
+  border-radius: 0px 16px 16px 0px;
+}
+.total_balance .total_balance_element .count button:hover {
+  opacity: 0.7;
+  cursor: pointer;
 }

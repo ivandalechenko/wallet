@@ -28,6 +28,9 @@ time, mark, audio, video, button
     font-family: 'Montserrat'
 img, svg
     transition: .3s
+a:hover, button:hover
+    cursor: pointer
+    opacity: .6
 body
     background-color: black
     line-height: 1
@@ -84,3 +87,75 @@ header
                     border-radius: 24px
             .img, .name, .arrow
                 margin: auto 0
+
+.sort_add
+    margin-top: 40px
+    .container
+        display: flex
+        justify-content: space-between
+        .sort_by
+            width: 50%
+            display: flex
+            column-gap: 12px
+            .text
+                font-weight: 500
+                font-size: 18px
+                line-height: 22px
+                color: #7C7C7C
+                margin: auto 0
+            .dd
+                button
+                    display: flex
+                    width: 270px
+                    background-color: white
+                    justify-content: space-between
+                    padding: 0px 11px
+                    height: 46px
+                    border-radius: 16px
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+                    .t
+                        color: black
+                        margin: auto 0
+                    img
+                        margin: auto 0
+        .add
+            button
+                width: 168px
+                height: 46px
+                background-color: #00A068
+                border-radius: 16px
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+
+.total_balance
+    margin-top: 40px
+    .total_balance_element
+        width: 83%
+        background-color: white
+        color: black
+        height: 80px
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        border-radius: 16px
+        display: flex
+        justify-content: space-between
+        .text, .count
+            margin: auto 0
+            color: black
+        .text
+            padding: 0px 40px
+            font-weight: 500
+            font-size: 24px
+            line-height: 29px
+        .count
+            display: flex
+            justify-content: right
+            .text
+                padding: 0px 20px
+                margin: auto 0
+            button
+                height: 80px
+                background-color: #006EE6
+                width: 80px
+                border-radius: 0px 16px 16px 0px
+            button:hover
+                opacity: .7
+                cursor: pointer
