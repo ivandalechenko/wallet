@@ -58,66 +58,6 @@ a {
   margin: 0 auto;
 }
 
-header {
-  background-color: #00A068;
-  min-width: 1140px;
-}
-header .container {
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
-}
-header .container .logo_and_text {
-  width: 25%;
-  display: flex;
-  margin: auto 0;
-}
-header .container .logo_and_text .logo {
-  margin: auto 0;
-}
-header .container .logo_and_text .text {
-  margin: auto 0;
-  padding-left: 8px;
-  font-weight: 900;
-  font-size: 24px;
-  line-height: 29px;
-}
-header .container .links {
-  width: 50%;
-  margin: auto 0;
-  display: flex;
-  justify-content: center;
-}
-header .container .links a {
-  padding: 0px 15px;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-}
-header .container .links .active {
-  font-weight: 700;
-}
-header .container .user {
-  width: 25%;
-  margin: auto 0;
-  display: flex;
-  justify-content: right;
-  -moz-column-gap: 12px;
-       column-gap: 12px;
-}
-header .container .user .img img {
-  width: 46px;
-  height: 46px;
-  border-radius: 24px;
-}
-header .container .user .img, header .container .user .name, header .container .user .arrow {
-  margin: auto 0;
-}
-
-object {
-  width: 100%;
-}
-
 .sort_add {
   margin-top: 40px;
 }
@@ -303,6 +243,137 @@ object {
   border: 2px solid #A54F50;
 }
 
+header {
+  background-color: #00A068;
+  min-width: 1140px;
+}
+header .container {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+header .container .logo_and_text {
+  width: 25%;
+  display: flex;
+  margin: auto 0;
+}
+header .container .logo_and_text .logo {
+  margin: auto 0;
+}
+header .container .logo_and_text .text {
+  margin: auto 0;
+  padding-left: 8px;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+}
+header .container .links {
+  width: 50%;
+  margin: auto 0;
+  display: flex;
+  justify-content: center;
+}
+header .container .links a {
+  padding: 0px 15px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+header .container .links .active {
+  font-weight: 700;
+}
+header .container .user {
+  width: 25%;
+  margin: auto 0;
+  display: flex;
+  justify-content: right;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+}
+header .container .user .img img {
+  width: 46px;
+  height: 46px;
+  border-radius: 24px;
+}
+header .container .user .img, header .container .user .name, header .container .user .arrow {
+  margin: auto 0;
+}
+
+.reg {
+  width: 640px;
+  margin: 0 auto;
+}
+.reg h1 {
+  margin-top: 44px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 77px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #00A068;
+}
+.reg .form {
+  margin-top: 16px;
+  padding: 40px;
+  border: 3px solid #00A068;
+  border-radius: 10px;
+}
+.reg .form label {
+  color: #7C7C7C;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
+}
+.reg .form input {
+  margin: 18px 0px;
+  width: 91%;
+  background: none;
+  border: 1px solid #7C7C7C;
+  height: 55px;
+  padding: 0px 20px;
+  font-size: 24px;
+  border-radius: 8px;
+}
+.reg .form a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 31px;
+  color: #3E5DCD;
+  display: block;
+  margin-top: -10px;
+}
+.reg .form button {
+  margin-top: 16px;
+  width: 100%;
+  height: 55px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
+  background: #00A068;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+}
+
+.reg_dop_info {
+  width: 950px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  color: #00A068;
+  margin: 0 auto;
+  margin-top: 24px;
+}
+
+.popup .cross {
+  transition: 0.3s;
+}
+.popup .cross:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
 #add_account_popup {
   width: 100%;
   height: 100vh;
@@ -378,69 +449,82 @@ object {
   color: #7C7C7C;
 }
 
-.reg {
-  width: 640px;
-  margin: 0 auto;
+#add_card_popup, #account_edit_popup, #account_add_popup {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: rgba(18, 18, 18, 0.85);
 }
-.reg h1 {
-  margin-top: 44px;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 64px;
-  line-height: 77px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #00A068;
+#add_card_popup .add_card, #account_edit_popup .add_card, #account_add_popup .add_card {
+  position: absolute;
+  width: 861px;
+  padding-bottom: 56px;
+  left: calc(50% - 430.5px + 0.5px);
+  top: calc(50% - 274.5px);
+  background: #F2F2F2;
 }
-.reg .form {
-  margin-top: 16px;
-  padding: 40px;
-  border: 3px solid #00A068;
-  border-radius: 10px;
+#add_card_popup .add_card .control, #account_edit_popup .add_card .control, #account_add_popup .add_card .control {
+  position: absolute;
+  width: 861px;
+  height: 80px;
+  left: 0px;
+  top: 0px;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 40px;
 }
-.reg .form label {
+#add_card_popup .add_card .control .text, #add_card_popup .add_card .control .cross, #account_edit_popup .add_card .control .text, #account_edit_popup .add_card .control .cross, #account_add_popup .add_card .control .text, #account_add_popup .add_card .control .cross {
   color: #7C7C7C;
+  margin: auto 0;
+}
+#add_card_popup .add_card .content, #account_edit_popup .add_card .content, #account_add_popup .add_card .content {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 80px;
+  width: 552px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#add_card_popup .add_card .content label, #account_edit_popup .add_card .content label, #account_add_popup .add_card .content label {
+  width: 100%;
+  text-align: center;
+  padding-top: 28px;
+  padding-bottom: 16px;
   font-weight: 500;
   font-size: 24px;
   line-height: 31px;
+  color: #7C7C7C;
 }
-.reg .form input {
-  margin: 18px 0px;
-  width: 91%;
-  background: none;
-  border: 1px solid #7C7C7C;
-  height: 55px;
-  padding: 0px 20px;
-  font-size: 24px;
-  border-radius: 8px;
-}
-.reg .form a {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 31px;
-  color: #3E5DCD;
-  display: block;
-  margin-top: -10px;
-}
-.reg .form button {
-  margin-top: 16px;
+#add_card_popup .add_card .content input, #account_edit_popup .add_card .content input, #account_add_popup .add_card .content input {
   width: 100%;
   height: 55px;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 31px;
+  border: 1px solid #7C7C7C;
+  border-radius: 8px;
+  background: none;
+  padding: 0px 20px;
+}
+#add_card_popup .add_card .content button, #account_edit_popup .add_card .content button, #account_add_popup .add_card .content button {
+  width: 100%;
+  margin-top: 16px;
+  height: 55px;
   background: #00A068;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
 }
 
-.reg_dop_info {
-  width: 950px;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 30px;
-  text-align: center;
-  color: #00A068;
-  margin: 0 auto;
-  margin-top: 24px;
+#account_edit_popup .add_card .content label, #account_add_popup .add_card .content label {
+  text-align: left;
+  padding-top: 10px;
+}
+#account_edit_popup .add_card .content label:first-child, #account_add_popup .add_card .content label:first-child {
+  padding-top: 28px;
+}
+#account_edit_popup .add_card .content button, #account_add_popup .add_card .content button {
+  margin-top: 42px;
 }

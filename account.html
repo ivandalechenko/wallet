@@ -14,7 +14,7 @@
         <div class="container">
             <div class="logo_and_text">
                 <div class="logo">
-                    <img src="img/logo.svg" alt="">
+                    <a href="index.html"><img src="img/logo.svg" alt=""></a>
                 </div>
                 <div class="text">
                     BudgetBuddy
@@ -22,15 +22,15 @@
             </div>
             <div class="links">
                 <a href="account.html">Account</a>
-                <a href="#">Categories</a>
-                <a href="#">Statistic</a>
+                <a href="cat.html">Categories</a>
+                <a href="stat.html">Statistic</a>
             </div>
             <div class="user">
                 <div class="img">
                     <img src="img/user.jpg" alt="">
                 </div>
                 <div class="name">
-                    Name name
+                    <a href="reg.html">Name name</a>
                 </div>
                 <div class="arrow">
                     <img src="img/white_arrow_down.svg">
@@ -39,7 +39,8 @@
         </div>
     </header>
 
-    <div id="add_account_popup">
+
+    <div id="add_account_popup" class="popup dnone">
         <div class="add_account">
             <div class="control">
                 <div class="text">
@@ -74,6 +75,77 @@
             </div>
         </div>
     </div>
+    <div id="add_card_popup" class="popup dnone">
+        <div class="add_card">
+            <div class="control">
+                <div class="text">
+                    ADD CARD
+                </div>
+                <div class="cross">
+                    <img src="img/cross.svg" alt="">
+                </div>
+            </div>
+            <div class="content">
+                <label for="card_num">
+                    Card numbers
+                </label>
+                <input type="text" id="card_num" name="card_num">
+                <button>ADD</button>
+            </div>
+        </div>
+    </div>
+    <div id="account_edit_popup" class="popup dnone">
+        <div class="add_card">
+            <div class="control">
+                <div class="text">
+                    EDIT
+                </div>
+                <div class="cross">
+                    <img src="img/cross.svg" alt="">
+                </div>
+            </div>
+            <div class="content">
+                <label for="card_num">
+                    Name
+                </label>
+                <input type="text" id="card_num" name="card_num">
+                <label for="card_num">
+                    Description
+                </label>
+                <input type="text" id="card_num" name="card_num">
+                <button>EDIT</button>
+            </div>
+        </div>
+    </div>
+    <div id="account_add_popup" class="popup dnone">
+        <div class="add_card">
+            <div class="control">
+                <div class="text">
+                    EDIT
+                </div>
+                <div class="cross">
+                    <img src="img/cross.svg" alt="">
+                </div>
+            </div>
+            <div class="content">
+                <label for="card_num">
+                    Name
+                </label>
+                <input type="text" id="card_num" name="card_num">
+                <label for="card_num">
+                    Account type
+                </label>
+                <input type="text" id="card_num" name="card_num">
+                <label for="card_num">
+                    Initial amount
+                </label>
+                <input type="text" id="card_num" name="card_num">
+                <button>EDIT</button>
+            </div>
+        </div>
+    </div>
+
+
 
 
     <div class="sort_add">
