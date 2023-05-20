@@ -45,10 +45,6 @@ a
     padding: 0px 20px
     margin: 0 auto
 
-@import account
-@import header
-@import reg
-
 .popup
     .cross
         transition: .3s
@@ -56,140 +52,68 @@ a
         cursor: pointer
         opacity: .6
 
-#add_account_popup
-    width: 100%
-    height: 100vh
-    position: absolute
-    top: 0px
-    left: 0px
-    background: rgba(18, 18, 18, 0.85)
-    .add_account
-        position: absolute
-        width: 861px
-        height: 549px
-        left: calc(50% - 861px/2 + 0.5px)
-        top: calc(50% - 549px/2)
-        background: #F2F2F2
-        .control
-            position: absolute
-            width: 861px
+@import account
+@import header
+@import reg
+
+.cat_nav
+    display: flex
+    justify-content: center
+    column-gap: 12px
+    padding-top: 42px
+    button
+        font-size: 18px
+        line-height: 22px
+        font-weight: 500
+        color: #7C7C7C
+    .active
+        font-weight: 700
+        color: #000000
+
+#ucat, #scat
+    margin-top: 42px
+    .cat_element
+        margin-top: 16px
+        display: flex
+        justify-content: space-between
+
+        .info
+            width: 81%
+            background-color: white
             height: 80px
-            left: 0px
-            top: 0px
-            background: #FFFFFF
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+            border-radius: 16px
             display: flex
             justify-content: space-between
-            padding: 0px 40px
-            .text, .cross
-                color: #7C7C7C
-                margin: auto 0
-        .content
-            display: flex
-            margin: 0 auto
-            margin-top: 80px
-            height: 469px
-            width: 90%
-            justify-content: space-around
-            .element_or
+            padding-left: 32px
+            .text
+                color: black
                 font-weight: 500
-                font-size: 18px
-                line-height: 22px
-                color: #7C7C7C
+                font-size: 24px
+                line-height: 29px
                 margin: auto 0
-
-            .element:hover
-                opacity: .6
-                cursor: pointer
-            .element
-                width: 325px
-                height: 325px
-                margin: auto 0
-                background: #FFFFFF
-                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        .control
+            width: 19%
+            display: flex
+            justify-content: right
+            column-gap: 24px
+            .edit, .del
+                width: 80px
+                height: 80px
                 border-radius: 16px
-                padding: 40px
-                text-align: center
-                .name
-                    font-weight: 500
-                    font-size: 24px
-                    line-height: 29px
-                    color: #000000
-                    margin-top: 14px
-                .desc
-                    margin-top: 8px
-                    font-weight: 500
-                    font-size: 12px
-                    line-height: 15px
-                    color: #7C7C7C
+                display: flex
+                img
+                    margin: auto
+            .edit
+                border: 2px solid #E0AC14
+            .del
+                border: 2px solid #A54F50
 
-#add_card_popup, #account_edit_popup, #account_add_popup
-    width: 100%
-    height: 100vh
-    position: absolute
-    top: 0px
-    left: 0px
-    background: rgba(18, 18, 18, 0.85)
-    .add_card
-        position: absolute
-        width: 861px
-        padding-bottom: 56px
-        left: calc(50% - 861px/2 + 0.5px)
-        top: calc(50% - 549px/2)
-        background: #F2F2F2
+#scat
+    .cat_element
+        .info
+            width: 90%
         .control
-            position: absolute
-            width: 861px
-            height: 80px
-            left: 0px
-            top: 0px
-            background: #FFFFFF
-            display: flex
-            justify-content: space-between
-            padding: 0px 40px
-            .text, .cross
-                color: #7C7C7C
+            width: 10%
+            svg
                 margin: auto 0
-        .content
-            display: flex
-            margin: 0 auto
-            margin-top: 80px
-            width: 552px
-            flex-wrap: wrap
-            justify-content: center
-            label
-                width: 100%
-                text-align: center
-                padding-top: 28px
-                padding-bottom: 16px
-                font-weight: 500
-                font-size: 24px
-                line-height: 31px
-                color: #7C7C7C
-            input
-                width: 100%
-                height: 55px
-                border: 1px solid #7C7C7C
-                border-radius: 8px
-                background: none
-                padding: 0px 20px
-            button
-                width: 100%
-                margin-top: 16px
-                height: 55px
-                background: #00A068
-                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
-                border-radius: 8px
-                font-weight: 500
-                font-size: 24px
-                line-height: 31px
-
-#account_edit_popup, #account_add_popup
-    .add_card
-        .content
-            label
-                text-align: left
-                padding-top: 10px
-            label:first-child
-                padding-top: 28px
-            button
-                margin-top: 42px

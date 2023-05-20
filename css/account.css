@@ -182,3 +182,158 @@
 .accounts .account_element .del {
   border: 2px solid #A54F50;
 }
+
+#add_account_popup {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: rgba(18, 18, 18, 0.85);
+}
+#add_account_popup .add_account {
+  position: absolute;
+  width: 861px;
+  height: 549px;
+  left: calc(50% - 430.5px + 0.5px);
+  top: calc(50% - 274.5px);
+  background: #F2F2F2;
+}
+#add_account_popup .add_account .control {
+  position: absolute;
+  width: 861px;
+  height: 80px;
+  left: 0px;
+  top: 0px;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 40px;
+}
+#add_account_popup .add_account .control .text, #add_account_popup .add_account .control .cross {
+  color: #7C7C7C;
+  margin: auto 0;
+}
+#add_account_popup .add_account .content {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 80px;
+  height: 469px;
+  width: 90%;
+  justify-content: space-around;
+}
+#add_account_popup .add_account .content .element_or {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #7C7C7C;
+  margin: auto 0;
+}
+#add_account_popup .add_account .content .element:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+#add_account_popup .add_account .content .element {
+  width: 325px;
+  height: 325px;
+  margin: auto 0;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+}
+#add_account_popup .add_account .content .element .name {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  margin-top: 14px;
+}
+#add_account_popup .add_account .content .element .desc {
+  margin-top: 8px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #7C7C7C;
+}
+
+#add_card_popup, #account_edit_popup, #account_add_popup {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: rgba(18, 18, 18, 0.85);
+}
+#add_card_popup .add_card, #account_edit_popup .add_card, #account_add_popup .add_card {
+  position: absolute;
+  width: 861px;
+  padding-bottom: 56px;
+  left: calc(50% - 430.5px + 0.5px);
+  top: calc(50% - 274.5px);
+  background: #F2F2F2;
+}
+#add_card_popup .add_card .control, #account_edit_popup .add_card .control, #account_add_popup .add_card .control {
+  position: absolute;
+  width: 861px;
+  height: 80px;
+  left: 0px;
+  top: 0px;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 40px;
+}
+#add_card_popup .add_card .control .text, #add_card_popup .add_card .control .cross, #account_edit_popup .add_card .control .text, #account_edit_popup .add_card .control .cross, #account_add_popup .add_card .control .text, #account_add_popup .add_card .control .cross {
+  color: #7C7C7C;
+  margin: auto 0;
+}
+#add_card_popup .add_card .content, #account_edit_popup .add_card .content, #account_add_popup .add_card .content {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 80px;
+  width: 552px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#add_card_popup .add_card .content label, #account_edit_popup .add_card .content label, #account_add_popup .add_card .content label {
+  width: 100%;
+  text-align: center;
+  padding-top: 28px;
+  padding-bottom: 16px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
+  color: #7C7C7C;
+}
+#add_card_popup .add_card .content input, #account_edit_popup .add_card .content input, #account_add_popup .add_card .content input {
+  width: 100%;
+  height: 55px;
+  border: 1px solid #7C7C7C;
+  border-radius: 8px;
+  background: none;
+  padding: 0px 20px;
+}
+#add_card_popup .add_card .content button, #account_edit_popup .add_card .content button, #account_add_popup .add_card .content button {
+  width: 100%;
+  margin-top: 16px;
+  height: 55px;
+  background: #00A068;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
+}
+
+#account_edit_popup .add_card .content label, #account_add_popup .add_card .content label {
+  text-align: left;
+  padding-top: 10px;
+}
+#account_edit_popup .add_card .content label:first-child, #account_add_popup .add_card .content label:first-child {
+  padding-top: 28px;
+}
+#account_edit_popup .add_card .content button, #account_add_popup .add_card .content button {
+  margin-top: 42px;
+}
