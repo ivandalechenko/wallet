@@ -337,3 +337,202 @@
 #account_edit_popup .add_card .content button, #account_add_popup .add_card .content button {
   margin-top: 42px;
 }
+
+#account_info_popup {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: rgba(18, 18, 18, 0.85);
+}
+#account_info_popup .account_info {
+  position: absolute;
+  width: 861px;
+  padding-bottom: 26px;
+  left: calc(50% - 430.5px + 0.5px);
+  top: 10vh;
+  background: #F2F2F2;
+}
+#account_info_popup .account_info .control {
+  position: absolute;
+  width: 861px;
+  height: 80px;
+  left: 0px;
+  top: 0px;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 40px;
+}
+#account_info_popup .account_info .control .text, #account_info_popup .account_info .control .cross {
+  color: #7C7C7C;
+  margin: auto 0;
+}
+#account_info_popup .account_info .content {
+  margin: 0 auto;
+  margin-top: 80px;
+  width: 95%;
+}
+#account_info_popup .account_info .content .bank_name, #account_info_popup .account_info .content .card_num, #account_info_popup .account_info .content .bank_desc {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #7C7C7C;
+  text-align: center;
+  padding-top: 8px;
+}
+#account_info_popup .account_info .content .bank_name {
+  padding-top: 18px;
+}
+#account_info_popup .account_info .content .filter {
+  width: 645px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 8px;
+  padding-bottom: 10px;
+}
+#account_info_popup .account_info .content .filter .text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #7C7C7C;
+  margin: auto 0;
+}
+#account_info_popup .account_info .content .filter .dd {
+  width: 269px;
+  height: 46px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  padding: 0px 11px;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+}
+#account_info_popup .account_info .content .filter .dd .text, #account_info_popup .account_info .content .filter .dd img {
+  margin: auto 0;
+}
+#account_info_popup .account_info .content .filter .tr_add {
+  width: 298px;
+  height: 46px;
+  background: #00A068;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
+  color: #FFFFFF;
+}
+#account_info_popup .account_info .content .tr_per_day {
+  padding-top: 16px;
+  width: 100%;
+}
+#account_info_popup .account_info .content .tr_per_day .date {
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #7C7C7C;
+}
+#account_info_popup .account_info .content .tr_per_day .tr {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+#account_info_popup .account_info .content .tr_per_day .tr .tr_control {
+  display: flex;
+  justify-content: space-between;
+  width: 129px;
+}
+#account_info_popup .account_info .content .tr_per_day .tr .tr_control .edit, #account_info_popup .account_info .content .tr_per_day .tr .tr_control .del {
+  width: 59px;
+  height: 59px;
+  border-radius: 16px;
+  display: flex;
+}
+#account_info_popup .account_info .content .tr_per_day .tr .tr_control .edit img, #account_info_popup .account_info .content .tr_per_day .tr .tr_control .del img {
+  margin: auto;
+  width: 30px;
+}
+#account_info_popup .account_info .content .tr_per_day .tr .tr_control .edit {
+  border: 2px solid #E0AC14;
+}
+#account_info_popup .account_info .content .tr_per_day .tr .tr_control .del {
+  border: 2px solid #A54F50;
+}
+#account_info_popup .account_info .content .tr_per_day .tr .tr_info {
+  width: 674px;
+  height: 59px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 35px;
+}
+#account_info_popup .account_info .content .tr_per_day .tr .tr_info .tr_info_element {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  margin: auto 0;
+  display: flex;
+  width: 33.3%;
+}
+#account_info_popup .account_info .content .tr_per_day .tr .tr_info .left {
+  justify-content: left;
+}
+#account_info_popup .account_info .content .tr_per_day .tr .tr_info .center {
+  justify-content: center;
+}
+#account_info_popup .account_info .content .tr_per_day .tr .tr_info .right {
+  justify-content: right;
+}
+#account_info_popup .account_info .content .tr_per_day .tr .tr_info .gray {
+  color: #DDDDDD;
+}
+#account_info_popup .account_info .content .tr_per_day .tr .tr_info .plus {
+  color: #00A068;
+}
+#account_info_popup .account_info .content .tr_per_day .tr .tr_info .minus {
+  color: #A54F50;
+}
+#account_info_popup .account_info .pagination {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 26px;
+  -moz-column-gap: 9px;
+       column-gap: 9px;
+}
+#account_info_popup .account_info .pagination button {
+  width: 46px;
+  height: 46px;
+  background: rgba(0, 160, 104, 0.53);
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
+  color: #FFFFFF;
+}
+#account_info_popup .account_info .pagination .active {
+  background-color: #00A068;
+}
+#account_info_popup .account_info .pagination .arrow {
+  display: flex;
+}
+#account_info_popup .account_info .pagination .arrow img {
+  margin: auto;
+}
+
+.popup {
+  z-index: 5;
+}
+
+.cat_info, #add_cat_btn {
+  position: relative;
+  z-index: 1;
+}

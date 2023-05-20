@@ -284,3 +284,166 @@
                 padding-top: 28px
             button
                 margin-top: 42px
+
+#account_info_popup
+    width: 100%
+    height: 100vh
+    position: absolute
+    top: 0px
+    left: 0px
+    background: rgba(18, 18, 18, 0.85)
+    .account_info
+        position: absolute
+        width: 861px
+        padding-bottom: 26px
+        left: calc(50% - 861px/2 + 0.5px)
+        top: 10vh
+        background: #F2F2F2
+
+        .control
+            position: absolute
+            width: 861px
+            height: 80px
+            left: 0px
+            top: 0px
+            background: #FFFFFF
+            display: flex
+            justify-content: space-between
+            padding: 0px 40px
+            .text, .cross
+                color: #7C7C7C
+                margin: auto 0
+        .content
+            margin: 0 auto
+            margin-top: 80px
+            width: 95%
+            .bank_name, .card_num, .bank_desc
+                font-weight: 500
+                font-size: 18px
+                line-height: 22px
+                color: #7C7C7C
+                text-align: center
+                padding-top: 8px
+            .bank_name
+                padding-top: 18px
+            .filter
+                width: 645px
+                margin: 0 auto
+                display: flex
+                justify-content: space-between
+                padding-top: 8px
+                padding-bottom: 10px
+                .text
+                    font-weight: 500
+                    font-size: 18px
+                    line-height: 22px
+                    color: #7C7C7C
+                    margin: auto 0
+                .dd
+                    width: 269px
+                    height: 46px
+                    background: #FFFFFF
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+                    border-radius: 16px
+                    padding: 0px 11px
+                    color: black
+                    display: flex
+                    justify-content: space-between
+                    .text, img
+                        margin: auto 0
+                .tr_add
+                    width: 298px
+                    height: 46px
+                    background: #00A068
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+                    border-radius: 8px
+                    font-weight: 500
+                    font-size: 24px
+                    line-height: 31px
+                    color: #FFFFFF
+            .tr_per_day
+                padding-top: 16px
+                width: 100%
+                .date
+                    text-align: center
+                    font-weight: 500
+                    font-size: 18px
+                    line-height: 22px
+                    color: #7C7C7C
+                .tr
+                    margin-top: 16px
+                    display: flex
+                    justify-content: space-between
+                    .tr_control
+                        display: flex
+                        justify-content: space-between
+                        width: 129px
+                        .edit, .del
+                            width: 59px
+                            height: 59px
+                            border-radius: 16px
+                            display: flex
+                            img
+                                margin: auto
+                                width: 30px
+                        .edit
+                            border: 2px solid #E0AC14
+                        .del
+                            border: 2px solid #A54F50
+                    .tr_info
+                        width: 674px
+                        height: 59px
+                        background: #FFFFFF
+                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+                        border-radius: 16px
+                        display: flex
+                        justify-content: space-between
+                        padding: 0px 35px
+                        .tr_info_element
+                            font-weight: 500
+                            font-size: 24px
+                            line-height: 29px
+                            color: #000000
+                            margin: auto 0
+                            display: flex
+                            width: 33.3%
+                        .left
+                            justify-content: left
+                        .center
+                            justify-content: center
+                        .right
+                            justify-content: right
+                        .gray
+                            color: #DDDDDD
+                        .plus
+                            color: #00A068
+                        .minus
+                            color: #A54F50
+        .pagination
+            width: 80%
+            margin: 0 auto
+            display: flex
+            justify-content: center
+            margin-top: 26px
+            column-gap: 9px
+            button
+                width: 46px
+                height: 46px
+                background: rgba(0, 160, 104, 0.53)
+                border-radius: 8px
+                font-weight: 500
+                font-size: 24px
+                line-height: 31px
+                color: #FFFFFF
+            .active
+                background-color: #00A068
+            .arrow
+                display: flex
+                img
+                    margin: auto
+
+.popup
+    z-index: 5
+.cat_info, #add_cat_btn
+    position: relative
+    z-index: 1
