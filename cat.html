@@ -40,15 +40,15 @@
     </header>
 
     <div class="cat_nav">
-        <button class="active">
+        <button class="active" id="ucat_btn">
             User categories
         </button>
-        <button>
+        <button id="scat_btn">
             System categories
         </button>
     </div>
 
-    <div id="ucat" class="dnone">
+    <div id="ucat">
         <div class="container">
             <div class="cat_element">
                 <div class="info">
@@ -97,22 +97,23 @@
             </div>
         </div>
     </div>
-    <div id="scat">
+    <div id="scat" class="dnone">
         <div class="container">
-            <div class="cat_element">
+            <div class="cat_element off">
                 <div class="info">
                     <div class="text">
                         Name
                     </div>
                 </div>
                 <div class="control">
-                    <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="cat_element_active_changer" width="72" height="72" viewBox="0 0 72 72" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_54_2710)">
                             <rect y="22" width="72" height="28" rx="14" fill="#00A068" fill-opacity="0.6" />
                             <path
                                 d="M72.0002 36.0467C72.0002 47.645 62.5981 57.0471 51.0004 57.0471C39.4021 57.0471 30 47.645 30 36.0467C30 24.449 39.4021 15.0469 51.0004 15.0469C62.5981 15.0469 72.0002 24.449 72.0002 36.0467Z"
                                 fill="#00A068" />
-                            <path
+                            <path class="wh"
                                 d="M60.0005 36.0464C60.0005 41.0172 55.9707 45.0464 51.0005 45.0464C46.0297 45.0464 42.0005 41.0172 42.0005 36.0464C42.0005 31.0762 46.0297 27.0464 51.0005 27.0464C55.9707 27.0464 60.0005 31.0762 60.0005 36.0464Z"
                                 fill="#FAFAFA" />
                         </g>
@@ -122,7 +123,32 @@
                             </clipPath>
                         </defs>
                     </svg>
-
+                </div>
+            </div>
+            <div class="cat_element">
+                <div class="info">
+                    <div class="text">
+                        Name
+                    </div>
+                </div>
+                <div class="control">
+                    <svg class="cat_element_active_changer" width="72" height="72" viewBox="0 0 72 72" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_54_2710)">
+                            <rect y="22" width="72" height="28" rx="14" fill="#00A068" fill-opacity="0.6" />
+                            <path
+                                d="M72.0002 36.0467C72.0002 47.645 62.5981 57.0471 51.0004 57.0471C39.4021 57.0471 30 47.645 30 36.0467C30 24.449 39.4021 15.0469 51.0004 15.0469C62.5981 15.0469 72.0002 24.449 72.0002 36.0467Z"
+                                fill="#00A068" />
+                            <path class="wh"
+                                d="M60.0005 36.0464C60.0005 41.0172 55.9707 45.0464 51.0005 45.0464C46.0297 45.0464 42.0005 41.0172 42.0005 36.0464C42.0005 31.0762 46.0297 27.0464 51.0005 27.0464C55.9707 27.0464 60.0005 31.0762 60.0005 36.0464Z"
+                                fill="#FAFAFA" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_54_2710">
+                                <rect width="72" height="72" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
                 </div>
             </div>
         </div>
@@ -131,6 +157,8 @@
 
 
 
+
+    <script src="js/cat.js"></script>
 </body>
 
 </html>

@@ -117,3 +117,20 @@ a
             width: 10%
             svg
                 margin: auto 0
+                path, rect
+                    transition: 0.2s ease-out
+            svg:hover
+                cursor: pointer
+.off
+    .info
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0) !important
+        opacity: .5
+    svg
+        path
+            transform: translateX(-30px)
+            fill: #A6A6A6
+        .wh
+            fill: #FAFAFA
+        rect
+            fill: #A6A6A6
+            opacity: .5
