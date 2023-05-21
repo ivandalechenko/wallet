@@ -889,6 +889,10 @@ header .container .user .img, header .container .user .name, header .container .
   line-height: 22px;
   color: #000000;
 }
+.stat_header .chart {
+  height: 253px;
+  margin-top: 21px;
+}
 
 .stat_element {
   width: 1128px;
@@ -905,6 +909,17 @@ header .container .user .img, header .container .user .name, header .container .
 .stat_element .stat_element_inner {
   color: black;
   margin: auto 0;
+  display: flex;
+  width: 33.3%;
+}
+.stat_element .left {
+  justify-content: left;
+}
+.stat_element .center {
+  justify-content: center;
+}
+.stat_element .right {
+  justify-content: right;
 }
 .stat_element .color_1 {
   color: #3C6053;
@@ -914,4 +929,16 @@ header .container .user .img, header .container .user .name, header .container .
 }
 .stat_element .color_3 {
   color: #00A068;
+}
+
+.ct-series-a path {
+  fill: #3C6053 !important;
+}
+
+.ct-series-b path {
+  fill: #248A66 !important;
+}
+
+.ct-series-c path {
+  fill: #00A068 !important;
 }

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -83,38 +84,41 @@
 
             </div>
         </div>
-    </div>
-    <div class="stat_element">
-        <div class="stat_element_inner color_1">
-            Category name
-        </div>
-        <div class="stat_element_inner color_1">
-            1%
-        </div>
-        <div class="stat_element_inner color_1">
-            UAH 00000.00
+        <div id="amount_by_cat_chart" class="chart">
+
         </div>
     </div>
     <div class="stat_element">
-        <div class="stat_element_inner color_2">
+        <div class="stat_element_inner left color_1">
             Category name
         </div>
-        <div class="stat_element_inner color_2">
-            1%
+        <div class="stat_element_inner center color_1">
+            20%
         </div>
-        <div class="stat_element_inner color_2">
-            UAH 00000.00
+        <div class="stat_element_inner right color_1">
+            UAH 20.00
         </div>
     </div>
     <div class="stat_element">
-        <div class="stat_element_inner color_3">
+        <div class="stat_element_inner left color_2">
             Category name
         </div>
-        <div class="stat_element_inner color_3">
-            1%
+        <div class="stat_element_inner center color_2">
+            30%
         </div>
-        <div class="stat_element_inner color_3">
-            UAH 00000.00
+        <div class="stat_element_inner right color_2">
+            UAH 30.00
+        </div>
+    </div>
+    <div class="stat_element">
+        <div class="stat_element_inner left color_3">
+            Category name
+        </div>
+        <div class="stat_element_inner center color_3">
+            50%
+        </div>
+        <div class="stat_element_inner right color_3">
+            UAH 50.00
         </div>
     </div>
 
@@ -122,8 +126,8 @@
 
 
 
-
-    <script src="js/cat.js"></script>
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script src="js/stat.js"></script>
 </body>
 
 </html>
