@@ -1099,6 +1099,7 @@ header .container .user .img, header .container .user .name, header .container .
   height: 0px;
   position: relative;
   z-index: 2;
+  top: 10px;
 }
 .sort_add .container .sort_by .dd #dd_block .dd_inner {
   width: 270px;
