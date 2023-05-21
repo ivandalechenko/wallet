@@ -889,8 +889,10 @@ header .container .user .img, header .container .user .name, header .container .
   line-height: 22px;
   color: #000000;
 }
-.stat_header .chart {
+.stat_header #chart {
   height: 253px;
+  width: 80%;
+  margin: 0 auto;
   margin-top: 21px;
 }
 
@@ -917,6 +919,7 @@ header .container .user .img, header .container .user .name, header .container .
 }
 .stat_element .center {
   justify-content: center;
+  color: #7C7C7C !important;
 }
 .stat_element .right {
   justify-content: right;
@@ -931,14 +934,29 @@ header .container .user .img, header .container .user .name, header .container .
   color: #00A068;
 }
 
-.ct-series-a path {
+.ct-label {
+  fill: black !important;
+  color: black !important;
+}
+
+.pie .ct-label {
+  fill: white !important;
+  color: white !important;
+}
+.pie .ct-series-a path {
   fill: #3C6053 !important;
 }
-
-.ct-series-b path {
+.pie .ct-series-b path {
   fill: #248A66 !important;
 }
-
-.ct-series-c path {
+.pie .ct-series-c path {
   fill: #00A068 !important;
+}
+
+.ct-series-a .ct-bar, .ct-series-a .ct-line, .ct-series-a .ct-point, .ct-series-a .ct-slice-donut {
+  stroke: #00A068;
+}
+
+.ct-bar {
+  stroke-width: 23px;
 }

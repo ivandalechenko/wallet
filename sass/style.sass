@@ -106,8 +106,10 @@ a
                 font-size: 18px
                 line-height: 22px
                 color: #000000
-    .chart
+    #chart
         height: 253px
+        width: 80%
+        margin: 0 auto
         margin-top: 21px
 
 .stat_element
@@ -130,6 +132,7 @@ a
         justify-content: left
     .center
         justify-content: center
+        color: #7C7C7C !important
     .right
         justify-content: right
     .color_1
@@ -139,14 +142,26 @@ a
     .color_3
         color: #00A068
 
-.ct-series-a
-    path
-        fill: #3C6053 !important
+.ct-label
+    fill: black !important
+    color: black !important
+.pie
+    .ct-label
+        fill: white !important
+        color: white !important
+    .ct-series-a
+        path
+            fill: #3C6053 !important
 
-.ct-series-b
-    path
-        fill: #248A66 !important
+    .ct-series-b
+        path
+            fill: #248A66 !important
 
-.ct-series-c
-    path
-        fill: #00A068 !important
+    .ct-series-c
+        path
+            fill: #00A068 !important
+
+.ct-series-a .ct-bar, .ct-series-a .ct-line, .ct-series-a .ct-point, .ct-series-a .ct-slice-donut
+    stroke: #00A068
+.ct-bar
+    stroke-width: 23px
