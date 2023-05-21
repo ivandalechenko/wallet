@@ -825,3 +825,93 @@ header .container .user .img, header .container .user .name, header .container .
   fill: #A6A6A6;
   opacity: 0.5;
 }
+
+.stat_nav {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+  padding-top: 42px;
+}
+.stat_nav button {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #7C7C7C;
+}
+.stat_nav .active {
+  font-weight: 700;
+}
+
+.stat_header {
+  width: 1128px;
+  height: 391px;
+  margin: 0 auto;
+  margin-top: 16px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+}
+.stat_header .nav {
+  width: 100%;
+  padding-top: 16px;
+}
+.stat_header .nav .type {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+}
+.stat_header .nav .type button {
+  background: none;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #00A068;
+}
+.stat_header .nav .type .active {
+  font-weight: 700;
+  text-decoration-line: underline;
+}
+.stat_header .nav .date {
+  display: flex;
+  justify-content: space-between;
+  width: 230px;
+  margin: 0 auto;
+  margin-top: 8px;
+}
+.stat_header .nav .date button {
+  background: none;
+}
+.stat_header .nav .date .text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.stat_element {
+  width: 1128px;
+  height: 80px;
+  margin: 0 auto;
+  margin-top: 16px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 32px;
+}
+.stat_element .stat_element_inner {
+  color: black;
+  margin: auto 0;
+}
+.stat_element .color_1 {
+  color: #3C6053;
+}
+.stat_element .color_2 {
+  color: #248A66;
+}
+.stat_element .color_3 {
+  color: #00A068;
+}
