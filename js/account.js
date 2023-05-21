@@ -32,3 +32,9 @@ document.getElementById('add_wallet_btn').onclick = function () {
     closeAllPopup()
     document.getElementById('account_add_popup').classList.remove('dnone');
 };
+
+
+document.getElementById("dd").onclick = function () {
+    document.getElementById("dd").classList.toggle("active")
+    document.getElementById("dd_block").classList.toggle("dnone")
+}

@@ -67,51 +67,6 @@ a {
   opacity: 0.6;
 }
 
-.sort_add {
-  margin-top: 40px;
-}
-.sort_add .container {
-  display: flex;
-  justify-content: space-between;
-}
-.sort_add .container .sort_by {
-  width: 50%;
-  display: flex;
-  -moz-column-gap: 12px;
-       column-gap: 12px;
-}
-.sort_add .container .sort_by .text {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-  color: #7C7C7C;
-  margin: auto 0;
-}
-.sort_add .container .sort_by .dd button {
-  display: flex;
-  width: 270px;
-  background-color: white;
-  justify-content: space-between;
-  padding: 0px 11px;
-  height: 46px;
-  border-radius: 16px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.sort_add .container .sort_by .dd button .t {
-  color: black;
-  margin: auto 0;
-}
-.sort_add .container .sort_by .dd button img {
-  margin: auto 0;
-}
-.sort_add .container .add button {
-  width: 168px;
-  height: 46px;
-  background-color: #00A068;
-  border-radius: 16px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
 .total_balance {
   margin-top: 40px;
 }
@@ -1097,4 +1052,82 @@ header .container .user .img, header .container .user .name, header .container .
 }
 #cash_flow_block .inc .sum {
   color: #00A068;
+}
+
+.sort_add {
+  margin-top: 40px;
+}
+.sort_add .container {
+  display: flex;
+  justify-content: space-between;
+}
+.sort_add .container .sort_by {
+  width: 50%;
+  display: flex;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+}
+.sort_add .container .sort_by .text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #7C7C7C;
+  margin: auto 0;
+}
+.sort_add .container .sort_by .dd .active img {
+  transform: rotate(180deg);
+}
+.sort_add .container .sort_by .dd button {
+  display: flex;
+  width: 270px;
+  background-color: white;
+  justify-content: space-between;
+  padding: 0px 11px;
+  height: 46px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.sort_add .container .sort_by .dd button .t {
+  color: black;
+  margin: auto 0;
+}
+.sort_add .container .sort_by .dd button img {
+  margin: auto 0;
+}
+.sort_add .container .sort_by .dd #dd_block {
+  width: 0px;
+  height: 0px;
+  position: relative;
+  z-index: 2;
+}
+.sort_add .container .sort_by .dd #dd_block .dd_inner {
+  width: 270px;
+  height: auto;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.sort_add .container .sort_by .dd #dd_block .dd_inner .dd_inner_element {
+  color: black;
+  height: 46px;
+  border-radius: 0px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0);
+}
+.sort_add .container .sort_by .dd #dd_block .dd_inner .dd_inner_element {
+  border-bottom: 1px solid gray;
+}
+.sort_add .container .sort_by .dd #dd_block .dd_inner .dd_inner_element:last-child {
+  border-bottom: none;
+}
+.sort_add .container .sort_by .dd #dd_block .dd_inner .dd_inner_element:hover {
+  border-radius: 0px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0);
+}
+.sort_add .container .add button {
+  width: 168px;
+  height: 46px;
+  background-color: #00A068;
+  border-radius: 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
