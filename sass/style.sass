@@ -49,21 +49,34 @@ a
         cursor: pointer
         opacity: .6
 
-// $k: 1
+$k: 1
 $k: 0.7
 
+$lh_k: 1.5
 $primary_color: #00A068
 $body_bg_color: #F2F2F2
 $header_height: 80px*$k
 $header_logo_font_size: 24px*$k
+$header_logo_img_size: 34px*$k
 $header_nav_font_size: 18px*$k
 $header_account_font_size: 18px*$k
+$header_account_img_height: 46px*$k
+$header_account_arr_height: 20px*$k
+$header_account_arr_pt: 5px*$k
 
 $acc_dd_h: 46px*$k
 
+$fs_l: 32px*$k
+$lh_l: $fs_l*$lh_k*$k
+
 $fs_m: 24px*$k
+$lh_m: $fs_m*$lh_k*$k
+
 $fs_s: 18px*$k
+$lh_s: $fs_s*$lh_k*$k
+
 $fs_xs: 16px*$k
+$lh_xs: $fs_xs*$lh_k*$k
 
 $row_element_h_m: 80px*$k
 $row_element_pad_m: 40px*$k
@@ -101,6 +114,8 @@ header
             margin: auto 0
             .logo
                 margin: auto 0
+                img
+                    height: $header_logo_img_size
             .text
                 margin: auto 0
                 padding-left: 8px
@@ -129,11 +144,15 @@ header
                 font-size: $header_account_font_size
             .img
                 img
-                    width: 46px
-                    height: 46px
+                    width: $header_account_img_height
+                    height: $header_account_img_height
                     border-radius: 24px
             .img, .name, .arrow
                 margin: auto 0
+            .arrow
+                padding-top: $header_account_arr_pt
+                img
+                    height: $header_account_arr_height
 
 // ACCOUNT ================= 
 // ACCOUNT ================= 
@@ -175,8 +194,8 @@ header
         margin-top: $margin_top_s
         h1
             font-weight: 700
-            font-size: 32px
-            line-height: 39px
+            font-size: $fs_l
+            line-height: $lh_l
             color: #7C7C7C
         .account_element
             margin-top: $margin_top_s
@@ -199,16 +218,17 @@ header
                     .orange
                         background-color: #FF6F00
                     .ico
-                        width: 80px
+                        width: $margin_top_xl
                         display: flex
                         border-radius: 16px 0px 0px 16px
                         img
                             margin: auto
+                            width: $margin_top_l
                 .name, .count .text, .type
                     color: black
                     font-weight: 500
                     font-size: $fs_m
-                    line-height: 29px
+                    line-height: $lh_m
                     margin: auto 0
                 .type
                     color: #7C7C7C
@@ -217,7 +237,7 @@ header
                     font-weight: 500
                     font-size: $fs_m
                     width: 280px
-                    line-height: 29px
+                    line-height: $lh_m
                 .count
                     display: flex
                     justify-content: right
@@ -611,11 +631,11 @@ header
         display: flex
         justify-content: center
         column-gap: 12px
-        padding-top: 42px
+        padding-top: $margin_top_l
         button
             font-weight: 500
             font-size: $fs_s
-            line-height: 22px
+            line-height: $lh_s
             color: #7C7C7C
         .active
             font-weight: 700
@@ -665,7 +685,7 @@ header
 
     .stat_element
         width: 1128px
-        height: 80px
+        height: $row_element_h_m
         margin: 0 auto
         margin-top: $margin_top_s
         background: #FFFFFF
@@ -841,10 +861,10 @@ header
         display: flex
         justify-content: center
         column-gap: 12px
-        padding-top: 42px
+        padding-top: $margin_top_l
         button
             font-size: $fs_s
-            line-height: 22px
+            line-height: $lh_s
             font-weight: 500
             color: #7C7C7C
         .active
@@ -859,35 +879,27 @@ header
             justify-content: space-between
 
             .info
-                width: 81%
+                width: 100%
                 background-color: white
-                height: 80px
+                height: $row_element_h_m
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
                 border-radius: 16px
                 display: flex
                 justify-content: space-between
-                padding-left: 32px
+                padding-left: $row_element_pad_m
                 .text
                     color: black
                     font-weight: 500
                     font-size: $fs_m
+                    line-height: $lh_m
                     margin: auto 0
-            .control
-                width: 19%
-                display: flex
-                justify-content: right
-                column-gap: 24px
-                .edit, .del
-                    width: 80px
-                    height: 80px
-                    border-radius: 16px
-                    display: flex
+                button
+                    background: none
                     img
-                        margin: auto
-                .edit
-                    border: 2px solid #E0AC14
-                .del
-                    border: 2px solid #A54F50
+                        height: $row_element_control_wh
+                        width: $row_element_control_wh
+                button:hover
+                    cursor: pointer
 
     #scat
         .cat_element
@@ -895,8 +907,12 @@ header
                 width: 90%
             .control
                 width: 10%
+                display: flex
+                justify-content: right
                 svg
                     margin: auto 0
+                    width: $row_element_control_wh
+                    height: $row_element_control_wh
                     path, rect
                         transition: 0.2s ease-out
                 svg:hover

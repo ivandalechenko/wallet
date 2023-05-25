@@ -84,6 +84,9 @@ header .container .logo_and_text {
 header .container .logo_and_text .logo {
   margin: auto 0;
 }
+header .container .logo_and_text .logo img {
+  height: 23.8px;
+}
 header .container .logo_and_text .text {
   margin: auto 0;
   padding-left: 8px;
@@ -118,12 +121,18 @@ header .container .user a {
   font-size: 12.6px;
 }
 header .container .user .img img {
-  width: 46px;
-  height: 46px;
+  width: 32.2px;
+  height: 32.2px;
   border-radius: 24px;
 }
 header .container .user .img, header .container .user .name, header .container .user .arrow {
   margin: auto 0;
+}
+header .container .user .arrow {
+  padding-top: 3.5px;
+}
+header .container .user .arrow img {
+  height: 14px;
 }
 
 .account .total_balance {
@@ -171,8 +180,8 @@ header .container .user .img, header .container .user .name, header .container .
 }
 .account .accounts h1 {
   font-weight: 700;
-  font-size: 32px;
-  line-height: 39px;
+  font-size: 22.4px;
+  line-height: 23.52px;
   color: #7C7C7C;
 }
 .account .accounts .account_element {
@@ -201,18 +210,19 @@ header .container .user .img, header .container .user .name, header .container .
   background-color: #FF6F00;
 }
 .account .accounts .account_element .info .ico_and_name .ico {
-  width: 80px;
+  width: 56px;
   display: flex;
   border-radius: 16px 0px 0px 16px;
 }
 .account .accounts .account_element .info .ico_and_name .ico img {
   margin: auto;
+  width: 28px;
 }
 .account .accounts .account_element .info .name, .account .accounts .account_element .info .count .text, .account .accounts .account_element .info .type {
   color: black;
   font-weight: 500;
   font-size: 16.8px;
-  line-height: 29px;
+  line-height: 17.64px;
   margin: auto 0;
 }
 .account .accounts .account_element .info .type {
@@ -223,7 +233,7 @@ header .container .user .img, header .container .user .name, header .container .
   font-weight: 500;
   font-size: 16.8px;
   width: 280px;
-  line-height: 29px;
+  line-height: 17.64px;
 }
 .account .accounts .account_element .info .count {
   display: flex;
@@ -680,12 +690,12 @@ header .container .user .img, header .container .user .name, header .container .
   justify-content: center;
   -moz-column-gap: 12px;
        column-gap: 12px;
-  padding-top: 42px;
+  padding-top: 28px;
 }
 .stat .stat_nav button {
   font-weight: 500;
   font-size: 12.6px;
-  line-height: 22px;
+  line-height: 13.23px;
   color: #7C7C7C;
 }
 .stat .stat_nav .active {
@@ -746,7 +756,7 @@ header .container .user .img, header .container .user .name, header .container .
 }
 .stat .stat_element {
   width: 1128px;
-  height: 80px;
+  height: 56px;
   margin: 0 auto;
   margin-top: 11.2px;
   background: #FFFFFF;
@@ -943,11 +953,11 @@ header .container .user .img, header .container .user .name, header .container .
   justify-content: center;
   -moz-column-gap: 12px;
        column-gap: 12px;
-  padding-top: 42px;
+  padding-top: 28px;
 }
 .cat .cat_nav button {
   font-size: 12.6px;
-  line-height: 22px;
+  line-height: 13.23px;
   font-weight: 500;
   color: #7C7C7C;
 }
@@ -964,51 +974,44 @@ header .container .user .img, header .container .user .name, header .container .
   justify-content: space-between;
 }
 .cat #ucat .cat_element .info, .cat #scat .cat_element .info {
-  width: 81%;
+  width: 100%;
   background-color: white;
-  height: 80px;
+  height: 56px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
   display: flex;
   justify-content: space-between;
-  padding-left: 32px;
+  padding-left: 28px;
 }
 .cat #ucat .cat_element .info .text, .cat #scat .cat_element .info .text {
   color: black;
   font-weight: 500;
   font-size: 16.8px;
+  line-height: 17.64px;
   margin: auto 0;
 }
-.cat #ucat .cat_element .control, .cat #scat .cat_element .control {
-  width: 19%;
-  display: flex;
-  justify-content: right;
-  -moz-column-gap: 24px;
-       column-gap: 24px;
+.cat #ucat .cat_element .info button, .cat #scat .cat_element .info button {
+  background: none;
 }
-.cat #ucat .cat_element .control .edit, .cat #ucat .cat_element .control .del, .cat #scat .cat_element .control .edit, .cat #scat .cat_element .control .del {
-  width: 80px;
-  height: 80px;
-  border-radius: 16px;
-  display: flex;
+.cat #ucat .cat_element .info button img, .cat #scat .cat_element .info button img {
+  height: 56px;
+  width: 56px;
 }
-.cat #ucat .cat_element .control .edit img, .cat #ucat .cat_element .control .del img, .cat #scat .cat_element .control .edit img, .cat #scat .cat_element .control .del img {
-  margin: auto;
-}
-.cat #ucat .cat_element .control .edit, .cat #scat .cat_element .control .edit {
-  border: 2px solid #E0AC14;
-}
-.cat #ucat .cat_element .control .del, .cat #scat .cat_element .control .del {
-  border: 2px solid #A54F50;
+.cat #ucat .cat_element .info button:hover, .cat #scat .cat_element .info button:hover {
+  cursor: pointer;
 }
 .cat #scat .cat_element .info {
   width: 90%;
 }
 .cat #scat .cat_element .control {
   width: 10%;
+  display: flex;
+  justify-content: right;
 }
 .cat #scat .cat_element .control svg {
   margin: auto 0;
+  width: 56px;
+  height: 56px;
 }
 .cat #scat .cat_element .control svg path, .cat #scat .cat_element .control svg rect {
   transition: 0.2s ease-out;
