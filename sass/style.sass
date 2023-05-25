@@ -50,7 +50,7 @@ a
         opacity: .6
 
 $k: 1
-$k: 0.7
+$k: 0.75
 
 $lh_k: 1.5
 $primary_color: #00A068
@@ -65,6 +65,9 @@ $header_account_arr_height: 20px*$k
 $header_account_arr_pt: 5px*$k
 
 $acc_dd_h: 46px*$k
+
+$fs_xl: 60px*$k
+$lh_xl: $fs_xl*$lh_k*$k
 
 $fs_l: 32px*$k
 $lh_l: $fs_l*$lh_k*$k
@@ -81,7 +84,9 @@ $lh_xs: $fs_xs*$lh_k*$k
 $row_element_h_m: 80px*$k
 $row_element_pad_m: 40px*$k
 $row_element_h_s: 60px*$k
+$row_element_pad_s: 30px*$k
 $row_element_control_wh: 80px*$k
+$row_element_h_xs: 44px*$k
 
 $margin_top_xl: 80px*$k
 $margin_top_l: 40px*$k
@@ -479,39 +484,32 @@ header
                         margin-top: $margin_top_s
                         display: flex
                         justify-content: space-between
-                        .tr_control
-                            display: flex
-                            justify-content: space-between
-                            width: 129px
-                            .edit, .del
-                                width: 59px
-                                height: 59px
-                                border-radius: 16px
-                                display: flex
-                                img
-                                    margin: auto
-                                    width: 30px
-                            .edit
-                                border: 2px solid #E0AC14
-                            .del
-                                border: 2px solid #A54F50
                         .tr_info
-                            width: 674px
-                            height: 59px
+                            width: 100%
+                            height: $row_element_h_s
                             background: #FFFFFF
                             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
                             border-radius: 16px
                             display: flex
                             justify-content: space-between
-                            padding: 0px 35px
+                            padding: 0px $row_element_pad_s
                             .tr_info_element
                                 font-weight: 500
                                 font-size: $fs_m
-                                line-height: 29px
+                                line-height: $lh_m
                                 color: #000000
                                 margin: auto 0
                                 display: flex
                                 width: 33.3%
+                                button
+                                    background: none
+                                    img
+                                        height: $row_element_h_s
+                                        width: $row_element_h_s
+                                .text
+                                    margin: auto 0
+                                    padding-right: $margin_top_s
+
                             .left
                                 justify-content: left
                             .center
@@ -641,7 +639,7 @@ header
             font-weight: 700
     .stat_header
         width: 1128px
-        min-height: 391px
+        // min-height: 391px
         padding-bottom: 60px
         margin: 0 auto
         margin-top: $margin_top_s
@@ -675,7 +673,7 @@ header
                 .text
                     font-weight: 500
                     font-size: $fs_s
-                    line-height: 22px
+                    line-height: $lh_s
                     color: #000000
         #chart
             height: 253px
@@ -693,12 +691,14 @@ header
         border-radius: 16px
         display: flex
         justify-content: space-between
-        padding: 0px 32px
+        padding: 0px $row_element_pad_m
         .stat_element_inner
             color: black
             margin: auto 0
             display: flex
             width: 33.3%
+            font-size: $fs_m
+            line-height: $lh_m
         .left
             justify-content: left
         .center
@@ -740,35 +740,35 @@ header
     #cash_flow
         width: 934px
         margin: 0 auto
-        .date, .income, .expanse
+        .income, .expanse
             font-weight: 600
-            font-size: 32px
-            line-height: 39px
+            font-size: $fs_l
+            line-height: $lh_l
             color: #000000
             margin-top: $margin_top_s
         .income
             span
                 font-weight: 500
-                font-size: 32px
-                line-height: 39px
+                font-size: $fs_l
+                line-height: $lh_l
                 color: $primary_color
         .expanse
             span
                 font-weight: 500
-                font-size: 32px
-                line-height: 39px
+                font-size: $fs_l
+                line-height: $lh_l
                 color: #A54F50
         .bar
             margin-top: $margin_top_s
             width: 100%
-            height: 48px
+            height: $row_element_h_xs
             background: #F2F2F2
             box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
             border-radius: 8px
             .income, .expanse
                 border-radius: 8px
                 box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
-                height: 48px
+                height: $row_element_h_xs
             .income
                 background: $primary_color
                 width: 30%
@@ -776,24 +776,6 @@ header
                 background: #A54F50
                 width: 50%
 
-    #cash_flow_desc
-        width: 1128px
-        padding: 50px
-        margin: 0 auto
-        margin-top: $margin_top_s
-        background: #FFFFFF
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
-        border-radius: 16px
-        .date, .cf_header
-            font-weight: 600
-            font-size: 32px
-            line-height: 39px
-            text-transform: uppercase
-            color: $primary_color
-            width: 100%
-            text-align: center
-        .cf_header
-            margin-top: $margin_top_l
         .cash_flow_desc_element
             width: 934px
             margin: 0 auto
@@ -803,43 +785,55 @@ header
                 width: 20%
                 font-weight: 600
                 font-size: $fs_m
-                line-height: 29px
+                line-height: $lh_m
                 color: #000000
             .name
                 width: 60%
             .exp
                 color: #A54F50
         .cf
-            font-weight: 500
-            font-size: 48px
-            line-height: 59px
-            color: #000000
-            width: 100%
-            text-align: center
+            margin-top: $margin_top_l
+            display: flex
+            justify-content: space-between
+            .text
+                font-weight: 600
+                font-size: $fs_l
+                line-height: $lh_l
+                text-transform: uppercase
+                color: $primary_color
+                width: 100%
+                text-align: center
+            .sum
+                font-weight: 500
+                font-size: $fs_l
+                line-height: $lh_l
+                color: #000000
+                width: 100%
+                text-align: center
 
     #cash_flow_block
         width: 1128px
         margin: 0px auto
         .exp_header, .inc_header
             margin-top: $margin_top_l
-            padding-left: 100px
+            padding-left: $margin_top_xl
             width: 100%
             font-weight: 900
-            font-size: 32px
-            line-height: 39px
+            font-size: $fs_l
+            line-height: $lh_l
         .exp_header
             color: #A54F50
         .inc_header
             color: $primary_color
         .element
             margin-top: $margin_top_s
-            height: 80px
+            height: $row_element_h_m
             background: #FFFFFF
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
             border-radius: 16px
             display: flex
             justify-content: space-between
-            padding: 0px 32px
+            padding: 0px $row_element_pad_m
             .name, .sum
                 margin: auto 0
                 font-weight: 500
@@ -941,8 +935,8 @@ header
         margin-top: $margin_top_l
         font-style: normal
         font-weight: 700
-        font-size: 64px
-        line-height: 77px
+        font-size: $fs_xl
+        line-height: $lh_xl
         text-align: center
         text-transform: uppercase
         color: $primary_color
@@ -961,7 +955,7 @@ header
             width: 91%
             background: none
             border: 1px solid #7C7C7C
-            height: 55px
+            height: $row_element_h_s
             padding: 0px 20px
             font-size: $fs_m
             border-radius: 8px

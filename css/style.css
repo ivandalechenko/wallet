@@ -72,7 +72,7 @@ header {
   min-width: 1140px;
 }
 header .container {
-  height: 56px;
+  height: 60px;
   display: flex;
   justify-content: space-between;
 }
@@ -85,13 +85,13 @@ header .container .logo_and_text .logo {
   margin: auto 0;
 }
 header .container .logo_and_text .logo img {
-  height: 23.8px;
+  height: 25.5px;
 }
 header .container .logo_and_text .text {
   margin: auto 0;
   padding-left: 8px;
   font-weight: 900;
-  font-size: 16.8px;
+  font-size: 18px;
   line-height: 29px;
 }
 header .container .links {
@@ -103,7 +103,7 @@ header .container .links {
 header .container .links a {
   padding: 0px 15px;
   font-weight: 500;
-  font-size: 12.6px;
+  font-size: 13.5px;
   line-height: 22px;
 }
 header .container .links .active {
@@ -118,31 +118,31 @@ header .container .user {
        column-gap: 12px;
 }
 header .container .user a {
-  font-size: 12.6px;
+  font-size: 13.5px;
 }
 header .container .user .img img {
-  width: 32.2px;
-  height: 32.2px;
+  width: 34.5px;
+  height: 34.5px;
   border-radius: 24px;
 }
 header .container .user .img, header .container .user .name, header .container .user .arrow {
   margin: auto 0;
 }
 header .container .user .arrow {
-  padding-top: 3.5px;
+  padding-top: 3.75px;
 }
 header .container .user .arrow img {
-  height: 14px;
+  height: 15px;
 }
 
 .account .total_balance {
-  margin-top: 28px;
+  margin-top: 30px;
 }
 .account .total_balance .total_balance_element {
   width: 81%;
   background-color: white;
   color: black;
-  height: 56px;
+  height: 60px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
   display: flex;
@@ -153,9 +153,9 @@ header .container .user .arrow img {
   color: black;
 }
 .account .total_balance .total_balance_element .text {
-  padding: 0px 28px;
+  padding: 0px 30px;
   font-weight: 500;
-  font-size: 16.8px;
+  font-size: 18px;
 }
 .account .total_balance .total_balance_element .count {
   display: flex;
@@ -169,23 +169,23 @@ header .container .user .arrow img {
   background: none;
 }
 .account .total_balance .total_balance_element .count button img {
-  height: 56px;
-  width: 56px;
+  height: 60px;
+  width: 60px;
 }
 .account .total_balance .total_balance_element .count button:hover {
   cursor: pointer;
 }
 .account .accounts {
-  margin-top: 11.2px;
+  margin-top: 12px;
 }
 .account .accounts h1 {
   font-weight: 700;
-  font-size: 22.4px;
-  line-height: 23.52px;
+  font-size: 24px;
+  line-height: 27px;
   color: #7C7C7C;
 }
 .account .accounts .account_element {
-  margin-top: 11.2px;
+  margin-top: 12px;
   display: flex;
   justify-content: space-between;
 }
@@ -193,7 +193,7 @@ header .container .user .arrow img {
   width: 100%;
   background-color: white;
   color: black;
-  height: 56px;
+  height: 60px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
   display: flex;
@@ -210,30 +210,30 @@ header .container .user .arrow img {
   background-color: #FF6F00;
 }
 .account .accounts .account_element .info .ico_and_name .ico {
-  width: 56px;
+  width: 60px;
   display: flex;
   border-radius: 16px 0px 0px 16px;
 }
 .account .accounts .account_element .info .ico_and_name .ico img {
   margin: auto;
-  width: 28px;
+  width: 30px;
 }
 .account .accounts .account_element .info .name, .account .accounts .account_element .info .count .text, .account .accounts .account_element .info .type {
   color: black;
   font-weight: 500;
-  font-size: 16.8px;
-  line-height: 17.64px;
+  font-size: 18px;
+  line-height: 20.25px;
   margin: auto 0;
 }
 .account .accounts .account_element .info .type {
   color: #7C7C7C;
 }
 .account .accounts .account_element .info .name {
-  padding: 0px 12.6px;
+  padding: 0px 13.5px;
   font-weight: 500;
-  font-size: 16.8px;
+  font-size: 18px;
   width: 280px;
-  line-height: 17.64px;
+  line-height: 20.25px;
 }
 .account .accounts .account_element .info .count {
   display: flex;
@@ -247,8 +247,8 @@ header .container .user .arrow img {
   background: none;
 }
 .account .accounts .account_element .info .count button img {
-  height: 56px;
-  width: 56px;
+  height: 60px;
+  width: 60px;
 }
 .account .accounts .account_element .info .count button:hover {
   cursor: pointer;
@@ -287,14 +287,14 @@ header .container .user .arrow img {
 .account #add_account_popup .add_account .content {
   display: flex;
   margin: 0 auto;
-  margin-top: 56px;
+  margin-top: 60px;
   height: 469px;
   width: 90%;
   justify-content: space-around;
 }
 .account #add_account_popup .add_account .content .element_or {
   font-weight: 500;
-  font-size: 12.6px;
+  font-size: 13.5px;
   line-height: 22px;
   color: #7C7C7C;
   margin: auto 0;
@@ -315,13 +315,13 @@ header .container .user .arrow img {
 }
 .account #add_account_popup .add_account .content .element .name {
   font-weight: 500;
-  font-size: 16.8px;
+  font-size: 18px;
   line-height: 29px;
   color: #000000;
-  margin-top: 11.2px;
+  margin-top: 12px;
 }
 .account #add_account_popup .add_account .content .element .desc {
-  margin-top: 5.6px;
+  margin-top: 6px;
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
@@ -361,7 +361,7 @@ header .container .user .arrow img {
 .account #add_card_popup .add_card .content, .account #account_edit_popup .add_card .content, .account #account_add_popup .add_card .content {
   display: flex;
   margin: 0 auto;
-  margin-top: 56px;
+  margin-top: 60px;
   width: 552px;
   flex-wrap: wrap;
   justify-content: center;
@@ -386,13 +386,13 @@ header .container .user .arrow img {
 }
 .account #add_card_popup .add_card .content button, .account #account_edit_popup .add_card .content button, .account #account_add_popup .add_card .content button {
   width: 100%;
-  margin-top: 11.2px;
+  margin-top: 12px;
   height: 55px;
   background: #00A068;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   font-weight: 500;
-  font-size: 16.8px;
+  font-size: 18px;
   line-height: 31px;
 }
 .account #account_edit_popup .add_card .content label, .account #account_add_popup .add_card .content label {
@@ -403,7 +403,7 @@ header .container .user .arrow img {
   padding-top: 28px;
 }
 .account #account_edit_popup .add_card .content button, .account #account_add_popup .add_card .content button {
-  margin-top: 28px;
+  margin-top: 30px;
 }
 .account #account_info_popup {
   width: 100%;
@@ -438,19 +438,19 @@ header .container .user .arrow img {
 }
 .account #account_info_popup .account_info .content {
   margin: 0 auto;
-  margin-top: 56px;
+  margin-top: 60px;
   width: 95%;
 }
 .account #account_info_popup .account_info .content .bank_name, .account #account_info_popup .account_info .content .card_num, .account #account_info_popup .account_info .content .bank_desc {
   font-weight: 500;
-  font-size: 12.6px;
+  font-size: 13.5px;
   line-height: 22px;
   color: #7C7C7C;
   text-align: center;
   padding-top: 8px;
 }
 .account #account_info_popup .account_info .content .bank_name {
-  padding-top: 12.6px;
+  padding-top: 13.5px;
 }
 .account #account_info_popup .account_info .content .filter {
   width: 645px;
@@ -462,7 +462,7 @@ header .container .user .arrow img {
 }
 .account #account_info_popup .account_info .content .filter .text {
   font-weight: 500;
-  font-size: 12.6px;
+  font-size: 13.5px;
   line-height: 22px;
   color: #7C7C7C;
   margin: auto 0;
@@ -488,7 +488,7 @@ header .container .user .arrow img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   font-weight: 500;
-  font-size: 16.8px;
+  font-size: 18px;
   line-height: 31px;
   color: #FFFFFF;
 }
@@ -499,54 +499,44 @@ header .container .user .arrow img {
 .account #account_info_popup .account_info .content .tr_per_day .date {
   text-align: center;
   font-weight: 500;
-  font-size: 12.6px;
+  font-size: 13.5px;
   line-height: 22px;
   color: #7C7C7C;
 }
 .account #account_info_popup .account_info .content .tr_per_day .tr {
-  margin-top: 11.2px;
+  margin-top: 12px;
   display: flex;
   justify-content: space-between;
-}
-.account #account_info_popup .account_info .content .tr_per_day .tr .tr_control {
-  display: flex;
-  justify-content: space-between;
-  width: 129px;
-}
-.account #account_info_popup .account_info .content .tr_per_day .tr .tr_control .edit, .account #account_info_popup .account_info .content .tr_per_day .tr .tr_control .del {
-  width: 59px;
-  height: 59px;
-  border-radius: 16px;
-  display: flex;
-}
-.account #account_info_popup .account_info .content .tr_per_day .tr .tr_control .edit img, .account #account_info_popup .account_info .content .tr_per_day .tr .tr_control .del img {
-  margin: auto;
-  width: 30px;
-}
-.account #account_info_popup .account_info .content .tr_per_day .tr .tr_control .edit {
-  border: 2px solid #E0AC14;
-}
-.account #account_info_popup .account_info .content .tr_per_day .tr .tr_control .del {
-  border: 2px solid #A54F50;
 }
 .account #account_info_popup .account_info .content .tr_per_day .tr .tr_info {
-  width: 674px;
-  height: 59px;
+  width: 100%;
+  height: 45px;
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
   display: flex;
   justify-content: space-between;
-  padding: 0px 35px;
+  padding: 0px 22.5px;
 }
 .account #account_info_popup .account_info .content .tr_per_day .tr .tr_info .tr_info_element {
   font-weight: 500;
-  font-size: 16.8px;
-  line-height: 29px;
+  font-size: 18px;
+  line-height: 20.25px;
   color: #000000;
   margin: auto 0;
   display: flex;
   width: 33.3%;
+}
+.account #account_info_popup .account_info .content .tr_per_day .tr .tr_info .tr_info_element button {
+  background: none;
+}
+.account #account_info_popup .account_info .content .tr_per_day .tr .tr_info .tr_info_element button img {
+  height: 45px;
+  width: 45px;
+}
+.account #account_info_popup .account_info .content .tr_per_day .tr .tr_info .tr_info_element .text {
+  margin: auto 0;
+  padding-right: 12px;
 }
 .account #account_info_popup .account_info .content .tr_per_day .tr .tr_info .left {
   justify-content: left;
@@ -571,7 +561,7 @@ header .container .user .arrow img {
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  margin-top: 16.8px;
+  margin-top: 18px;
   -moz-column-gap: 9px;
        column-gap: 9px;
 }
@@ -581,7 +571,7 @@ header .container .user .arrow img {
   background: rgba(0, 160, 104, 0.53);
   border-radius: 8px;
   font-weight: 500;
-  font-size: 16.8px;
+  font-size: 18px;
   line-height: 31px;
   color: #FFFFFF;
 }
@@ -602,7 +592,7 @@ header .container .user .arrow img {
   z-index: 1;
 }
 .account .sort_add {
-  margin-top: 28px;
+  margin-top: 30px;
 }
 .account .sort_add .container {
   display: flex;
@@ -616,7 +606,7 @@ header .container .user .arrow img {
 }
 .account .sort_add .container .sort_by .text {
   font-weight: 500;
-  font-size: 12.6px;
+  font-size: 13.5px;
   line-height: 22px;
   color: #7C7C7C;
   margin: auto 0;
@@ -632,9 +622,9 @@ header .container .user .arrow img {
   width: 270px;
   background-color: white;
   justify-content: space-between;
-  padding: 0px 11.2px;
-  font-size: 12.6px;
-  height: 32.2px;
+  padding: 0px 12px;
+  font-size: 13.5px;
+  height: 34.5px;
   border-radius: 16px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -677,11 +667,11 @@ header .container .user .arrow img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0);
 }
 .account .sort_add .container .add button {
-  width: 112px;
-  height: 28px;
+  width: 120px;
+  height: 30px;
   background-color: #00A068;
   border-radius: 16px;
-  font-size: 12.6px;
+  font-size: 13.5px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -690,12 +680,12 @@ header .container .user .arrow img {
   justify-content: center;
   -moz-column-gap: 12px;
        column-gap: 12px;
-  padding-top: 28px;
+  padding-top: 30px;
 }
 .stat .stat_nav button {
   font-weight: 500;
-  font-size: 12.6px;
-  line-height: 13.23px;
+  font-size: 13.5px;
+  line-height: 15.1875px;
   color: #7C7C7C;
 }
 .stat .stat_nav .active {
@@ -703,10 +693,9 @@ header .container .user .arrow img {
 }
 .stat .stat_header {
   width: 1128px;
-  min-height: 391px;
   padding-bottom: 60px;
   margin: 0 auto;
-  margin-top: 11.2px;
+  margin-top: 12px;
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
@@ -724,7 +713,7 @@ header .container .user .arrow img {
 .stat .stat_header .nav .type button {
   background: none;
   font-weight: 500;
-  font-size: 12.6px;
+  font-size: 13.5px;
   line-height: 22px;
   color: #00A068;
 }
@@ -737,40 +726,42 @@ header .container .user .arrow img {
   justify-content: space-between;
   width: 230px;
   margin: 0 auto;
-  margin-top: 5.6px;
+  margin-top: 6px;
 }
 .stat .stat_header .nav .date button {
   background: none;
 }
 .stat .stat_header .nav .date .text {
   font-weight: 500;
-  font-size: 12.6px;
-  line-height: 22px;
+  font-size: 13.5px;
+  line-height: 15.1875px;
   color: #000000;
 }
 .stat .stat_header #chart {
   height: 253px;
   width: 80%;
   margin: 0 auto;
-  margin-top: 16.8px;
+  margin-top: 18px;
 }
 .stat .stat_element {
   width: 1128px;
-  height: 56px;
+  height: 60px;
   margin: 0 auto;
-  margin-top: 11.2px;
+  margin-top: 12px;
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
   display: flex;
   justify-content: space-between;
-  padding: 0px 32px;
+  padding: 0px 30px;
 }
 .stat .stat_element .stat_element_inner {
   color: black;
   margin: auto 0;
   display: flex;
   width: 33.3%;
+  font-size: 18px;
+  line-height: 20.25px;
 }
 .stat .stat_element .left {
   justify-content: left;
@@ -818,29 +809,29 @@ header .container .user .arrow img {
   width: 934px;
   margin: 0 auto;
 }
-.stat #cash_flow .date, .stat #cash_flow .income, .stat #cash_flow .expanse {
+.stat #cash_flow .income, .stat #cash_flow .expanse {
   font-weight: 600;
-  font-size: 32px;
-  line-height: 39px;
+  font-size: 24px;
+  line-height: 27px;
   color: #000000;
-  margin-top: 11.2px;
+  margin-top: 12px;
 }
 .stat #cash_flow .income span {
   font-weight: 500;
-  font-size: 32px;
-  line-height: 39px;
+  font-size: 24px;
+  line-height: 27px;
   color: #00A068;
 }
 .stat #cash_flow .expanse span {
   font-weight: 500;
-  font-size: 32px;
-  line-height: 39px;
+  font-size: 24px;
+  line-height: 27px;
   color: #A54F50;
 }
 .stat #cash_flow .bar {
-  margin-top: 11.2px;
+  margin-top: 12px;
   width: 100%;
-  height: 48px;
+  height: 33px;
   background: #F2F2F2;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
@@ -848,7 +839,7 @@ header .container .user .arrow img {
 .stat #cash_flow .bar .income, .stat #cash_flow .bar .expanse {
   border-radius: 8px;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  height: 48px;
+  height: 33px;
 }
 .stat #cash_flow .bar .income {
   background: #00A068;
@@ -858,50 +849,43 @@ header .container .user .arrow img {
   background: #A54F50;
   width: 50%;
 }
-.stat #cash_flow_desc {
-  width: 1128px;
-  padding: 50px;
+.stat #cash_flow .cash_flow_desc_element {
+  width: 934px;
   margin: 0 auto;
-  margin-top: 11.2px;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 16px;
+  margin-top: 12px;
+  display: flex;
 }
-.stat #cash_flow_desc .date, .stat #cash_flow_desc .cf_header {
+.stat #cash_flow .cash_flow_desc_element .name, .stat #cash_flow .cash_flow_desc_element .inc, .stat #cash_flow .cash_flow_desc_element .exp {
+  width: 20%;
   font-weight: 600;
-  font-size: 32px;
-  line-height: 39px;
+  font-size: 18px;
+  line-height: 20.25px;
+  color: #000000;
+}
+.stat #cash_flow .cash_flow_desc_element .name {
+  width: 60%;
+}
+.stat #cash_flow .cash_flow_desc_element .exp {
+  color: #A54F50;
+}
+.stat #cash_flow .cf {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.stat #cash_flow .cf .text {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 27px;
   text-transform: uppercase;
   color: #00A068;
   width: 100%;
   text-align: center;
 }
-.stat #cash_flow_desc .cf_header {
-  margin-top: 28px;
-}
-.stat #cash_flow_desc .cash_flow_desc_element {
-  width: 934px;
-  margin: 0 auto;
-  margin-top: 11.2px;
-  display: flex;
-}
-.stat #cash_flow_desc .cash_flow_desc_element .name, .stat #cash_flow_desc .cash_flow_desc_element .inc, .stat #cash_flow_desc .cash_flow_desc_element .exp {
-  width: 20%;
-  font-weight: 600;
-  font-size: 16.8px;
-  line-height: 29px;
-  color: #000000;
-}
-.stat #cash_flow_desc .cash_flow_desc_element .name {
-  width: 60%;
-}
-.stat #cash_flow_desc .cash_flow_desc_element .exp {
-  color: #A54F50;
-}
-.stat #cash_flow_desc .cf {
+.stat #cash_flow .cf .sum {
   font-weight: 500;
-  font-size: 48px;
-  line-height: 59px;
+  font-size: 24px;
+  line-height: 27px;
   color: #000000;
   width: 100%;
   text-align: center;
@@ -911,12 +895,12 @@ header .container .user .arrow img {
   margin: 0px auto;
 }
 .stat #cash_flow_block .exp_header, .stat #cash_flow_block .inc_header {
-  margin-top: 28px;
-  padding-left: 100px;
+  margin-top: 30px;
+  padding-left: 60px;
   width: 100%;
   font-weight: 900;
-  font-size: 32px;
-  line-height: 39px;
+  font-size: 24px;
+  line-height: 27px;
 }
 .stat #cash_flow_block .exp_header {
   color: #A54F50;
@@ -925,19 +909,19 @@ header .container .user .arrow img {
   color: #00A068;
 }
 .stat #cash_flow_block .element {
-  margin-top: 11.2px;
-  height: 80px;
+  margin-top: 12px;
+  height: 60px;
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
   display: flex;
   justify-content: space-between;
-  padding: 0px 32px;
+  padding: 0px 30px;
 }
 .stat #cash_flow_block .element .name, .stat #cash_flow_block .element .sum {
   margin: auto 0;
   font-weight: 500;
-  font-size: 16.8px;
+  font-size: 18px;
   line-height: 29px;
   color: #000000;
 }
@@ -953,11 +937,11 @@ header .container .user .arrow img {
   justify-content: center;
   -moz-column-gap: 12px;
        column-gap: 12px;
-  padding-top: 28px;
+  padding-top: 30px;
 }
 .cat .cat_nav button {
-  font-size: 12.6px;
-  line-height: 13.23px;
+  font-size: 13.5px;
+  line-height: 15.1875px;
   font-weight: 500;
   color: #7C7C7C;
 }
@@ -966,36 +950,36 @@ header .container .user .arrow img {
   color: #000000;
 }
 .cat #ucat, .cat #scat {
-  margin-top: 28px;
+  margin-top: 30px;
 }
 .cat #ucat .cat_element, .cat #scat .cat_element {
-  margin-top: 11.2px;
+  margin-top: 12px;
   display: flex;
   justify-content: space-between;
 }
 .cat #ucat .cat_element .info, .cat #scat .cat_element .info {
   width: 100%;
   background-color: white;
-  height: 56px;
+  height: 60px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
   display: flex;
   justify-content: space-between;
-  padding-left: 28px;
+  padding-left: 30px;
 }
 .cat #ucat .cat_element .info .text, .cat #scat .cat_element .info .text {
   color: black;
   font-weight: 500;
-  font-size: 16.8px;
-  line-height: 17.64px;
+  font-size: 18px;
+  line-height: 20.25px;
   margin: auto 0;
 }
 .cat #ucat .cat_element .info button, .cat #scat .cat_element .info button {
   background: none;
 }
 .cat #ucat .cat_element .info button img, .cat #scat .cat_element .info button img {
-  height: 56px;
-  width: 56px;
+  height: 60px;
+  width: 60px;
 }
 .cat #ucat .cat_element .info button:hover, .cat #scat .cat_element .info button:hover {
   cursor: pointer;
@@ -1010,8 +994,8 @@ header .container .user .arrow img {
 }
 .cat #scat .cat_element .control svg {
   margin: auto 0;
-  width: 56px;
-  height: 56px;
+  width: 60px;
+  height: 60px;
 }
 .cat #scat .cat_element .control svg path, .cat #scat .cat_element .control svg rect {
   transition: 0.2s ease-out;
@@ -1040,17 +1024,17 @@ header .container .user .arrow img {
   margin: 0 auto;
 }
 .reg h1 {
-  margin-top: 28px;
+  margin-top: 30px;
   font-style: normal;
   font-weight: 700;
-  font-size: 64px;
-  line-height: 77px;
+  font-size: 45px;
+  line-height: 50.625px;
   text-align: center;
   text-transform: uppercase;
   color: #00A068;
 }
 .reg .form {
-  margin-top: 11.2px;
+  margin-top: 12px;
   padding: 40px;
   border: 3px solid #00A068;
   border-radius: 10px;
@@ -1058,7 +1042,7 @@ header .container .user .arrow img {
 .reg .form label {
   color: #7C7C7C;
   font-weight: 500;
-  font-size: 16.8px;
+  font-size: 18px;
   line-height: 31px;
 }
 .reg .form input {
@@ -1066,9 +1050,9 @@ header .container .user .arrow img {
   width: 91%;
   background: none;
   border: 1px solid #7C7C7C;
-  height: 55px;
+  height: 45px;
   padding: 0px 20px;
-  font-size: 16.8px;
+  font-size: 18px;
   border-radius: 8px;
 }
 .reg .form a {
@@ -1079,11 +1063,11 @@ header .container .user .arrow img {
   display: block;
 }
 .reg .form button {
-  margin-top: 11.2px;
+  margin-top: 12px;
   width: 100%;
   height: 55px;
   font-weight: 500;
-  font-size: 16.8px;
+  font-size: 18px;
   line-height: 31px;
   background: #00A068;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -1092,10 +1076,10 @@ header .container .user .arrow img {
 .reg .dop_info {
   width: 100%;
   font-weight: 400;
-  font-size: 16.8px;
+  font-size: 18px;
   line-height: 30px;
   text-align: center;
   color: #00A068;
   margin: 0 auto;
-  margin-top: 16.8px;
+  margin-top: 18px;
 }

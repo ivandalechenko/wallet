@@ -15,7 +15,6 @@ function redraw() {
     document.getElementById('chart').classList.remove("pie");
     document.getElementById('chart').classList.add('dnone');
     document.getElementById('cash_flow').classList.add('dnone');
-    document.getElementById('cash_flow_desc').classList.add('dnone');
 }
 
 
@@ -101,7 +100,6 @@ document.getElementById('cash_flow_btn').onclick = function () {
     redraw()
     document.getElementById('cash_flow_btn').classList.add('active')
     document.getElementById('cash_flow').classList.remove('dnone')
-    document.getElementById('cash_flow_desc').classList.remove('dnone')
     document.getElementById('cash_flow_block').classList.remove('dnone')
     document.getElementById('cash_flow_btn').classList.add('active')
 
