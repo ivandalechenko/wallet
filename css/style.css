@@ -38,13 +38,6 @@ a:hover, button:hover {
   opacity: 0.6;
 }
 
-body {
-  background-color: black;
-  line-height: 1;
-  background-color: #F2F2F2;
-  padding-bottom: 20px;
-}
-
 .dnone {
   display: none;
 }
@@ -67,498 +60,11 @@ a {
   opacity: 0.6;
 }
 
-.total_balance {
-  margin-top: 40px;
-}
-.total_balance .total_balance_element {
-  width: 81%;
-  background-color: white;
-  color: black;
-  height: 80px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 16px;
-  display: flex;
-  justify-content: space-between;
-}
-.total_balance .total_balance_element .text, .total_balance .total_balance_element .count {
-  margin: auto 0;
-  color: black;
-}
-.total_balance .total_balance_element .text {
-  padding: 0px 40px;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 29px;
-}
-.total_balance .total_balance_element .count {
-  display: flex;
-  justify-content: right;
-}
-.total_balance .total_balance_element .count .text {
-  padding: 0px 20px;
-  margin: auto 0;
-}
-.total_balance .total_balance_element .count button {
-  height: 80px;
-  background-color: #006EE6;
-  width: 80px;
-  border-radius: 0px 16px 16px 0px;
-}
-.total_balance .total_balance_element .count button:hover {
-  cursor: pointer;
-}
-
-.accounts {
-  margin-top: 16px;
-}
-.accounts h1 {
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 39px;
-  color: #7C7C7C;
-}
-.accounts .account_element {
-  margin-top: 16px;
-  display: flex;
-  justify-content: space-between;
-}
-.accounts .account_element .info {
-  width: 81%;
-  background-color: white;
-  color: black;
-  height: 80px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 16px;
-  display: flex;
-  justify-content: space-between;
-}
-.accounts .account_element .info .ico_and_name {
-  display: flex;
-  width: 40%;
-}
-.accounts .account_element .info .ico_and_name .green {
-  background-color: #00695C;
-}
-.accounts .account_element .info .ico_and_name .orange {
-  background-color: #FF6F00;
-}
-.accounts .account_element .info .ico_and_name .ico {
-  width: 80px;
-  display: flex;
-  border-radius: 16px 0px 0px 16px;
-}
-.accounts .account_element .info .ico_and_name .ico img {
-  margin: auto;
-}
-.accounts .account_element .info .name, .accounts .account_element .info .count .text, .accounts .account_element .info .type {
-  color: black;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 29px;
-  margin: auto 0;
-}
-.accounts .account_element .info .type {
-  color: #7C7C7C;
-}
-.accounts .account_element .info .name {
-  padding: 0px 18px;
-  font-weight: 500;
-  font-size: 24px;
-  width: 280px;
-  line-height: 29px;
-}
-.accounts .account_element .info .count {
-  display: flex;
-  justify-content: right;
-  width: 40%;
-}
-.accounts .account_element .info .count .text {
-  padding: 0px 20px;
-}
-.accounts .account_element .info .count button {
-  height: 80px;
-  background-color: #006EE6;
-  width: 80px;
-  border-radius: 0px 16px 16px 0px;
-}
-.accounts .account_element .info .count button:hover {
-  cursor: pointer;
-}
-.accounts .account_element .control {
-  width: 19%;
-  display: flex;
-  justify-content: right;
-  -moz-column-gap: 24px;
-       column-gap: 24px;
-}
-.accounts .account_element .edit, .accounts .account_element .del {
-  width: 80px;
-  height: 80px;
-  border-radius: 16px;
-  display: flex;
-}
-.accounts .account_element .edit img, .accounts .account_element .del img {
-  margin: auto;
-}
-.accounts .account_element .edit {
-  border: 2px solid #E0AC14;
-}
-.accounts .account_element .del {
-  border: 2px solid #A54F50;
-}
-
-#add_account_popup {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  background: rgba(18, 18, 18, 0.85);
-}
-#add_account_popup .add_account {
-  position: absolute;
-  width: 861px;
-  height: 549px;
-  left: calc(50% - 430.5px + 0.5px);
-  top: calc(50% - 274.5px);
-  background: #F2F2F2;
-}
-#add_account_popup .add_account .control {
-  position: absolute;
-  width: 861px;
-  height: 80px;
-  left: 0px;
-  top: 0px;
-  background: #FFFFFF;
-  display: flex;
-  justify-content: space-between;
-  padding: 0px 40px;
-}
-#add_account_popup .add_account .control .text, #add_account_popup .add_account .control .cross {
-  color: #7C7C7C;
-  margin: auto 0;
-}
-#add_account_popup .add_account .content {
-  display: flex;
-  margin: 0 auto;
-  margin-top: 80px;
-  height: 469px;
-  width: 90%;
-  justify-content: space-around;
-}
-#add_account_popup .add_account .content .element_or {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-  color: #7C7C7C;
-  margin: auto 0;
-}
-#add_account_popup .add_account .content .element:hover {
-  opacity: 0.6;
-  cursor: pointer;
-}
-#add_account_popup .add_account .content .element {
-  width: 325px;
-  height: 325px;
-  margin: auto 0;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 16px;
-  padding: 40px;
-  text-align: center;
-}
-#add_account_popup .add_account .content .element .name {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 29px;
-  color: #000000;
-  margin-top: 14px;
-}
-#add_account_popup .add_account .content .element .desc {
-  margin-top: 8px;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 15px;
-  color: #7C7C7C;
-}
-
-#add_card_popup, #account_edit_popup, #account_add_popup {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  background: rgba(18, 18, 18, 0.85);
-}
-#add_card_popup .add_card, #account_edit_popup .add_card, #account_add_popup .add_card {
-  position: absolute;
-  width: 861px;
-  padding-bottom: 56px;
-  left: calc(50% - 430.5px + 0.5px);
-  top: calc(50% - 274.5px);
-  background: #F2F2F2;
-}
-#add_card_popup .add_card .control, #account_edit_popup .add_card .control, #account_add_popup .add_card .control {
-  position: absolute;
-  width: 861px;
-  height: 80px;
-  left: 0px;
-  top: 0px;
-  background: #FFFFFF;
-  display: flex;
-  justify-content: space-between;
-  padding: 0px 40px;
-}
-#add_card_popup .add_card .control .text, #add_card_popup .add_card .control .cross, #account_edit_popup .add_card .control .text, #account_edit_popup .add_card .control .cross, #account_add_popup .add_card .control .text, #account_add_popup .add_card .control .cross {
-  color: #7C7C7C;
-  margin: auto 0;
-}
-#add_card_popup .add_card .content, #account_edit_popup .add_card .content, #account_add_popup .add_card .content {
-  display: flex;
-  margin: 0 auto;
-  margin-top: 80px;
-  width: 552px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-#add_card_popup .add_card .content label, #account_edit_popup .add_card .content label, #account_add_popup .add_card .content label {
-  width: 100%;
-  text-align: center;
-  padding-top: 28px;
-  padding-bottom: 16px;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 31px;
-  color: #7C7C7C;
-}
-#add_card_popup .add_card .content input, #account_edit_popup .add_card .content input, #account_add_popup .add_card .content input {
-  width: 100%;
-  height: 55px;
-  border: 1px solid #7C7C7C;
-  border-radius: 8px;
-  background: none;
-  padding: 0px 20px;
-}
-#add_card_popup .add_card .content button, #account_edit_popup .add_card .content button, #account_add_popup .add_card .content button {
-  width: 100%;
-  margin-top: 16px;
-  height: 55px;
-  background: #00A068;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 31px;
-}
-
-#account_edit_popup .add_card .content label, #account_add_popup .add_card .content label {
-  text-align: left;
-  padding-top: 10px;
-}
-#account_edit_popup .add_card .content label:first-child, #account_add_popup .add_card .content label:first-child {
-  padding-top: 28px;
-}
-#account_edit_popup .add_card .content button, #account_add_popup .add_card .content button {
-  margin-top: 42px;
-}
-
-#account_info_popup {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  background: rgba(18, 18, 18, 0.85);
-}
-#account_info_popup .account_info {
-  position: absolute;
-  width: 861px;
-  padding-bottom: 26px;
-  left: calc(50% - 430.5px + 0.5px);
-  top: 10vh;
-  background: #F2F2F2;
-}
-#account_info_popup .account_info .control {
-  position: absolute;
-  width: 861px;
-  height: 80px;
-  left: 0px;
-  top: 0px;
-  background: #FFFFFF;
-  display: flex;
-  justify-content: space-between;
-  padding: 0px 40px;
-}
-#account_info_popup .account_info .control .text, #account_info_popup .account_info .control .cross {
-  color: #7C7C7C;
-  margin: auto 0;
-}
-#account_info_popup .account_info .content {
-  margin: 0 auto;
-  margin-top: 80px;
-  width: 95%;
-}
-#account_info_popup .account_info .content .bank_name, #account_info_popup .account_info .content .card_num, #account_info_popup .account_info .content .bank_desc {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-  color: #7C7C7C;
-  text-align: center;
-  padding-top: 8px;
-}
-#account_info_popup .account_info .content .bank_name {
-  padding-top: 18px;
-}
-#account_info_popup .account_info .content .filter {
-  width: 645px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 8px;
-  padding-bottom: 10px;
-}
-#account_info_popup .account_info .content .filter .text {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-  color: #7C7C7C;
-  margin: auto 0;
-}
-#account_info_popup .account_info .content .filter .dd {
-  width: 269px;
-  height: 46px;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 16px;
-  padding: 0px 11px;
-  color: black;
-  display: flex;
-  justify-content: space-between;
-}
-#account_info_popup .account_info .content .filter .dd .text, #account_info_popup .account_info .content .filter .dd img {
-  margin: auto 0;
-}
-#account_info_popup .account_info .content .filter .tr_add {
-  width: 298px;
-  height: 46px;
-  background: #00A068;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 31px;
-  color: #FFFFFF;
-}
-#account_info_popup .account_info .content .tr_per_day {
-  padding-top: 16px;
-  width: 100%;
-}
-#account_info_popup .account_info .content .tr_per_day .date {
-  text-align: center;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-  color: #7C7C7C;
-}
-#account_info_popup .account_info .content .tr_per_day .tr {
-  margin-top: 16px;
-  display: flex;
-  justify-content: space-between;
-}
-#account_info_popup .account_info .content .tr_per_day .tr .tr_control {
-  display: flex;
-  justify-content: space-between;
-  width: 129px;
-}
-#account_info_popup .account_info .content .tr_per_day .tr .tr_control .edit, #account_info_popup .account_info .content .tr_per_day .tr .tr_control .del {
-  width: 59px;
-  height: 59px;
-  border-radius: 16px;
-  display: flex;
-}
-#account_info_popup .account_info .content .tr_per_day .tr .tr_control .edit img, #account_info_popup .account_info .content .tr_per_day .tr .tr_control .del img {
-  margin: auto;
-  width: 30px;
-}
-#account_info_popup .account_info .content .tr_per_day .tr .tr_control .edit {
-  border: 2px solid #E0AC14;
-}
-#account_info_popup .account_info .content .tr_per_day .tr .tr_control .del {
-  border: 2px solid #A54F50;
-}
-#account_info_popup .account_info .content .tr_per_day .tr .tr_info {
-  width: 674px;
-  height: 59px;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 16px;
-  display: flex;
-  justify-content: space-between;
-  padding: 0px 35px;
-}
-#account_info_popup .account_info .content .tr_per_day .tr .tr_info .tr_info_element {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 29px;
-  color: #000000;
-  margin: auto 0;
-  display: flex;
-  width: 33.3%;
-}
-#account_info_popup .account_info .content .tr_per_day .tr .tr_info .left {
-  justify-content: left;
-}
-#account_info_popup .account_info .content .tr_per_day .tr .tr_info .center {
-  justify-content: center;
-}
-#account_info_popup .account_info .content .tr_per_day .tr .tr_info .right {
-  justify-content: right;
-}
-#account_info_popup .account_info .content .tr_per_day .tr .tr_info .gray {
-  color: #DDDDDD;
-}
-#account_info_popup .account_info .content .tr_per_day .tr .tr_info .plus {
-  color: #00A068;
-}
-#account_info_popup .account_info .content .tr_per_day .tr .tr_info .minus {
-  color: #A54F50;
-}
-#account_info_popup .account_info .pagination {
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  margin-top: 26px;
-  -moz-column-gap: 9px;
-       column-gap: 9px;
-}
-#account_info_popup .account_info .pagination button {
-  width: 46px;
-  height: 46px;
-  background: rgba(0, 160, 104, 0.53);
-  border-radius: 8px;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 31px;
-  color: #FFFFFF;
-}
-#account_info_popup .account_info .pagination .active {
-  background-color: #00A068;
-}
-#account_info_popup .account_info .pagination .arrow {
-  display: flex;
-}
-#account_info_popup .account_info .pagination .arrow img {
-  margin: auto;
-}
-
-.popup {
-  z-index: 5;
-}
-
-.cat_info, #add_cat_btn {
-  position: relative;
-  z-index: 1;
+body {
+  background-color: black;
+  line-height: 1;
+  background-color: #F2F2F2;
+  padding-bottom: 20px;
 }
 
 header {
@@ -566,7 +72,7 @@ header {
   min-width: 1140px;
 }
 header .container {
-  height: 80px;
+  height: 56px;
   display: flex;
   justify-content: space-between;
 }
@@ -582,7 +88,7 @@ header .container .logo_and_text .text {
   margin: auto 0;
   padding-left: 8px;
   font-weight: 900;
-  font-size: 24px;
+  font-size: 16.8px;
   line-height: 29px;
 }
 header .container .links {
@@ -594,7 +100,7 @@ header .container .links {
 header .container .links a {
   padding: 0px 15px;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 12.6px;
   line-height: 22px;
 }
 header .container .links .active {
@@ -608,6 +114,9 @@ header .container .user {
   -moz-column-gap: 12px;
        column-gap: 12px;
 }
+header .container .user a {
+  font-size: 12.6px;
+}
 header .container .user .img img {
   width: 46px;
   height: 46px;
@@ -617,100 +126,844 @@ header .container .user .img, header .container .user .name, header .container .
   margin: auto 0;
 }
 
-.reg {
-  width: 640px;
-  margin: 0 auto;
+.account .total_balance {
+  margin-top: 28px;
 }
-.reg h1 {
-  margin-top: 44px;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 64px;
-  line-height: 77px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #00A068;
+.account .total_balance .total_balance_element {
+  width: 81%;
+  background-color: white;
+  color: black;
+  height: 56px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
 }
-.reg .form {
-  margin-top: 16px;
-  padding: 40px;
-  border: 3px solid #00A068;
-  border-radius: 10px;
+.account .total_balance .total_balance_element .text, .account .total_balance .total_balance_element .count {
+  margin: auto 0;
+  color: black;
 }
-.reg .form label {
-  color: #7C7C7C;
+.account .total_balance .total_balance_element .text {
+  padding: 0px 28px;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 31px;
+  font-size: 16.8px;
 }
-.reg .form input {
-  margin: 18px 0px;
-  width: 91%;
-  background: none;
-  border: 1px solid #7C7C7C;
-  height: 55px;
+.account .total_balance .total_balance_element .count {
+  display: flex;
+  justify-content: right;
+}
+.account .total_balance .total_balance_element .count .text {
   padding: 0px 20px;
-  font-size: 24px;
-  border-radius: 8px;
+  margin: auto 0;
 }
-.reg .form a {
+.account .total_balance .total_balance_element .count button {
+  background: none;
+}
+.account .total_balance .total_balance_element .count button img {
+  height: 56px;
+  width: 56px;
+}
+.account .total_balance .total_balance_element .count button:hover {
+  cursor: pointer;
+}
+.account .accounts {
+  margin-top: 11.2px;
+}
+.account .accounts h1 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  color: #7C7C7C;
+}
+.account .accounts .account_element {
+  margin-top: 11.2px;
+  display: flex;
+  justify-content: space-between;
+}
+.account .accounts .account_element .info {
+  width: 100%;
+  background-color: white;
+  color: black;
+  height: 56px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.account .accounts .account_element .info .ico_and_name {
+  display: flex;
+  width: 40%;
+}
+.account .accounts .account_element .info .ico_and_name .green {
+  background-color: #00695C;
+}
+.account .accounts .account_element .info .ico_and_name .orange {
+  background-color: #FF6F00;
+}
+.account .accounts .account_element .info .ico_and_name .ico {
+  width: 80px;
+  display: flex;
+  border-radius: 16px 0px 0px 16px;
+}
+.account .accounts .account_element .info .ico_and_name .ico img {
+  margin: auto;
+}
+.account .accounts .account_element .info .name, .account .accounts .account_element .info .count .text, .account .accounts .account_element .info .type {
+  color: black;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 31px;
-  color: #3E5DCD;
-  display: block;
-  margin-top: -10px;
+  font-size: 16.8px;
+  line-height: 29px;
+  margin: auto 0;
 }
-.reg .form button {
-  margin-top: 16px;
+.account .accounts .account_element .info .type {
+  color: #7C7C7C;
+}
+.account .accounts .account_element .info .name {
+  padding: 0px 12.6px;
+  font-weight: 500;
+  font-size: 16.8px;
+  width: 280px;
+  line-height: 29px;
+}
+.account .accounts .account_element .info .count {
+  display: flex;
+  justify-content: right;
+  width: 40%;
+}
+.account .accounts .account_element .info .count .text {
+  padding: 0px 20px;
+}
+.account .accounts .account_element .info .count button {
+  background: none;
+}
+.account .accounts .account_element .info .count button img {
+  height: 56px;
+  width: 56px;
+}
+.account .accounts .account_element .info .count button:hover {
+  cursor: pointer;
+}
+.account #add_account_popup {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: rgba(18, 18, 18, 0.85);
+}
+.account #add_account_popup .add_account {
+  position: absolute;
+  width: 861px;
+  height: 549px;
+  left: calc(50% - 430.5px + 0.5px);
+  top: calc(50% - 274.5px);
+  background: #F2F2F2;
+}
+.account #add_account_popup .add_account .control {
+  position: absolute;
+  width: 861px;
+  height: 80px;
+  left: 0px;
+  top: 0px;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 40px;
+}
+.account #add_account_popup .add_account .control .text, .account #add_account_popup .add_account .control .cross {
+  color: #7C7C7C;
+  margin: auto 0;
+}
+.account #add_account_popup .add_account .content {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 56px;
+  height: 469px;
+  width: 90%;
+  justify-content: space-around;
+}
+.account #add_account_popup .add_account .content .element_or {
+  font-weight: 500;
+  font-size: 12.6px;
+  line-height: 22px;
+  color: #7C7C7C;
+  margin: auto 0;
+}
+.account #add_account_popup .add_account .content .element:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+.account #add_account_popup .add_account .content .element {
+  width: 325px;
+  height: 325px;
+  margin: auto 0;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+}
+.account #add_account_popup .add_account .content .element .name {
+  font-weight: 500;
+  font-size: 16.8px;
+  line-height: 29px;
+  color: #000000;
+  margin-top: 11.2px;
+}
+.account #add_account_popup .add_account .content .element .desc {
+  margin-top: 5.6px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #7C7C7C;
+}
+.account #add_card_popup, .account #account_edit_popup, .account #account_add_popup {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: rgba(18, 18, 18, 0.85);
+}
+.account #add_card_popup .add_card, .account #account_edit_popup .add_card, .account #account_add_popup .add_card {
+  position: absolute;
+  width: 861px;
+  padding-bottom: 56px;
+  left: calc(50% - 430.5px + 0.5px);
+  top: calc(50% - 274.5px);
+  background: #F2F2F2;
+}
+.account #add_card_popup .add_card .control, .account #account_edit_popup .add_card .control, .account #account_add_popup .add_card .control {
+  position: absolute;
+  width: 861px;
+  height: 80px;
+  left: 0px;
+  top: 0px;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 40px;
+}
+.account #add_card_popup .add_card .control .text, .account #add_card_popup .add_card .control .cross, .account #account_edit_popup .add_card .control .text, .account #account_edit_popup .add_card .control .cross, .account #account_add_popup .add_card .control .text, .account #account_add_popup .add_card .control .cross {
+  color: #7C7C7C;
+  margin: auto 0;
+}
+.account #add_card_popup .add_card .content, .account #account_edit_popup .add_card .content, .account #account_add_popup .add_card .content {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 56px;
+  width: 552px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.account #add_card_popup .add_card .content label, .account #account_edit_popup .add_card .content label, .account #account_add_popup .add_card .content label {
+  width: 100%;
+  text-align: center;
+  padding-top: 28px;
+  padding-bottom: 16px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
+  color: #7C7C7C;
+}
+.account #add_card_popup .add_card .content input, .account #account_edit_popup .add_card .content input, .account #account_add_popup .add_card .content input {
   width: 100%;
   height: 55px;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 31px;
+  border: 1px solid #7C7C7C;
+  border-radius: 8px;
+  background: none;
+  padding: 0px 20px;
+}
+.account #add_card_popup .add_card .content button, .account #account_edit_popup .add_card .content button, .account #account_add_popup .add_card .content button {
+  width: 100%;
+  margin-top: 11.2px;
+  height: 55px;
   background: #00A068;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
+  font-weight: 500;
+  font-size: 16.8px;
+  line-height: 31px;
 }
-
-.reg_dop_info {
-  width: 950px;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 30px;
-  text-align: center;
-  color: #00A068;
+.account #account_edit_popup .add_card .content label, .account #account_add_popup .add_card .content label {
+  text-align: left;
+  padding-top: 10px;
+}
+.account #account_edit_popup .add_card .content label:first-child, .account #account_add_popup .add_card .content label:first-child {
+  padding-top: 28px;
+}
+.account #account_edit_popup .add_card .content button, .account #account_add_popup .add_card .content button {
+  margin-top: 28px;
+}
+.account #account_info_popup {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: rgba(18, 18, 18, 0.85);
+}
+.account #account_info_popup .account_info {
+  position: absolute;
+  width: 861px;
+  padding-bottom: 26px;
+  left: calc(50% - 430.5px + 0.5px);
+  top: 10vh;
+  background: #F2F2F2;
+}
+.account #account_info_popup .account_info .control {
+  position: absolute;
+  width: 861px;
+  height: 80px;
+  left: 0px;
+  top: 0px;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 40px;
+}
+.account #account_info_popup .account_info .control .text, .account #account_info_popup .account_info .control .cross {
+  color: #7C7C7C;
+  margin: auto 0;
+}
+.account #account_info_popup .account_info .content {
   margin: 0 auto;
-  margin-top: 24px;
+  margin-top: 56px;
+  width: 95%;
+}
+.account #account_info_popup .account_info .content .bank_name, .account #account_info_popup .account_info .content .card_num, .account #account_info_popup .account_info .content .bank_desc {
+  font-weight: 500;
+  font-size: 12.6px;
+  line-height: 22px;
+  color: #7C7C7C;
+  text-align: center;
+  padding-top: 8px;
+}
+.account #account_info_popup .account_info .content .bank_name {
+  padding-top: 12.6px;
+}
+.account #account_info_popup .account_info .content .filter {
+  width: 645px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 8px;
+  padding-bottom: 10px;
+}
+.account #account_info_popup .account_info .content .filter .text {
+  font-weight: 500;
+  font-size: 12.6px;
+  line-height: 22px;
+  color: #7C7C7C;
+  margin: auto 0;
+}
+.account #account_info_popup .account_info .content .filter .dd {
+  width: 269px;
+  height: 46px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  padding: 0px 11px;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+}
+.account #account_info_popup .account_info .content .filter .dd .text, .account #account_info_popup .account_info .content .filter .dd img {
+  margin: auto 0;
+}
+.account #account_info_popup .account_info .content .filter .tr_add {
+  width: 298px;
+  height: 46px;
+  background: #00A068;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 16.8px;
+  line-height: 31px;
+  color: #FFFFFF;
+}
+.account #account_info_popup .account_info .content .tr_per_day {
+  padding-top: 16px;
+  width: 100%;
+}
+.account #account_info_popup .account_info .content .tr_per_day .date {
+  text-align: center;
+  font-weight: 500;
+  font-size: 12.6px;
+  line-height: 22px;
+  color: #7C7C7C;
+}
+.account #account_info_popup .account_info .content .tr_per_day .tr {
+  margin-top: 11.2px;
+  display: flex;
+  justify-content: space-between;
+}
+.account #account_info_popup .account_info .content .tr_per_day .tr .tr_control {
+  display: flex;
+  justify-content: space-between;
+  width: 129px;
+}
+.account #account_info_popup .account_info .content .tr_per_day .tr .tr_control .edit, .account #account_info_popup .account_info .content .tr_per_day .tr .tr_control .del {
+  width: 59px;
+  height: 59px;
+  border-radius: 16px;
+  display: flex;
+}
+.account #account_info_popup .account_info .content .tr_per_day .tr .tr_control .edit img, .account #account_info_popup .account_info .content .tr_per_day .tr .tr_control .del img {
+  margin: auto;
+  width: 30px;
+}
+.account #account_info_popup .account_info .content .tr_per_day .tr .tr_control .edit {
+  border: 2px solid #E0AC14;
+}
+.account #account_info_popup .account_info .content .tr_per_day .tr .tr_control .del {
+  border: 2px solid #A54F50;
+}
+.account #account_info_popup .account_info .content .tr_per_day .tr .tr_info {
+  width: 674px;
+  height: 59px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 35px;
+}
+.account #account_info_popup .account_info .content .tr_per_day .tr .tr_info .tr_info_element {
+  font-weight: 500;
+  font-size: 16.8px;
+  line-height: 29px;
+  color: #000000;
+  margin: auto 0;
+  display: flex;
+  width: 33.3%;
+}
+.account #account_info_popup .account_info .content .tr_per_day .tr .tr_info .left {
+  justify-content: left;
+}
+.account #account_info_popup .account_info .content .tr_per_day .tr .tr_info .center {
+  justify-content: center;
+}
+.account #account_info_popup .account_info .content .tr_per_day .tr .tr_info .right {
+  justify-content: right;
+}
+.account #account_info_popup .account_info .content .tr_per_day .tr .tr_info .gray {
+  color: #DDDDDD;
+}
+.account #account_info_popup .account_info .content .tr_per_day .tr .tr_info .plus {
+  color: #00A068;
+}
+.account #account_info_popup .account_info .content .tr_per_day .tr .tr_info .minus {
+  color: #A54F50;
+}
+.account #account_info_popup .account_info .pagination {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 16.8px;
+  -moz-column-gap: 9px;
+       column-gap: 9px;
+}
+.account #account_info_popup .account_info .pagination button {
+  width: 46px;
+  height: 46px;
+  background: rgba(0, 160, 104, 0.53);
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 16.8px;
+  line-height: 31px;
+  color: #FFFFFF;
+}
+.account #account_info_popup .account_info .pagination .active {
+  background-color: #00A068;
+}
+.account #account_info_popup .account_info .pagination .arrow {
+  display: flex;
+}
+.account #account_info_popup .account_info .pagination .arrow img {
+  margin: auto;
+}
+.account .popup {
+  z-index: 5;
+}
+.account .cat_info, .account #add_cat_btn {
+  position: relative;
+  z-index: 1;
+}
+.account .sort_add {
+  margin-top: 28px;
+}
+.account .sort_add .container {
+  display: flex;
+  justify-content: space-between;
+}
+.account .sort_add .container .sort_by {
+  width: 50%;
+  display: flex;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+}
+.account .sort_add .container .sort_by .text {
+  font-weight: 500;
+  font-size: 12.6px;
+  line-height: 22px;
+  color: #7C7C7C;
+  margin: auto 0;
+}
+.account .sort_add .container .sort_by .dd {
+  margin: auto 0;
+}
+.account .sort_add .container .sort_by .dd .active img {
+  transform: rotate(180deg);
+}
+.account .sort_add .container .sort_by .dd button {
+  display: flex;
+  width: 270px;
+  background-color: white;
+  justify-content: space-between;
+  padding: 0px 11.2px;
+  font-size: 12.6px;
+  height: 32.2px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.account .sort_add .container .sort_by .dd button .t {
+  color: black;
+  margin: auto 0;
+}
+.account .sort_add .container .sort_by .dd button img {
+  margin: auto 0;
+}
+.account .sort_add .container .sort_by .dd #dd_block {
+  width: 0px;
+  height: 0px;
+  position: relative;
+  z-index: 2;
+  top: 10px;
+}
+.account .sort_add .container .sort_by .dd #dd_block .dd_inner {
+  width: 270px;
+  height: auto;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.account .sort_add .container .sort_by .dd #dd_block .dd_inner .dd_inner_element {
+  color: black;
+  height: 46px;
+  border-radius: 0px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0);
+}
+.account .sort_add .container .sort_by .dd #dd_block .dd_inner .dd_inner_element {
+  border-bottom: 1px solid gray;
+}
+.account .sort_add .container .sort_by .dd #dd_block .dd_inner .dd_inner_element:last-child {
+  border-bottom: none;
+}
+.account .sort_add .container .sort_by .dd #dd_block .dd_inner .dd_inner_element:hover {
+  border-radius: 0px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0);
+}
+.account .sort_add .container .add button {
+  width: 112px;
+  height: 28px;
+  background-color: #00A068;
+  border-radius: 16px;
+  font-size: 12.6px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.cat_nav {
+.stat .stat_nav {
   display: flex;
   justify-content: center;
   -moz-column-gap: 12px;
        column-gap: 12px;
   padding-top: 42px;
 }
-.cat_nav button {
-  font-size: 18px;
+.stat .stat_nav button {
+  font-weight: 500;
+  font-size: 12.6px;
+  line-height: 22px;
+  color: #7C7C7C;
+}
+.stat .stat_nav .active {
+  font-weight: 700;
+}
+.stat .stat_header {
+  width: 1128px;
+  min-height: 391px;
+  padding-bottom: 60px;
+  margin: 0 auto;
+  margin-top: 11.2px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+}
+.stat .stat_header .nav {
+  width: 100%;
+  padding-top: 16px;
+}
+.stat .stat_header .nav .type {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+}
+.stat .stat_header .nav .type button {
+  background: none;
+  font-weight: 500;
+  font-size: 12.6px;
+  line-height: 22px;
+  color: #00A068;
+}
+.stat .stat_header .nav .type .active {
+  font-weight: 700;
+  text-decoration-line: underline;
+}
+.stat .stat_header .nav .date {
+  display: flex;
+  justify-content: space-between;
+  width: 230px;
+  margin: 0 auto;
+  margin-top: 5.6px;
+}
+.stat .stat_header .nav .date button {
+  background: none;
+}
+.stat .stat_header .nav .date .text {
+  font-weight: 500;
+  font-size: 12.6px;
+  line-height: 22px;
+  color: #000000;
+}
+.stat .stat_header #chart {
+  height: 253px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 16.8px;
+}
+.stat .stat_element {
+  width: 1128px;
+  height: 80px;
+  margin: 0 auto;
+  margin-top: 11.2px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 32px;
+}
+.stat .stat_element .stat_element_inner {
+  color: black;
+  margin: auto 0;
+  display: flex;
+  width: 33.3%;
+}
+.stat .stat_element .left {
+  justify-content: left;
+}
+.stat .stat_element .center {
+  justify-content: center;
+  color: #7C7C7C !important;
+}
+.stat .stat_element .right {
+  justify-content: right;
+}
+.stat .stat_element .color_1 {
+  color: #3C6053;
+}
+.stat .stat_element .color_2 {
+  color: #248A66;
+}
+.stat .stat_element .color_3 {
+  color: #00A068;
+}
+.stat .ct-label {
+  fill: black !important;
+  color: black !important;
+}
+.stat .pie .ct-label {
+  fill: white !important;
+  color: white !important;
+}
+.stat .pie .ct-series-a path {
+  fill: #3C6053 !important;
+}
+.stat .pie .ct-series-b path {
+  fill: #248A66 !important;
+}
+.stat .pie .ct-series-c path {
+  fill: #00A068 !important;
+}
+.stat .ct-series-a .ct-bar, .stat .ct-series-a .ct-line, .stat .ct-series-a .ct-point, .stat .ct-series-a .ct-slice-donut {
+  stroke: #00A068;
+}
+.stat .ct-bar {
+  stroke-width: 23px;
+}
+.stat #cash_flow {
+  width: 934px;
+  margin: 0 auto;
+}
+.stat #cash_flow .date, .stat #cash_flow .income, .stat #cash_flow .expanse {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  color: #000000;
+  margin-top: 11.2px;
+}
+.stat #cash_flow .income span {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 39px;
+  color: #00A068;
+}
+.stat #cash_flow .expanse span {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 39px;
+  color: #A54F50;
+}
+.stat #cash_flow .bar {
+  margin-top: 11.2px;
+  width: 100%;
+  height: 48px;
+  background: #F2F2F2;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+}
+.stat #cash_flow .bar .income, .stat #cash_flow .bar .expanse {
+  border-radius: 8px;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 48px;
+}
+.stat #cash_flow .bar .income {
+  background: #00A068;
+  width: 30%;
+}
+.stat #cash_flow .bar .expanse {
+  background: #A54F50;
+  width: 50%;
+}
+.stat #cash_flow_desc {
+  width: 1128px;
+  padding: 50px;
+  margin: 0 auto;
+  margin-top: 11.2px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+}
+.stat #cash_flow_desc .date, .stat #cash_flow_desc .cf_header {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  text-transform: uppercase;
+  color: #00A068;
+  width: 100%;
+  text-align: center;
+}
+.stat #cash_flow_desc .cf_header {
+  margin-top: 28px;
+}
+.stat #cash_flow_desc .cash_flow_desc_element {
+  width: 934px;
+  margin: 0 auto;
+  margin-top: 11.2px;
+  display: flex;
+}
+.stat #cash_flow_desc .cash_flow_desc_element .name, .stat #cash_flow_desc .cash_flow_desc_element .inc, .stat #cash_flow_desc .cash_flow_desc_element .exp {
+  width: 20%;
+  font-weight: 600;
+  font-size: 16.8px;
+  line-height: 29px;
+  color: #000000;
+}
+.stat #cash_flow_desc .cash_flow_desc_element .name {
+  width: 60%;
+}
+.stat #cash_flow_desc .cash_flow_desc_element .exp {
+  color: #A54F50;
+}
+.stat #cash_flow_desc .cf {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 59px;
+  color: #000000;
+  width: 100%;
+  text-align: center;
+}
+.stat #cash_flow_block {
+  width: 1128px;
+  margin: 0px auto;
+}
+.stat #cash_flow_block .exp_header, .stat #cash_flow_block .inc_header {
+  margin-top: 28px;
+  padding-left: 100px;
+  width: 100%;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 39px;
+}
+.stat #cash_flow_block .exp_header {
+  color: #A54F50;
+}
+.stat #cash_flow_block .inc_header {
+  color: #00A068;
+}
+.stat #cash_flow_block .element {
+  margin-top: 11.2px;
+  height: 80px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 32px;
+}
+.stat #cash_flow_block .element .name, .stat #cash_flow_block .element .sum {
+  margin: auto 0;
+  font-weight: 500;
+  font-size: 16.8px;
+  line-height: 29px;
+  color: #000000;
+}
+.stat #cash_flow_block .exp .sum {
+  color: #A54F50;
+}
+.stat #cash_flow_block .inc .sum {
+  color: #00A068;
+}
+
+.cat .cat_nav {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+  padding-top: 42px;
+}
+.cat .cat_nav button {
+  font-size: 12.6px;
   line-height: 22px;
   font-weight: 500;
   color: #7C7C7C;
 }
-.cat_nav .active {
+.cat .cat_nav .active {
   font-weight: 700;
   color: #000000;
 }
-
-#ucat, #scat {
-  margin-top: 42px;
+.cat #ucat, .cat #scat {
+  margin-top: 28px;
 }
-#ucat .cat_element, #scat .cat_element {
-  margin-top: 16px;
+.cat #ucat .cat_element, .cat #scat .cat_element {
+  margin-top: 11.2px;
   display: flex;
   justify-content: space-between;
 }
-#ucat .cat_element .info, #scat .cat_element .info {
+.cat #ucat .cat_element .info, .cat #scat .cat_element .info {
   width: 81%;
   background-color: white;
   height: 80px;
@@ -720,415 +973,126 @@ header .container .user .img, header .container .user .name, header .container .
   justify-content: space-between;
   padding-left: 32px;
 }
-#ucat .cat_element .info .text, #scat .cat_element .info .text {
+.cat #ucat .cat_element .info .text, .cat #scat .cat_element .info .text {
   color: black;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 29px;
+  font-size: 16.8px;
   margin: auto 0;
 }
-#ucat .cat_element .control, #scat .cat_element .control {
+.cat #ucat .cat_element .control, .cat #scat .cat_element .control {
   width: 19%;
   display: flex;
   justify-content: right;
   -moz-column-gap: 24px;
        column-gap: 24px;
 }
-#ucat .cat_element .control .edit, #ucat .cat_element .control .del, #scat .cat_element .control .edit, #scat .cat_element .control .del {
+.cat #ucat .cat_element .control .edit, .cat #ucat .cat_element .control .del, .cat #scat .cat_element .control .edit, .cat #scat .cat_element .control .del {
   width: 80px;
   height: 80px;
   border-radius: 16px;
   display: flex;
 }
-#ucat .cat_element .control .edit img, #ucat .cat_element .control .del img, #scat .cat_element .control .edit img, #scat .cat_element .control .del img {
+.cat #ucat .cat_element .control .edit img, .cat #ucat .cat_element .control .del img, .cat #scat .cat_element .control .edit img, .cat #scat .cat_element .control .del img {
   margin: auto;
 }
-#ucat .cat_element .control .edit, #scat .cat_element .control .edit {
+.cat #ucat .cat_element .control .edit, .cat #scat .cat_element .control .edit {
   border: 2px solid #E0AC14;
 }
-#ucat .cat_element .control .del, #scat .cat_element .control .del {
+.cat #ucat .cat_element .control .del, .cat #scat .cat_element .control .del {
   border: 2px solid #A54F50;
 }
-
-#scat .cat_element .info {
+.cat #scat .cat_element .info {
   width: 90%;
 }
-#scat .cat_element .control {
+.cat #scat .cat_element .control {
   width: 10%;
 }
-#scat .cat_element .control svg {
+.cat #scat .cat_element .control svg {
   margin: auto 0;
 }
-#scat .cat_element .control svg path, #scat .cat_element .control svg rect {
+.cat #scat .cat_element .control svg path, .cat #scat .cat_element .control svg rect {
   transition: 0.2s ease-out;
 }
-#scat .cat_element .control svg:hover {
+.cat #scat .cat_element .control svg:hover {
   cursor: pointer;
 }
-
-.off .info {
+.cat .off .info {
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0) !important;
   opacity: 0.5;
 }
-.off svg path {
+.cat .off svg path {
   transform: translateX(-30px);
   fill: #A6A6A6;
 }
-.off svg .wh {
+.cat .off svg .wh {
   fill: #FAFAFA;
 }
-.off svg rect {
+.cat .off svg rect {
   fill: #A6A6A6;
   opacity: 0.5;
 }
 
-.stat_nav {
-  display: flex;
-  justify-content: center;
-  -moz-column-gap: 12px;
-       column-gap: 12px;
-  padding-top: 42px;
+.reg {
+  width: 640px;
+  margin: 0 auto;
 }
-.stat_nav button {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-  color: #7C7C7C;
-}
-.stat_nav .active {
+.reg h1 {
+  margin-top: 28px;
+  font-style: normal;
   font-weight: 700;
-}
-
-.stat_header {
-  width: 1128px;
-  min-height: 391px;
-  padding-bottom: 60px;
-  margin: 0 auto;
-  margin-top: 16px;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 16px;
-}
-.stat_header .nav {
-  width: 100%;
-  padding-top: 16px;
-}
-.stat_header .nav .type {
-  display: flex;
-  justify-content: center;
-  -moz-column-gap: 12px;
-       column-gap: 12px;
-}
-.stat_header .nav .type button {
-  background: none;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-  color: #00A068;
-}
-.stat_header .nav .type .active {
-  font-weight: 700;
-  text-decoration-line: underline;
-}
-.stat_header .nav .date {
-  display: flex;
-  justify-content: space-between;
-  width: 230px;
-  margin: 0 auto;
-  margin-top: 8px;
-}
-.stat_header .nav .date button {
-  background: none;
-}
-.stat_header .nav .date .text {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-  color: #000000;
-}
-.stat_header #chart {
-  height: 253px;
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 21px;
-}
-
-.stat_element {
-  width: 1128px;
-  height: 80px;
-  margin: 0 auto;
-  margin-top: 16px;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 16px;
-  display: flex;
-  justify-content: space-between;
-  padding: 0px 32px;
-}
-.stat_element .stat_element_inner {
-  color: black;
-  margin: auto 0;
-  display: flex;
-  width: 33.3%;
-}
-.stat_element .left {
-  justify-content: left;
-}
-.stat_element .center {
-  justify-content: center;
-  color: #7C7C7C !important;
-}
-.stat_element .right {
-  justify-content: right;
-}
-.stat_element .color_1 {
-  color: #3C6053;
-}
-.stat_element .color_2 {
-  color: #248A66;
-}
-.stat_element .color_3 {
-  color: #00A068;
-}
-
-.ct-label {
-  fill: black !important;
-  color: black !important;
-}
-
-.pie .ct-label {
-  fill: white !important;
-  color: white !important;
-}
-.pie .ct-series-a path {
-  fill: #3C6053 !important;
-}
-.pie .ct-series-b path {
-  fill: #248A66 !important;
-}
-.pie .ct-series-c path {
-  fill: #00A068 !important;
-}
-
-.ct-series-a .ct-bar, .ct-series-a .ct-line, .ct-series-a .ct-point, .ct-series-a .ct-slice-donut {
-  stroke: #00A068;
-}
-
-.ct-bar {
-  stroke-width: 23px;
-}
-
-#cash_flow {
-  width: 934px;
-  margin: 0 auto;
-}
-#cash_flow .date, #cash_flow .income, #cash_flow .expanse {
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 39px;
-  color: #000000;
-  margin-top: 18px;
-}
-#cash_flow .income span {
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 39px;
-  color: #00A068;
-}
-#cash_flow .expanse span {
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 39px;
-  color: #A54F50;
-}
-#cash_flow .bar {
-  margin-top: 18px;
-  width: 100%;
-  height: 48px;
-  background: #F2F2F2;
-  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
-}
-#cash_flow .bar .income, #cash_flow .bar .expanse {
-  border-radius: 8px;
-  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  height: 48px;
-}
-#cash_flow .bar .income {
-  background: #00A068;
-  width: 30%;
-}
-#cash_flow .bar .expanse {
-  background: #A54F50;
-  width: 50%;
-}
-
-#cash_flow_desc {
-  width: 1128px;
-  padding: 50px;
-  margin: 0 auto;
-  margin-top: 16px;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 16px;
-}
-#cash_flow_desc .date, #cash_flow_desc .cf_header {
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 39px;
+  font-size: 64px;
+  line-height: 77px;
+  text-align: center;
   text-transform: uppercase;
   color: #00A068;
-  width: 100%;
-  text-align: center;
 }
-#cash_flow_desc .cf_header {
-  margin-top: 30px;
+.reg .form {
+  margin-top: 11.2px;
+  padding: 40px;
+  border: 3px solid #00A068;
+  border-radius: 10px;
 }
-#cash_flow_desc .cash_flow_desc_element {
-  width: 934px;
-  margin: 0 auto;
-  margin-top: 16px;
-  display: flex;
-}
-#cash_flow_desc .cash_flow_desc_element .name, #cash_flow_desc .cash_flow_desc_element .inc, #cash_flow_desc .cash_flow_desc_element .exp {
-  width: 20%;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 29px;
-  color: #000000;
-}
-#cash_flow_desc .cash_flow_desc_element .name {
-  width: 60%;
-}
-#cash_flow_desc .cash_flow_desc_element .exp {
-  color: #A54F50;
-}
-#cash_flow_desc .cf {
-  font-weight: 500;
-  font-size: 48px;
-  line-height: 59px;
-  color: #000000;
-  width: 100%;
-  text-align: center;
-}
-
-#cash_flow_block {
-  width: 1128px;
-  margin: 0px auto;
-}
-#cash_flow_block .exp_header, #cash_flow_block .inc_header {
-  margin-top: 30px;
-  padding-left: 100px;
-  width: 100%;
-  font-weight: 900;
-  font-size: 32px;
-  line-height: 39px;
-}
-#cash_flow_block .exp_header {
-  color: #A54F50;
-}
-#cash_flow_block .inc_header {
-  color: #00A068;
-}
-#cash_flow_block .element {
-  margin-top: 16px;
-  height: 80px;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 16px;
-  display: flex;
-  justify-content: space-between;
-  padding: 0px 32px;
-}
-#cash_flow_block .element .name, #cash_flow_block .element .sum {
-  margin: auto 0;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 29px;
-  color: #000000;
-}
-#cash_flow_block .exp .sum {
-  color: #A54F50;
-}
-#cash_flow_block .inc .sum {
-  color: #00A068;
-}
-
-.sort_add {
-  margin-top: 40px;
-}
-.sort_add .container {
-  display: flex;
-  justify-content: space-between;
-}
-.sort_add .container .sort_by {
-  width: 50%;
-  display: flex;
-  -moz-column-gap: 12px;
-       column-gap: 12px;
-}
-.sort_add .container .sort_by .text {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
+.reg .form label {
   color: #7C7C7C;
-  margin: auto 0;
+  font-weight: 500;
+  font-size: 16.8px;
+  line-height: 31px;
 }
-.sort_add .container .sort_by .dd .active img {
-  transform: rotate(180deg);
+.reg .form input {
+  margin: 18px 0px;
+  width: 91%;
+  background: none;
+  border: 1px solid #7C7C7C;
+  height: 55px;
+  padding: 0px 20px;
+  font-size: 16.8px;
+  border-radius: 8px;
 }
-.sort_add .container .sort_by .dd button {
-  display: flex;
-  width: 270px;
-  background-color: white;
-  justify-content: space-between;
-  padding: 0px 11px;
-  height: 46px;
-  border-radius: 16px;
+.reg .form a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 31px;
+  color: #3E5DCD;
+  display: block;
+}
+.reg .form button {
+  margin-top: 11.2px;
+  width: 100%;
+  height: 55px;
+  font-weight: 500;
+  font-size: 16.8px;
+  line-height: 31px;
+  background: #00A068;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
 }
-.sort_add .container .sort_by .dd button .t {
-  color: black;
-  margin: auto 0;
-}
-.sort_add .container .sort_by .dd button img {
-  margin: auto 0;
-}
-.sort_add .container .sort_by .dd #dd_block {
-  width: 0px;
-  height: 0px;
-  position: relative;
-  z-index: 2;
-  top: 10px;
-}
-.sort_add .container .sort_by .dd #dd_block .dd_inner {
-  width: 270px;
-  height: auto;
-  border-radius: 16px;
-  background: white;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.sort_add .container .sort_by .dd #dd_block .dd_inner .dd_inner_element {
-  color: black;
-  height: 46px;
-  border-radius: 0px;
-  border-radius: 16px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0);
-}
-.sort_add .container .sort_by .dd #dd_block .dd_inner .dd_inner_element {
-  border-bottom: 1px solid gray;
-}
-.sort_add .container .sort_by .dd #dd_block .dd_inner .dd_inner_element:last-child {
-  border-bottom: none;
-}
-.sort_add .container .sort_by .dd #dd_block .dd_inner .dd_inner_element:hover {
-  border-radius: 0px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0);
-}
-.sort_add .container .add button {
-  width: 168px;
-  height: 46px;
-  background-color: #00A068;
-  border-radius: 16px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.reg .dop_info {
+  width: 100%;
+  font-weight: 400;
+  font-size: 16.8px;
+  line-height: 30px;
+  text-align: center;
+  color: #00A068;
+  margin: 0 auto;
+  margin-top: 16.8px;
 }

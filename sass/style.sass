@@ -31,11 +31,7 @@ img, svg
 a:hover, button:hover
     cursor: pointer
     opacity: .6
-body
-    background-color: black
-    line-height: 1
-    background-color: #F2F2F2
-    padding-bottom: 20px
+
 .dnone
     display: none
 a
@@ -53,75 +49,928 @@ a
         cursor: pointer
         opacity: .6
 
-@import account
-@import header
-@import reg
-@import cat
-@import stat
+// $k: 1
+$k: 0.7
 
-.sort_add
-    margin-top: 40px
+$primary_color: #00A068
+$body_bg_color: #F2F2F2
+$header_height: 80px*$k
+$header_logo_font_size: 24px*$k
+$header_nav_font_size: 18px*$k
+$header_account_font_size: 18px*$k
+
+$acc_dd_h: 46px*$k
+
+$fs_m: 24px*$k
+$fs_s: 18px*$k
+$fs_xs: 16px*$k
+
+$row_element_h_m: 80px*$k
+$row_element_pad_m: 40px*$k
+$row_element_h_s: 60px*$k
+$row_element_control_wh: 80px*$k
+
+$margin_top_xl: 80px*$k
+$margin_top_l: 40px*$k
+$margin_top_m: 24px*$k
+$margin_top_s: 16px*$k
+$margin_top_xs: 8px*$k
+
+$add_btn_h: 40px*$k
+$add_btn_w: 160px*$k
+
+body
+    background-color: black
+    line-height: 1
+    background-color: $body_bg_color
+    padding-bottom: 20px
+
+// HEADER ================= 
+// HEADER ================= 
+// HEADER =================
+header
+    background-color: $primary_color
+    min-width: 1140px
     .container
+        height: $header_height
         display: flex
         justify-content: space-between
-        .sort_by
-            width: 50%
+        .logo_and_text
+            width: 25%
             display: flex
-            column-gap: 12px
-            .text
-                font-weight: 500
-                font-size: 18px
-                line-height: 22px
-                color: #7C7C7C
+            margin: auto 0
+            .logo
                 margin: auto 0
-            .dd
-                .active
-                    img
-                        transform: rotate(180deg)
-                button
-                    display: flex
-                    width: 270px
-                    background-color: white
-                    justify-content: space-between
-                    padding: 0px 11px
+            .text
+                margin: auto 0
+                padding-left: 8px
+                font-weight: 900
+                font-size: $header_logo_font_size
+                line-height: 29px
+        .links
+            width: 50%
+            margin: auto 0
+            display: flex
+            justify-content: center
+            a
+                padding: 0px 15px
+                font-weight: 500
+                font-size: $header_nav_font_size
+                line-height: 22px
+            .active
+                font-weight: 700
+        .user
+            width: 25%
+            margin: auto 0
+            display: flex
+            justify-content: right
+            column-gap: 12px
+            a
+                font-size: $header_account_font_size
+            .img
+                img
+                    width: 46px
                     height: 46px
-                    border-radius: 16px
-                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
-                    .t
-                        color: black
-                        margin: auto 0
-                    img
-                        margin: auto 0
-                #dd_block
-                    width: 0px
-                    height: 0px
-                    position: relative
-                    z-index: 2
-                    top: 10px
-                    .dd_inner
-                        width: 270px
-                        height: auto
-                        border-radius: 16px
-                        background: white
-                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
-                        .dd_inner_element
-                            color: black
-                            height: 46px
-                            border-radius: 0px
-                            border-radius: 16px
-                            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0)
-                        .dd_inner_element
-                            border-bottom: 1px solid gray
-                        .dd_inner_element:last-child
-                            border-bottom: none
-                        .dd_inner_element:hover
-                            border-radius: 0px
-                            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0)
+                    border-radius: 24px
+            .img, .name, .arrow
+                margin: auto 0
 
-        .add
-            button
-                width: 168px
-                height: 46px
-                background-color: #00A068
-                border-radius: 16px
+// ACCOUNT ================= 
+// ACCOUNT ================= 
+// ACCOUNT =================
+.account
+    .total_balance
+        margin-top: $margin_top_l
+        .total_balance_element
+            width: 81%
+            background-color: white
+            color: black
+            height: $row_element_h_m
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+            border-radius: 16px
+            display: flex
+            justify-content: space-between
+            .text, .count
+                margin: auto 0
+                color: black
+            .text
+                padding: 0px $row_element_pad_m
+                font-weight: 500
+                font-size: $fs_m
+            .count
+                display: flex
+                justify-content: right
+                .text
+                    padding: 0px 20px
+                    margin: auto 0
+                button
+                    background: none
+                    img
+                        height: $row_element_control_wh
+                        width: $row_element_control_wh
+                button:hover
+                    cursor: pointer
+
+    .accounts
+        margin-top: $margin_top_s
+        h1
+            font-weight: 700
+            font-size: 32px
+            line-height: 39px
+            color: #7C7C7C
+        .account_element
+            margin-top: $margin_top_s
+            display: flex
+            justify-content: space-between
+            .info
+                width: 100%
+                background-color: white
+                color: black
+                height: $row_element_h_m
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+                border-radius: 16px
+                display: flex
+                justify-content: space-between
+                .ico_and_name
+                    display: flex
+                    width: 40%
+                    .green
+                        background-color: #00695C
+                    .orange
+                        background-color: #FF6F00
+                    .ico
+                        width: 80px
+                        display: flex
+                        border-radius: 16px 0px 0px 16px
+                        img
+                            margin: auto
+                .name, .count .text, .type
+                    color: black
+                    font-weight: 500
+                    font-size: $fs_m
+                    line-height: 29px
+                    margin: auto 0
+                .type
+                    color: #7C7C7C
+                .name
+                    padding: 0px $fs_s
+                    font-weight: 500
+                    font-size: $fs_m
+                    width: 280px
+                    line-height: 29px
+                .count
+                    display: flex
+                    justify-content: right
+                    width: 40%
+                    .text
+                        padding: 0px 20px
+                    button
+                        background: none
+                        img
+                            height: $row_element_control_wh
+                            width: $row_element_control_wh
+                    button:hover
+                        cursor: pointer
+
+    #add_account_popup
+        width: 100%
+        height: 100vh
+        position: absolute
+        top: 0px
+        left: 0px
+        background: rgba(18, 18, 18, 0.85)
+        .add_account
+            position: absolute
+            width: 861px
+            height: 549px
+            left: calc(50% - 861px/2 + 0.5px)
+            top: calc(50% - 549px/2)
+            background: #F2F2F2
+            .control
+                position: absolute
+                width: 861px
+                height: 80px
+                left: 0px
+                top: 0px
+                background: #FFFFFF
+                display: flex
+                justify-content: space-between
+                padding: 0px 40px
+                .text, .cross
+                    color: #7C7C7C
+                    margin: auto 0
+            .content
+                display: flex
+                margin: 0 auto
+                margin-top: $margin_top_xl
+                height: 469px
+                width: 90%
+                justify-content: space-around
+                .element_or
+                    font-weight: 500
+                    font-size: $fs_s
+                    line-height: 22px
+                    color: #7C7C7C
+                    margin: auto 0
+
+                .element:hover
+                    opacity: .6
+                    cursor: pointer
+                .element
+                    width: 325px
+                    height: 325px
+                    margin: auto 0
+                    background: #FFFFFF
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+                    border-radius: 16px
+                    padding: 40px
+                    text-align: center
+                    .name
+                        font-weight: 500
+                        font-size: $fs_m
+                        line-height: 29px
+                        color: #000000
+                        margin-top: $margin_top_s
+                    .desc
+                        margin-top: $margin_top_xs
+                        font-weight: 500
+                        font-size: 12px
+                        line-height: 15px
+                        color: #7C7C7C
+
+    #add_card_popup, #account_edit_popup, #account_add_popup
+        width: 100%
+        height: 100vh
+        position: absolute
+        top: 0px
+        left: 0px
+        background: rgba(18, 18, 18, 0.85)
+        .add_card
+            position: absolute
+            width: 861px
+            padding-bottom: 56px
+            left: calc(50% - 861px/2 + 0.5px)
+            top: calc(50% - 549px/2)
+            background: #F2F2F2
+            .control
+                position: absolute
+                width: 861px
+                height: 80px
+                left: 0px
+                top: 0px
+                background: #FFFFFF
+                display: flex
+                justify-content: space-between
+                padding: 0px 40px
+                .text, .cross
+                    color: #7C7C7C
+                    margin: auto 0
+            .content
+                display: flex
+                margin: 0 auto
+                margin-top: $margin_top_xl
+                width: 552px
+                flex-wrap: wrap
+                justify-content: center
+                label
+                    width: 100%
+                    text-align: center
+                    padding-top: 28px
+                    padding-bottom: 16px
+                    font-weight: 500
+                    font-size: 24px
+                    line-height: 31px
+                    color: #7C7C7C
+                input
+                    width: 100%
+                    height: 55px
+                    border: 1px solid #7C7C7C
+                    border-radius: 8px
+                    background: none
+                    padding: 0px 20px
+                button
+                    width: 100%
+                    margin-top: $margin_top_s
+                    height: 55px
+                    background: $primary_color
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+                    border-radius: 8px
+                    font-weight: 500
+                    font-size: $fs_m
+                    line-height: 31px
+
+    #account_edit_popup, #account_add_popup
+        .add_card
+            .content
+                label
+                    text-align: left
+                    padding-top: 10px
+                label:first-child
+                    padding-top: 28px
+                button
+                    margin-top: $margin_top_l
+
+    #account_info_popup
+        width: 100%
+        height: 100vh
+        position: absolute
+        top: 0px
+        left: 0px
+        background: rgba(18, 18, 18, 0.85)
+        .account_info
+            position: absolute
+            width: 861px
+            padding-bottom: 26px
+            left: calc(50% - 861px/2 + 0.5px)
+            top: 10vh
+            background: #F2F2F2
+
+            .control
+                position: absolute
+                width: 861px
+                height: 80px
+                left: 0px
+                top: 0px
+                background: #FFFFFF
+                display: flex
+                justify-content: space-between
+                padding: 0px 40px
+                .text, .cross
+                    color: #7C7C7C
+                    margin: auto 0
+            .content
+                margin: 0 auto
+                margin-top: $margin_top_xl
+                width: 95%
+                .bank_name, .card_num, .bank_desc
+                    font-weight: 500
+                    font-size: $fs_s
+                    line-height: 22px
+                    color: #7C7C7C
+                    text-align: center
+                    padding-top: 8px
+                .bank_name
+                    padding-top: $fs_s
+                .filter
+                    width: 645px
+                    margin: 0 auto
+                    display: flex
+                    justify-content: space-between
+                    padding-top: 8px
+                    padding-bottom: 10px
+                    .text
+                        font-weight: 500
+                        font-size: $fs_s
+                        line-height: 22px
+                        color: #7C7C7C
+                        margin: auto 0
+                    .dd
+                        width: 269px
+                        height: 46px
+                        background: #FFFFFF
+                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+                        border-radius: 16px
+                        padding: 0px 11px
+                        color: black
+                        display: flex
+                        justify-content: space-between
+                        .text, img
+                            margin: auto 0
+                    .tr_add
+                        width: 298px
+                        height: 46px
+                        background: $primary_color
+                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+                        border-radius: 8px
+                        font-weight: 500
+                        font-size: $fs_m
+                        line-height: 31px
+                        color: #FFFFFF
+                .tr_per_day
+                    padding-top: 16px
+                    width: 100%
+                    .date
+                        text-align: center
+                        font-weight: 500
+                        font-size: $fs_s
+                        line-height: 22px
+                        color: #7C7C7C
+                    .tr
+                        margin-top: $margin_top_s
+                        display: flex
+                        justify-content: space-between
+                        .tr_control
+                            display: flex
+                            justify-content: space-between
+                            width: 129px
+                            .edit, .del
+                                width: 59px
+                                height: 59px
+                                border-radius: 16px
+                                display: flex
+                                img
+                                    margin: auto
+                                    width: 30px
+                            .edit
+                                border: 2px solid #E0AC14
+                            .del
+                                border: 2px solid #A54F50
+                        .tr_info
+                            width: 674px
+                            height: 59px
+                            background: #FFFFFF
+                            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+                            border-radius: 16px
+                            display: flex
+                            justify-content: space-between
+                            padding: 0px 35px
+                            .tr_info_element
+                                font-weight: 500
+                                font-size: $fs_m
+                                line-height: 29px
+                                color: #000000
+                                margin: auto 0
+                                display: flex
+                                width: 33.3%
+                            .left
+                                justify-content: left
+                            .center
+                                justify-content: center
+                            .right
+                                justify-content: right
+                            .gray
+                                color: #DDDDDD
+                            .plus
+                                color: $primary_color
+                            .minus
+                                color: #A54F50
+            .pagination
+                width: 80%
+                margin: 0 auto
+                display: flex
+                justify-content: center
+                margin-top: $margin_top_m
+                column-gap: 9px
+                button
+                    width: 46px
+                    height: 46px
+                    background: rgba(0, 160, 104, 0.53)
+                    border-radius: 8px
+                    font-weight: 500
+                    font-size: $fs_m
+                    line-height: 31px
+                    color: #FFFFFF
+                .active
+                    background-color: $primary_color
+                .arrow
+                    display: flex
+                    img
+                        margin: auto
+
+    .popup
+        z-index: 5
+    .cat_info, #add_cat_btn
+        position: relative
+        z-index: 1
+
+    .sort_add
+        margin-top: $margin_top_l
+        .container
+            display: flex
+            justify-content: space-between
+            .sort_by
+                width: 50%
+                display: flex
+                column-gap: 12px
+                .text
+                    font-weight: 500
+                    font-size: $fs_s
+                    line-height: 22px
+                    color: #7C7C7C
+                    margin: auto 0
+                .dd
+                    margin: auto 0
+                    .active
+                        img
+                            transform: rotate(180deg)
+                    button
+                        display: flex
+                        width: 270px
+                        background-color: white
+                        justify-content: space-between
+                        padding: 0px $fs_xs
+                        font-size: $fs_s
+                        height: $acc_dd_h
+                        border-radius: 16px
+                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+                        .t
+                            color: black
+                            margin: auto 0
+                        img
+                            margin: auto 0
+                    #dd_block
+                        width: 0px
+                        height: 0px
+                        position: relative
+                        z-index: 2
+                        top: 10px
+                        .dd_inner
+                            width: 270px
+                            height: auto
+                            border-radius: 16px
+                            background: white
+                            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+                            .dd_inner_element
+                                color: black
+                                height: 46px
+                                border-radius: 0px
+                                border-radius: 16px
+                                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0)
+                            .dd_inner_element
+                                border-bottom: 1px solid gray
+                            .dd_inner_element:last-child
+                                border-bottom: none
+                            .dd_inner_element:hover
+                                border-radius: 0px
+                                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0)
+
+            .add
+                button
+                    width: $add_btn_w
+                    height: $add_btn_h
+                    background-color: $primary_color
+                    border-radius: 16px
+                    font-size: $fs_s
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+
+// STAT ================= 
+// STAT ================= 
+// STAT ================= 
+.stat
+    .stat_nav
+        display: flex
+        justify-content: center
+        column-gap: 12px
+        padding-top: 42px
+        button
+            font-weight: 500
+            font-size: $fs_s
+            line-height: 22px
+            color: #7C7C7C
+        .active
+            font-weight: 700
+    .stat_header
+        width: 1128px
+        min-height: 391px
+        padding-bottom: 60px
+        margin: 0 auto
+        margin-top: $margin_top_s
+        background: #FFFFFF
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        border-radius: 16px
+        .nav
+            width: 100%
+            padding-top: 16px
+            .type
+                display: flex
+                justify-content: center
+                column-gap: 12px
+                button
+                    background: none
+                    font-weight: 500
+                    font-size: $fs_s
+                    line-height: 22px
+                    color: $primary_color
+                .active
+                    font-weight: 700
+                    text-decoration-line: underline
+            .date
+                display: flex
+                justify-content: space-between
+                width: 230px
+                margin: 0 auto
+                margin-top: $margin_top_xs
+                button
+                    background: none
+                .text
+                    font-weight: 500
+                    font-size: $fs_s
+                    line-height: 22px
+                    color: #000000
+        #chart
+            height: 253px
+            width: 80%
+            margin: 0 auto
+            margin-top: $margin_top_m
+
+    .stat_element
+        width: 1128px
+        height: 80px
+        margin: 0 auto
+        margin-top: $margin_top_s
+        background: #FFFFFF
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        border-radius: 16px
+        display: flex
+        justify-content: space-between
+        padding: 0px 32px
+        .stat_element_inner
+            color: black
+            margin: auto 0
+            display: flex
+            width: 33.3%
+        .left
+            justify-content: left
+        .center
+            justify-content: center
+            color: #7C7C7C !important
+        .right
+            justify-content: right
+        .color_1
+            color: #3C6053
+        .color_2
+            color: #248A66
+        .color_3
+            color: $primary_color
+
+    .ct-label
+        fill: black !important
+        color: black !important
+    .pie
+        .ct-label
+            fill: white !important
+            color: white !important
+        .ct-series-a
+            path
+                fill: #3C6053 !important
+
+        .ct-series-b
+            path
+                fill: #248A66 !important
+
+        .ct-series-c
+            path
+                fill: $primary_color !important
+
+    .ct-series-a .ct-bar, .ct-series-a .ct-line, .ct-series-a .ct-point, .ct-series-a .ct-slice-donut
+        stroke: $primary_color
+    .ct-bar
+        stroke-width: 23px
+
+    #cash_flow
+        width: 934px
+        margin: 0 auto
+        .date, .income, .expanse
+            font-weight: 600
+            font-size: 32px
+            line-height: 39px
+            color: #000000
+            margin-top: $margin_top_s
+        .income
+            span
+                font-weight: 500
+                font-size: 32px
+                line-height: 39px
+                color: $primary_color
+        .expanse
+            span
+                font-weight: 500
+                font-size: 32px
+                line-height: 39px
+                color: #A54F50
+        .bar
+            margin-top: $margin_top_s
+            width: 100%
+            height: 48px
+            background: #F2F2F2
+            box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
+            border-radius: 8px
+            .income, .expanse
+                border-radius: 8px
+                box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
+                height: 48px
+            .income
+                background: $primary_color
+                width: 30%
+            .expanse
+                background: #A54F50
+                width: 50%
+
+    #cash_flow_desc
+        width: 1128px
+        padding: 50px
+        margin: 0 auto
+        margin-top: $margin_top_s
+        background: #FFFFFF
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        border-radius: 16px
+        .date, .cf_header
+            font-weight: 600
+            font-size: 32px
+            line-height: 39px
+            text-transform: uppercase
+            color: $primary_color
+            width: 100%
+            text-align: center
+        .cf_header
+            margin-top: $margin_top_l
+        .cash_flow_desc_element
+            width: 934px
+            margin: 0 auto
+            margin-top: $margin_top_s
+            display: flex
+            .name, .inc, .exp
+                width: 20%
+                font-weight: 600
+                font-size: $fs_m
+                line-height: 29px
+                color: #000000
+            .name
+                width: 60%
+            .exp
+                color: #A54F50
+        .cf
+            font-weight: 500
+            font-size: 48px
+            line-height: 59px
+            color: #000000
+            width: 100%
+            text-align: center
+
+    #cash_flow_block
+        width: 1128px
+        margin: 0px auto
+        .exp_header, .inc_header
+            margin-top: $margin_top_l
+            padding-left: 100px
+            width: 100%
+            font-weight: 900
+            font-size: 32px
+            line-height: 39px
+        .exp_header
+            color: #A54F50
+        .inc_header
+            color: $primary_color
+        .element
+            margin-top: $margin_top_s
+            height: 80px
+            background: #FFFFFF
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+            border-radius: 16px
+            display: flex
+            justify-content: space-between
+            padding: 0px 32px
+            .name, .sum
+                margin: auto 0
+                font-weight: 500
+                font-size: $fs_m
+                line-height: 29px
+                color: #000000
+        .exp
+            .sum
+                color: #A54F50
+        .inc
+            .sum
+                color: $primary_color
+
+// CAT ================= 
+// CAT ================= 
+// CAT ================= 
+.cat
+    .cat_nav
+        display: flex
+        justify-content: center
+        column-gap: 12px
+        padding-top: 42px
+        button
+            font-size: $fs_s
+            line-height: 22px
+            font-weight: 500
+            color: #7C7C7C
+        .active
+            font-weight: 700
+            color: #000000
+
+    #ucat, #scat
+        margin-top: $margin_top_l
+        .cat_element
+            margin-top: $margin_top_s
+            display: flex
+            justify-content: space-between
+
+            .info
+                width: 81%
+                background-color: white
+                height: 80px
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+                border-radius: 16px
+                display: flex
+                justify-content: space-between
+                padding-left: 32px
+                .text
+                    color: black
+                    font-weight: 500
+                    font-size: $fs_m
+                    margin: auto 0
+            .control
+                width: 19%
+                display: flex
+                justify-content: right
+                column-gap: 24px
+                .edit, .del
+                    width: 80px
+                    height: 80px
+                    border-radius: 16px
+                    display: flex
+                    img
+                        margin: auto
+                .edit
+                    border: 2px solid #E0AC14
+                .del
+                    border: 2px solid #A54F50
+
+    #scat
+        .cat_element
+            .info
+                width: 90%
+            .control
+                width: 10%
+                svg
+                    margin: auto 0
+                    path, rect
+                        transition: 0.2s ease-out
+                svg:hover
+                    cursor: pointer
+    .off
+        .info
+            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0) !important
+            opacity: .5
+        svg
+            path
+                transform: translateX(-30px)
+                fill: #A6A6A6
+            .wh
+                fill: #FAFAFA
+            rect
+                fill: #A6A6A6
+                opacity: .5
+
+// REG ================= 
+// REG ================= 
+// REG ================= 
+.reg
+    width: 640px
+    margin: 0 auto
+    h1
+        margin-top: $margin_top_l
+        font-style: normal
+        font-weight: 700
+        font-size: 64px
+        line-height: 77px
+        text-align: center
+        text-transform: uppercase
+        color: $primary_color
+    .form
+        margin-top: $margin_top_s
+        padding: 40px
+        border: 3px solid $primary_color
+        border-radius: 10px
+        label
+            color: #7C7C7C
+            font-weight: 500
+            font-size: $fs_m
+            line-height: 31px
+        input
+            margin: 18px 0px
+            width: 91%
+            background: none
+            border: 1px solid #7C7C7C
+            height: 55px
+            padding: 0px 20px
+            font-size: $fs_m
+            border-radius: 8px
+        a
+            font-weight: 500
+            font-size: 16px
+            line-height: 31px
+            color: #3E5DCD
+            display: block
+        button
+            margin-top: $margin_top_s
+            width: 100%
+            height: 55px
+            font-weight: 500
+            font-size: $fs_m
+            line-height: 31px
+            background: $primary_color
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+            border-radius: 8px
+    .dop_info
+        width: 100%
+        font-weight: 400
+        font-size: $fs_m
+        line-height: 30px
+        text-align: center
+        color: $primary_color
+        margin: 0 auto
+        margin-top: $margin_top_m
