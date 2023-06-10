@@ -11,34 +11,9 @@
 
 <body>
 
-    <header>
-        <div class="container">
-            <div class="logo_and_text">
-                <div class="logo">
-                    <a href="index.html"><img src="img/logo.svg" alt=""></a>
-                </div>
-                <div class="text">
-                    BudgetBuddy
-                </div>
-            </div>
-            <div class="links">
-                <a href="account.html">Account</a>
-                <a href="cat.html">Categories</a>
-                <a href="stat.html">Statistic</a>
-            </div>
-            <div class="user">
-                <div class="img">
-                    <img src="img/user.jpg" alt="">
-                </div>
-                <div class="name">
-                    <a href="reg.html">Name name</a>
-                </div>
-                <div class="arrow">
-                    <img src="img/logout.svg">
-                </div>
-            </div>
-        </div>
+    <header id="header">
     </header>
+    <script src="js/header.js"></script>
 
 
     <div class="reg">
@@ -49,17 +24,18 @@
             <label for="email">Email</label>
             <input type="text" id="email" name="email">
             <label for="email">Password</label>
-            <input type="text" id="email" name="email">
+            <input type="text" id="password" name="email">
             <label for="email">Confirm password</label>
-            <input type="text" id="email" name="email">
+            <input type="text" id="rpassword" name="email">
             <a href="log.html">Log in</a>
-            <button>REGISTRATION</button>
+            <button id="btn_reg">REGISTRATION</button>
         </div>
         <div class="dop_info">
             Dive into reports, build budgets, sync with yourbanks and enjoy automatic categorization.
         </div>
     </div>
 
+    <script src="js/reg.js"></script>
 
 </body>
 

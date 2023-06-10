@@ -71,6 +71,10 @@ header {
   background-color: #00A068;
   min-width: 1140px;
 }
+header #logout_btn:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
 header .container {
   height: 60px;
   display: flex;
