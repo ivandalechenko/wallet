@@ -26,10 +26,10 @@ function sendRequest(method, url, body = null) {
 
 document.getElementById('btn_login').onclick = () => {
     sendRequest('POST', requestURL, {
-        email: document.getElementById('email').value,
-        password: document.getElementById('password').value
-        // email: "someuser@unik",
-        // password: "p@r0LL1ng"
+        // email: document.getElementById('email').value,
+        // password: document.getElementById('password').value
+        email: "someuser@unik",
+        password: "p@r0LL1ng"
     })
         .then(data => {
             localStorage.setItem('token', data['token'])
@@ -40,4 +40,3 @@ document.getElementById('btn_login').onclick = () => {
             setTimeout(() => { document.getElementById('btn_login').innerHTML = 'Login'; }, 5000)
         })
 }
-

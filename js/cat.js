@@ -21,3 +21,80 @@ ucat.onclick = function () {
     document.getElementById("ucat_btn").classList.add('active');
     document.getElementById("scat_btn").classList.remove('active');
 }
+
+document.getElementById("add_category_popup_btn").onclick = () => {
+    document.getElementById('popup_block').classList.remove('dnone')
+    document.getElementById('popup_block').innerHTML = `
+            <div class="inner">
+                <div class="header">
+                    <div class="name">
+                        ADD CATEGORY
+                    </div>
+                    <div class="cross" onclick="clear_popup()">
+                        <img src="img/cross.svg" alt="">
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="add_some">
+                        <div class="label">
+                            Name of category
+                        </div>
+                        <input type="text" id="add_category_input">
+                        <button id="add_category">Add</button>
+                    </div>
+                </div>
+            </div>
+        `;
+    document.getElementById('add_category').onclick = () => add_category(document.getElementById('add_category_input').value)
+}
+
+function clear_popup() {
+    document.getElementById('popup_block').innerHTML = '';
+    document.getElementById('popup_block').classList.add('dnone')
+}
+
+
+
+
+function get_сategories() {
+    // console.log(localStorage.getItem('token'));
+    const requestURL = 'https://budget-buddy-finance-app.herokuapp.com/categories/for-current-user'
+    sendRequest("GET", requestURL, localStorage.getItem('token'))
+        .then(data => {
+            data.forEach(function (item, i, data) {
+                console.log(item.id)
+                document.getElementById('ucat_container').innerHTML += `
+                <div class="cat_element">
+                    <div class="info">
+                        <div class="text">`+ item.name + `</div>
+                        <div class="control">
+                            <button id="btn_cat_edit_`+ i + `" onclick="edit_category('` + item.id + `')">
+                                <img src="img/btn_edit.svg">
+                            </button>
+                            <button id="btn_cat_delete_`+ i + `" onclick="delete_category('` + item.id + `')">
+                                <img src="img/btn_del.svg">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                `;
+            });
+        })
+}
+
+function delete_category(id) {
+    console.log(id);
+}
+function edit_category(id) {
+    console.log(id);
+}
+function add_category(cat_name) {
+    const requestURL = 'https://budget-buddy-finance-app.herokuapp.com/categories/for-current-user'
+    sendRequest("POST", requestURL, localStorage.getItem('token'), { name: cat_name })
+        .then(data => {
+            console.log(data)
+        })
+    clear_popup()
+}
+
+get_сategories()

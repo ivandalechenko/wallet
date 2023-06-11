@@ -1,20 +1,23 @@
-function sendRequest(method, url, token, body = null) {
+function sendRequest(method, url, token, body = 0, no_json = false) {
     const headers = {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer ' + token
     }
     var fetch_body = {
         method: method,
-        // mode: 'cors',
+        mode: 'cors',
         headers: headers,
     }
-    // if (body != null) {
-    //     fetch_body.body = JSON.stringify(body);
-    // }
+    if (body != 0) {
+        fetch_body.body = JSON.stringify(body);
+    }
     return fetch(url, fetch_body)
         .then(response => {
             if (response.ok) {
-                return response
+                if (no_json) {
+                    return response
+                }
+                return response.json()
             }
             return response.json().then(error => {
                 const e = new Error('Что-то пошло не так')
@@ -25,18 +28,18 @@ function sendRequest(method, url, token, body = null) {
 }
 
 if (localStorage.getItem('token') !== null) {
-    // console.log(localStorage.getItem('token'));
     const requestURL = 'https://budget-buddy-finance-app.herokuapp.com/auth/my-info'
     sendRequest('GET', requestURL, localStorage.getItem('token'))
         .then(data => {
-            if (window.location.pathname == '/reg.html' || window.location.pathname == '/log.html') {
+            if (window.location.pathname == '/reg.html' || window.location.pathname == '/log.html' || window.location.pathname == '/index.html') {
                 window.location.href = '/account.html';
             }
+
             document.getElementById('header').innerHTML = `
                 <div class="container">
                     <div class="logo_and_text">
                         <div class="logo">
-                            <a href="index.html"><img src="img/logo.svg" alt=""></a>
+                            <a href="account.html"><img src="img/logo.svg" alt=""></a>
                         </div>
                         <div class="text">
                             BudgetBuddy
@@ -58,23 +61,20 @@ if (localStorage.getItem('token') !== null) {
                             <img id="logout_btn" src="img/logout.svg">
                         </div>
                     </div>
-                </div>
-            `;
+                </div>`;
             document.getElementById('logout_btn').onclick = logout
         })
         .catch(err => {
+            localStorage.removeItem('token')
             unauthenticated();
-            // console.log(err)
         })
 } else {
     unauthenticated();
-    // console.log("unauthenticated")
 }
 function unauthenticated() {
     if (window.location.pathname != '/reg.html' && window.location.pathname != '/log.html') {
         window.location.href = '/reg.html';
     }
-
     document.getElementById('header').innerHTML = `
         <div class="container">
             <div class="logo_and_text">
@@ -90,13 +90,10 @@ function unauthenticated() {
 }
 function logout() {
     const requestURL = 'https://budget-buddy-finance-app.herokuapp.com/auth/log-out'
-    sendRequest("PUT", requestURL, localStorage.getItem('token'))
+    sendRequest("PUT", requestURL, localStorage.getItem('token'), 0, no_json = true)
         .then(data => {
-            // console.log(data)
+            console.log(data)
             localStorage.removeItem('token')
             unauthenticated();
-        })
-        .catch(err => {
-            console.log('err')
         })
 }

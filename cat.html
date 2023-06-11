@@ -14,8 +14,31 @@
     </header>
     <script src="js/header.js"></script>
 
-    <div class="cat">
+    <div id="popup_block" class="dnone">
+        <!-- 
+            <div class="inner">
+                <div class="header">
+                    <div class="name">
+                        ADD CATEGORY
+                    </div>
+                    <div class="cross">
+                        <img src="img/cross.svg" alt="">
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="add_some">
+                        <div class="label">
+                            Name of category
+                        </div>
+                        <input type="text">
+                        <button>Add</button>
+                    </div>
+                </div>
+            </div>
+        -->
+    </div>
 
+    <div class="cat">
         <div class="cat_nav">
             <button class="active" id="ucat_btn">
                 User categories
@@ -23,11 +46,14 @@
             <button id="scat_btn">
                 System categories
             </button>
+            <button id="add_category_popup_btn">
+                Add category
+            </button>
         </div>
 
         <div id="ucat">
-            <div class="container">
-                <div class="cat_element">
+            <div class="container" id="ucat_container">
+                <!-- <div class="cat_element">
                     <div class="info">
                         <div class="text">
                             Name
@@ -41,7 +67,7 @@
                             </button>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div id="scat" class="dnone">

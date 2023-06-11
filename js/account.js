@@ -38,3 +38,15 @@ document.getElementById("dd").onclick = function () {
     document.getElementById("dd").classList.toggle("active")
     document.getElementById("dd_block").classList.toggle("dnone")
 }
+
+
+function get_accounts() {
+    console.log(localStorage.getItem('token'));
+    const requestURL = 'https://budget-buddy-finance-app.herokuapp.com/accounts/for-current-user'
+    sendRequest("GET", requestURL, localStorage.getItem('token'))
+        .then(data => {
+            console.log(data)
+        })
+}
+
+get_accounts()

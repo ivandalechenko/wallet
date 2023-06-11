@@ -1087,3 +1087,77 @@ header .container .user .arrow img {
   margin: 0 auto;
   margin-top: 18px;
 }
+
+#popup_block {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  min-height: 100vh;
+  padding-bottom: 26px;
+  background: rgba(18, 18, 18, 0.85);
+}
+#popup_block .inner {
+  position: absolute;
+  width: 861px;
+  left: calc(50% - 430.5px + 0.5px);
+  top: 10vh;
+  background: #F2F2F2;
+}
+#popup_block .inner .header {
+  width: 100%;
+  height: 80px;
+  background: #FFFFFF;
+  display: flex;
+  padding: 0px 30px;
+  justify-content: space-between;
+}
+#popup_block .inner .header .name {
+  color: #7C7C7C;
+  margin: auto 0;
+}
+#popup_block .inner .header .cross {
+  margin: auto 0;
+}
+#popup_block .inner .header .cross:hover {
+  cursor: pointer;
+  opacity: 0.3;
+}
+#popup_block .inner .content {
+  padding: 30px;
+  padding-bottom: 40px;
+  color: black;
+}
+#popup_block .inner .content .add_some {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 15px;
+  justify-content: center;
+}
+#popup_block .inner .content .add_some .label {
+  width: 54.8%;
+  color: black;
+  text-align: center;
+}
+#popup_block .inner .content .add_some input {
+  height: 55px;
+  border: 1px solid #7C7C7C;
+  border-radius: 8px;
+  background: none;
+  padding: 0px 20px;
+  width: 54.8%;
+}
+#popup_block .inner .content .add_some input:focus {
+  outline: none;
+}
+#popup_block .inner .content .add_some button {
+  padding: 5px 20px;
+  width: 60%;
+  background: #00A068;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 31px;
+  color: #FFFFFF;
+}
