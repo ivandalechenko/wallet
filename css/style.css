@@ -207,10 +207,10 @@ header .container .user .arrow img {
   display: flex;
   width: 40%;
 }
-.account .accounts .account_element .info .ico_and_name .green {
+.account .accounts .account_element .info .ico_and_name .color_CASH {
   background-color: #00695C;
 }
-.account .accounts .account_element .info .ico_and_name .orange {
+.account .accounts .account_element .info .ico_and_name .color_BANK {
   background-color: #FF6F00;
 }
 .account .accounts .account_element .info .ico_and_name .ico {

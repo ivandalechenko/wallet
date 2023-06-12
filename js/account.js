@@ -45,7 +45,43 @@ function get_accounts() {
     const requestURL = 'https://budget-buddy-finance-app.herokuapp.com/accounts/for-current-user'
     sendRequest("GET", requestURL, localStorage.getItem('token'))
         .then(data => {
-            console.log(data)
+            document.getElementById('total_balance').innerHTML = "UAH " + data.totalBalance + ".00"
+            document.getElementById('accounts').innerHTML = `<h1>Accounts</h1>`;
+            data.accounts.forEach(function (item, i, data) {
+                document.getElementById('accounts').innerHTML += `
+                    <div class="account_element">
+                        <div class="info">
+                            <div class="ico_and_name">
+                                <div class="ico color_`+ item.type + `">
+                                    <img src="img/account_type_`+ item.type + `.svg" alt="">
+                                </div>
+                                <div class="name">
+                                    `+ item.name + `
+                                </div>
+                            </div>
+                            <div class="type">
+                                `+ item.type + `
+                            </div>
+                            <div class="count">
+                                <div class="text">
+                                    UAH `+ item.balance + `.00
+                                </div>
+                                <button class="cat_info">
+                                    <img src="img/btn_doc.svg">
+                                </button>
+                                </button>
+                                <button>
+                                    <img src="img/btn_edit.svg">
+                                </button>
+                                <button>
+                                    <img src="img/btn_del.svg">
+                                </button>
+                            </div>
+                        </div>
+                    </div>`;
+
+                console.log(item)
+            })
         })
 }
 
