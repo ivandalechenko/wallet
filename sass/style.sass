@@ -993,6 +993,7 @@ header
     top: 0px
     left: 0px
     width: 100%
+    z-index: 5
     min-height: 100vh
     padding-bottom: 26px
     background: rgba(18, 18, 18, 0.85)
@@ -1039,6 +1040,13 @@ header
                     width: 54.8%
                 input:focus
                     outline: none
+                select
+                    width: 60%
+                    background: no-repeat
+                    border-radius: 8px
+                    padding: 17px
+                select:focus
+                    outline: none
                 button
                     padding: 5px 20px
                     width: 60%
@@ -1049,3 +1057,36 @@ header
                     font-size: 18px
                     line-height: 31px
                     color: #FFFFFF
+            .add_account
+                justify-content: space-around
+                display: flex
+                .element_or
+                    font-weight: 500
+                    font-size: $fs_s
+                    line-height: 22px
+                    color: #7C7C7C
+                    margin: auto 0
+                .element:hover
+                    opacity: .6
+                    cursor: pointer
+                .element
+                    width: 325px
+                    height: 325px
+                    margin: auto 0
+                    background: #FFFFFF
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+                    border-radius: 16px
+                    padding: 40px
+                    text-align: center
+                    .name
+                        font-weight: 500
+                        font-size: $fs_m
+                        line-height: 29px
+                        color: #000000
+                        margin-top: $margin_top_s
+                    .desc
+                        margin-top: $margin_top_xs
+                        font-weight: 500
+                        font-size: 12px
+                        line-height: 15px
+                        color: #7C7C7C

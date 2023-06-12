@@ -1093,6 +1093,7 @@ header .container .user .arrow img {
   top: 0px;
   left: 0px;
   width: 100%;
+  z-index: 5;
   min-height: 100vh;
   padding-bottom: 26px;
   background: rgba(18, 18, 18, 0.85);
@@ -1150,6 +1151,15 @@ header .container .user .arrow img {
 #popup_block .inner .content .add_some input:focus {
   outline: none;
 }
+#popup_block .inner .content .add_some select {
+  width: 60%;
+  background: no-repeat;
+  border-radius: 8px;
+  padding: 17px;
+}
+#popup_block .inner .content .add_some select:focus {
+  outline: none;
+}
 #popup_block .inner .content .add_some button {
   padding: 5px 20px;
   width: 60%;
@@ -1160,4 +1170,43 @@ header .container .user .arrow img {
   font-size: 18px;
   line-height: 31px;
   color: #FFFFFF;
+}
+#popup_block .inner .content .add_account {
+  justify-content: space-around;
+  display: flex;
+}
+#popup_block .inner .content .add_account .element_or {
+  font-weight: 500;
+  font-size: 13.5px;
+  line-height: 22px;
+  color: #7C7C7C;
+  margin: auto 0;
+}
+#popup_block .inner .content .add_account .element:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+#popup_block .inner .content .add_account .element {
+  width: 325px;
+  height: 325px;
+  margin: auto 0;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+}
+#popup_block .inner .content .add_account .element .name {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 29px;
+  color: #000000;
+  margin-top: 12px;
+}
+#popup_block .inner .content .add_account .element .desc {
+  margin-top: 6px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #7C7C7C;
 }

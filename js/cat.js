@@ -23,36 +23,17 @@ ucat.onclick = function () {
 }
 
 document.getElementById("add_category_popup_btn").onclick = () => {
-    document.getElementById('popup_block').classList.remove('dnone')
-    document.getElementById('popup_block').innerHTML = `
-            <div class="inner">
-                <div class="header">
-                    <div class="name">
-                        ADD CATEGORY
-                    </div>
-                    <div class="cross" onclick="clear_popup()">
-                        <img src="img/cross.svg" alt="">
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="add_some">
-                        <div class="label">
-                            Name of category
-                        </div>
-                        <input type="text" id="add_category_input">
-                        <button id="add_category">Add</button>
-                    </div>
-                </div>
+    show_popup("MANUAL INPUT", `
+        <div class="add_some">
+            <div class="label">
+                Name of category
             </div>
-        `;
+            <input type="text" id="add_category_input">
+            <button id="add_category">Add</button>
+        </div>
+    `)
     document.getElementById('add_category').onclick = () => add_category(document.getElementById('add_category_input').value)
 }
-
-function clear_popup() {
-    document.getElementById('popup_block').innerHTML = '';
-    document.getElementById('popup_block').classList.add('dnone')
-}
-
 
 
 
@@ -95,6 +76,8 @@ function add_category(cat_name) {
             console.log(data)
         })
     clear_popup()
+    get_сategories()
+
 }
 
 get_сategories()

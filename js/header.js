@@ -97,3 +97,28 @@ function logout() {
             unauthenticated();
         })
 }
+
+function clear_popup() {
+    document.getElementById('popup_block').innerHTML = '';
+    document.getElementById('popup_block').classList.add('dnone')
+}
+
+function show_popup(header, content) {
+    clear_popup()
+    document.getElementById("popup_block").classList.remove('dnone')
+    document.getElementById("popup_block").innerHTML = `
+    <div class="inner">
+        <div class="header">
+            <div class="name">
+                `+ header + `
+            </div>
+            <div class="cross" onclick="clear_popup()">
+                <img src="img/cross.svg" alt="">
+            </div>
+        </div>
+        <div class="content">
+            `+ content + `
+        </div>
+    </div>
+`;
+}
