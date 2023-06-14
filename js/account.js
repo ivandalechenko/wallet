@@ -56,13 +56,20 @@ function add_account(account_name, account_type, account_init_amount) {
         balance: account_init_amount,
     })
         .then(data => {
-            console.log(data)
+            clear_popup()
+            get_accounts()
         })
-    clear_popup()
-    get_accounts()
 }
+function delete_account(account_id) {
+    const requestURL = 'https://budget-buddy-finance-app.herokuapp.com/accounts/' + account_id;
+    console.log(requestURL)
+    sendRequest("DELETE", requestURL, localStorage.getItem('token'), no_json = true)
+        .then(data => {
+            clear_popup()
+            get_accounts()
+        })
 
-
+}
 function get_accounts() {
     console.log(localStorage.getItem('token'));
     const requestURL = 'https://budget-buddy-finance-app.herokuapp.com/accounts/for-current-user'
@@ -96,7 +103,7 @@ function get_accounts() {
                                 <button>
                                     <img src="img/btn_edit.svg">
                                 </button>
-                                <button>
+                                <button onclick="delete_account('`+ item.id + `')">
                                     <img src="img/btn_del.svg">
                                 </button>
                             </div>
