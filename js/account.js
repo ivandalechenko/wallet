@@ -119,6 +119,151 @@ function edit_account(account_id, account_name, account_comment) {
         get_accounts()
     })
 }
+function get_transactions(account_id, account_name, page) {
+    param = {
+        method: "GET",
+        url: 'https://budget-buddy-finance-app.herokuapp.com/transactions?accountId=' + account_id + '&transactionTypeDto=EXPANSE&page=' + page + '&size=' + 20,
+        token: localStorage.getItem('token'),
+    }
+    sendRequest(param).then(data => {
+        console.log(data)
+        content = `
+        <div class="transactions">
+            <div class="bank_name">
+                MONOBANK
+            </div>
+            <div class="card_num">
+                4444 3333 2222 1111
+            </div>
+            <div class="bank_desc">
+                description
+            </div>
+            <div class="filter">
+                <div class="text">
+                    Filter
+                </div>
+                <button class="dd">
+                    <div class="text">
+                        Default
+                    </div>
+                    <img src="img/black_arrow_down.svg" alt="">
+                </button>
+                <button class="tr_add" onclick="add_transaction_input('`+ account_id + `', '` + account_name + `', '` + page + `')">
+                    + add transaction
+                </button>
+            </div>`;
+        date = data.transactionsHistory
+        date.forEach(function (item, i, date) {
+            content += `
+                <div class="date">
+                    `+ item.date + `
+                </div>`;
+            transactions = item.transactions
+            transactions.forEach(function (tr_item, j, transactions) {
+                if (tr_item.amount > 0) {
+                    plus = "+"
+                } else {
+                    plus = ""
+                }
+                content += `        
+                <div class="tr">
+                    <div class="tr_info">
+                        <div class="tr_info_element left">
+                        `+ tr_item.category.name + `
+                        </div>
+                        <div class="tr_info_element gray center">
+                        `+ tr_item.type + `
+                        </div>
+                        <div class="tr_info_element right">
+                            <div class="text `+ tr_item.type + `">UAH ` + plus + tr_item.amount + `.00</div>
+                            <button><img src="img/btn_edit.svg" alt=""></button>
+                            <button><img src="img/btn_del.svg" alt=""></button>
+                        </div>
+                    </div>
+                </div>`;
+            })
+        })
+
+        // if (data.totalPages != 1) {
+        content += `<div class="pagination">`;
+        if (page != 0) {
+            content += `<button class="arrow" onclick="get_transactions(` + account_id + `,` + account_name + `,` + (page - 1) + `)"><img src="img/white_arrow_left.svg" alt=""></button>`;
+        }
+        for (let i = 0; i < data.totalPages; i++) {
+            content += `<button `;
+            if (i == page) {
+                content += `class='active' `;
+            } else {
+                content += `onclick="get_transactions(` + account_id + `,` + account_name + `,` + i + `)"`;
+            }
+            content += `>` + (i + 1) + `</button>`;
+        }
+
+        if (page != data.totalPages - 1 && page != data.totalPages) {
+            content += `<button class="arrow" onclick="get_transactions(` + account_id + `,` + account_name + `,` + (page + 1) + `)"><img src="img/white_arrow_right.svg" alt=""></button>`;
+        }
+        content += `</div>`;
+        // }
+        content += `</div>`;
+
+        show_popup(account_name + " TRANSACTIONS", content)
+    })
+}
+function add_transaction_input(account_id, account_name, page) {
+    param = {
+        method: "GET",
+        url: 'https://budget-buddy-finance-app.herokuapp.com/categories/for-current-user',
+        token: localStorage.getItem('token'),
+    }
+    sendRequest(param).then(data => {
+        content = `
+        <div class="add_some" >
+            <div class="label">
+                Category
+            </div>
+            <select id="add_transaction_input_category">`;
+        data.forEach(function (item, i, data) {
+            content += `<option value="` + item.id + `">` + item.name + `</option>`
+        })
+        content += `</select>
+            <div class="label">
+                Type
+            </div>
+            <select id="add_transaction_input_type">
+                <option value="INCOME">Income</option>
+                <option value="EXPANSE">Expanse</option>
+            </select>
+            <div class="label">
+                Amount
+            </div>
+            <input type="number" id="add_transaction_input_amount">
+            <div class="label">
+                Comment
+            </div>
+            <input type="text" id="add_transaction_input_comment">
+            <button id="add_transaction">Add</button>
+        </div>`
+        show_popup("ADD TRANSACTION TO " + account_name, content)
+        document.getElementById('add_transaction').onclick = () => add_transaction(account_id, document.getElementById('add_transaction_input_category').value, document.getElementById('add_transaction_input_type').value, document.getElementById('add_transaction_input_amount').value, document.getElementById('add_transaction_input_comment').value, page, account_name)
+    })
+}
+function add_transaction(account_id, category_id, type, transaction_amount, transaction_comment, page, account_name) {
+    param = {
+        method: "POST",
+        url: 'https://budget-buddy-finance-app.herokuapp.com/transactions',
+        token: localStorage.getItem('token'),
+        body: {
+            accountId: account_id,
+            categoryId: category_id,
+            type: type,
+            amount: transaction_amount,
+            comment: transaction_comment,
+        }
+    }
+    sendRequest(param).then(data => {
+        get_transactions(account_id, account_name, page)
+    })
+}
 function get_accounts() {
     param = {
         method: "GET",
@@ -151,7 +296,7 @@ function get_accounts() {
                                 <div class="text">
                                     UAH `+ item.balance + `.00
                                 </div>
-                                <button class="cat_info">
+                                <button class="cat_info" onclick="get_transactions('`+ item.id + `', '` + item.name + `', 0)">
                                     <img src="img/btn_doc.svg">
                                 </button>
                                 </button>
@@ -169,4 +314,3 @@ function get_accounts() {
         })
 }
 get_accounts()
-

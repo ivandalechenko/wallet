@@ -1093,3 +1093,121 @@ header
                         font-size: 12px
                         line-height: 15px
                         color: #7C7C7C
+
+            .transactions
+                .bank_name, .card_num, .bank_desc
+                    font-weight: 500
+                    font-size: $fs_s
+                    line-height: 22px
+                    color: #7C7C7C
+                    text-align: center
+                    padding-top: 8px
+                .bank_name
+                    padding-top: 0px
+                .filter
+                    width: 645px
+                    margin: 0 auto
+                    display: flex
+                    justify-content: space-between
+                    padding-top: 8px
+                    padding-bottom: 10px
+                    .text
+                        font-weight: 500
+                        font-size: $fs_s
+                        line-height: 22px
+                        color: #7C7C7C
+                        margin: auto 0
+                    .dd
+                        width: 269px
+                        height: 46px
+                        background: #FFFFFF
+                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+                        border-radius: 16px
+                        padding: 0px 11px
+                        color: black
+                        display: flex
+                        justify-content: space-between
+                        .text, img
+                            margin: auto 0
+                    .tr_add
+                        width: 298px
+                        height: 46px
+                        background: $primary_color
+                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+                        border-radius: 8px
+                        font-weight: 500
+                        font-size: $fs_m
+                        line-height: 31px
+                        color: #FFFFFF
+                .date
+                    text-align: center
+                    font-weight: 500
+                    font-size: $fs_s
+                    line-height: 22px
+                    color: #7C7C7C
+                    padding: 15px
+                    padding-bottom: 0px
+                .tr
+                    margin-top: $margin_top_s
+                    display: flex
+                    justify-content: space-between
+                    .tr_info
+                        width: 100%
+                        height: $row_element_h_s
+                        background: #FFFFFF
+                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+                        border-radius: 16px
+                        display: flex
+                        justify-content: space-between
+                        padding: 0px $row_element_pad_s
+                        .tr_info_element
+                            font-weight: 500
+                            font-size: $fs_m
+                            line-height: $lh_m
+                            color: #000000
+                            margin: auto 0
+                            display: flex
+                            width: 33.3%
+                            button
+                                background: none
+                                img
+                                    height: $row_element_h_s
+                                    width: $row_element_h_s
+                            .text
+                                margin: auto 0
+                                padding-right: $margin_top_s
+
+                        .left
+                            justify-content: left
+                        .center
+                            justify-content: center
+                        .right
+                            justify-content: right
+                        .gray
+                            color: #DDDDDD
+                        .INCOME
+                            color: #00A068
+                        .EXPANSE
+                            color: #A54F50
+            .pagination
+                width: 80%
+                margin: 0 auto
+                display: flex
+                justify-content: center
+                margin-top: $margin_top_m
+                column-gap: 9px
+                button
+                    width: 46px
+                    height: 46px
+                    background: rgba(0, 160, 104, 0.53)
+                    border-radius: 8px
+                    font-weight: 500
+                    font-size: $fs_m
+                    line-height: 31px
+                    color: #FFFFFF
+                .active
+                    background-color: $primary_color
+                .arrow
+                    display: flex
+                    img
+                        margin: auto

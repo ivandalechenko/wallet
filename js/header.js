@@ -128,6 +128,8 @@ function clear_popup() {
     document.getElementById('popup_block').classList.add('dnone')
 }
 
+
+
 function show_popup(header, content) {
     clear_popup()
     document.getElementById("popup_block").classList.remove('dnone')

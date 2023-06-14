@@ -86,7 +86,6 @@ function delete_category(category_id) {
         get_сategories()
     })
 }
-
 function edit_category_input(category_id, name) {
     show_popup("EDIT CATEGORY '" + name + "'", `
         <div class="add_some">
@@ -112,7 +111,6 @@ function edit_category(category_id, category_name) {
         get_сategories()
     })
 }
-
 function add_category(cat_name) {
     const requestURL =
         param = {
