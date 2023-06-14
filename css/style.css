@@ -1171,6 +1171,9 @@ header .container .user .arrow img {
   line-height: 31px;
   color: #FFFFFF;
 }
+#popup_block .inner .content .add_some .delete {
+  background: #A54F50;
+}
 #popup_block .inner .content .add_account {
   justify-content: space-around;
   display: flex;

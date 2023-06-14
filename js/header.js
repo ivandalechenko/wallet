@@ -1,20 +1,22 @@
-function sendRequest(method, url, token, body = 0, no_json = false) {
-    const headers = {
+function sendRequest(param) {
+    var headers = {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + token
+    }
+    if (typeof param['token'] !== "undefined") {
+        headers['Authorization'] = 'Bearer ' + param.token
     }
     var fetch_body = {
-        method: method,
+        method: param.method,
         mode: 'cors',
         headers: headers,
     }
-    if (body != 0) {
-        fetch_body.body = JSON.stringify(body);
+    if (typeof param['body'] !== "undefined") {
+        fetch_body.body = JSON.stringify(param.body);
     }
-    return fetch(url, fetch_body)
+    return fetch(param.url, fetch_body)
         .then(response => {
             if (response.ok) {
-                if (no_json) {
+                if (typeof param['no_json'] !== "undefined") {
                     return response
                 }
                 return response.json()
@@ -28,13 +30,32 @@ function sendRequest(method, url, token, body = 0, no_json = false) {
 }
 
 if (localStorage.getItem('token') !== null) {
-    const requestURL = 'https://budget-buddy-finance-app.herokuapp.com/auth/my-info'
-    sendRequest('GET', requestURL, localStorage.getItem('token'))
+    param = {
+        method: "GET",
+        url: 'https://budget-buddy-finance-app.herokuapp.com/auth/my-info',
+        token: localStorage.getItem('token')
+    }
+    sendRequest(param)
         .then(data => {
             if (window.location.pathname == '/reg.html' || window.location.pathname == '/log.html' || window.location.pathname == '/index.html') {
                 window.location.href = '/account.html';
             }
-
+            active_list = {}
+            if (window.location.pathname == '/account.html') {
+                active_list.account = "class='active'";
+            } else {
+                active_list.account = "";
+            }
+            if (window.location.pathname == '/cat.html') {
+                active_list.cat = "class='active'";
+            } else {
+                active_list.cat = "";
+            }
+            if (window.location.pathname == '/stat.html') {
+                active_list.stat = "class='active'";
+            } else {
+                active_list.stat = "";
+            }
             document.getElementById('header').innerHTML = `
                 <div class="container">
                     <div class="logo_and_text">
@@ -46,9 +67,9 @@ if (localStorage.getItem('token') !== null) {
                         </div>
                     </div>
                     <div class="links">
-                        <a href="account.html" class="active">Account</a>
-                        <a href="cat.html">Categories</a>
-                        <a href="stat.html">Statistic</a>
+                        <a href="account.html" `+ active_list.account + `>Account</a>
+                        <a href="cat.html" `+ active_list.cat + `>Categories</a>
+                        <a href="stat.html" `+ active_list.stat + `>Statistic</a>
                     </div>
                     <div class="user">
                         <div class="img">
@@ -89,10 +110,14 @@ function unauthenticated() {
     `;
 }
 function logout() {
-    const requestURL = 'https://budget-buddy-finance-app.herokuapp.com/auth/log-out'
-    sendRequest("PUT", requestURL, localStorage.getItem('token'), 0, no_json = true)
+    param = {
+        method: "PUT",
+        url: 'https://budget-buddy-finance-app.herokuapp.com/auth/log-out',
+        token: localStorage.getItem('token'),
+        no_json: true,
+    }
+    sendRequest(param)
         .then(data => {
-            console.log(data)
             localStorage.removeItem('token')
             unauthenticated();
         })
