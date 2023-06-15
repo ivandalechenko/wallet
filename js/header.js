@@ -105,6 +105,10 @@ function unauthenticated() {
                 <div class="text">
                     BudgetBuddy
                 </div>
+                <div class="links">
+                    <a href="reg.html">Reg</a>
+                    <a href="log.html">Log</a>
+                </div>
             </div>
         </div>
     `;

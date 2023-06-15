@@ -3,10 +3,8 @@ document.getElementById('btn_login').onclick = () => {
         method: "POST",
         url: 'https://budget-buddy-finance-app.herokuapp.com/auth/log-in',
         body: {
-            // email: document.getElementById('email').value,
-            // password: document.getElementById('password').value
-            email: "someuser@unik",
-            password: "p@r0LL1ng"
+            email: document.getElementById('email').value,
+            password: document.getElementById('password').value
         },
     }
     sendRequest(param)
