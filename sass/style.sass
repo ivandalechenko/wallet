@@ -665,6 +665,13 @@ header
                 .active
                     font-weight: 700
                     text-decoration-line: underline
+                .analyze
+                    font-weight: 700
+                    padding: 5px 20px
+                    color: white
+                    background: $primary_color
+                    border-radius: 20px
+
             .date
                 display: flex
                 justify-content: space-between
@@ -673,7 +680,7 @@ header
                 margin-top: $margin_top_xs
                 button
                     background: none
-                .text
+                .text, span
                     font-weight: 500
                     font-size: $fs_s
                     line-height: $lh_s
@@ -710,11 +717,21 @@ header
         .right
             justify-content: right
         .color_1
-            color: #3C6053
+            color: #26302c
         .color_2
-            color: #248A66
+            color: #364b43
         .color_3
-            color: $primary_color
+            color: #416255
+        .color_4
+            color: #4c856e
+        .color_5
+            color: #49a982
+        .color_6
+            color: #38c38b
+        .color_7
+            color: #1fdf92
+        .color_8
+            color: #00ffa6
 
     .ct-label
         fill: black !important
@@ -725,15 +742,35 @@ header
             color: white !important
         .ct-series-a
             path
-                fill: #3C6053 !important
+                fill: #26302c !important
 
         .ct-series-b
             path
-                fill: #248A66 !important
+                fill: #364b43 !important
 
         .ct-series-c
             path
-                fill: $primary_color !important
+                fill: #416255 !important
+
+        .ct-series-d
+            path
+                fill: #4c856e !important
+
+        .ct-series-e
+            path
+                fill: #49a982 !important
+
+        .ct-series-f
+            path
+                fill: #38c38b !important
+
+        .ct-series-g
+            path
+                fill: #1fdf92 !important
+
+        .ct-series-h
+            path
+                fill: #00ffa6 !important
 
     .ct-series-a .ct-bar, .ct-series-a .ct-line, .ct-series-a .ct-point, .ct-series-a .ct-slice-donut
         stroke: $primary_color
@@ -774,10 +811,10 @@ header
                 height: $row_element_h_xs
             .income
                 background: $primary_color
-                width: 30%
+                width: 100%
             .expanse
                 background: #A54F50
-                width: 50%
+                width: 75%
 
         .cash_flow_desc_element
             width: 934px
@@ -1031,6 +1068,9 @@ header
                     width: 54.8%
                     color: black
                     text-align: center
+                    a
+                        color: black
+                        text-decoration: underline
                 input
                     height: 55px
                     border: 1px solid #7C7C7C

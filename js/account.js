@@ -1,7 +1,7 @@
 document.getElementById('btn_add_account').onclick = function () {
     show_popup("ADD ACCOUNT", `
         <div class="add_account">
-            <div class="element" id="add_card_btn">
+            <div class="element" id="add_card_btn" onclick="add_account_mono_input()">
                 <img src="img/bank_sync.png" alt="">
                 <div class="name">
                     Bank Sync
@@ -57,6 +57,45 @@ function add_account(account_name, account_type, account_init_amount) {
             name: account_name,
             type: account_type,
             balance: account_init_amount,
+        }
+    }
+    sendRequest(param).then(data => {
+        clear_popup()
+        get_accounts()
+    })
+}
+function add_account_mono_input() {
+    show_popup("MONO INTEGRATION", `
+        <div class="add_some" >
+            <div class="label">
+                Card number
+            </div>
+            <input type="number" id="add_account_input_card_num">
+            <div class="label">
+                Token <a href="https://api.monobank.ua/">(generate token here)</a>
+            </div>
+            <input type="text" id="add_account_input_card_token">
+            <div class="label">
+                History from date
+            </div>
+            <input type="date" id="add_account_input_card_date" name="date"/>
+            <button id="add_account_card">Add</button>
+        </div>
+    `)
+    document.getElementById('add_account_card').onclick = () => add_account_card(document.getElementById('add_account_input_card_num').value,
+        document.getElementById('add_account_input_card_token').value,
+        document.getElementById('add_account_input_card_date').valueAsNumber / 1000
+    )
+}
+function add_account_card(card_num, bank_token, from_date) {
+    param = {
+        method: "POST",
+        url: 'https://budget-buddy-finance-app.herokuapp.com/accounts/for-current-user/bank-integration',
+        token: localStorage.getItem('token'),
+        body: {
+            cardNumber: card_num,
+            token: bank_token,
+            transactionsHistoryFrom: moment.unix(from_date).format("YYYY-MM-DDTHH:mm:ss.000")
         }
     }
     sendRequest(param).then(data => {
@@ -122,32 +161,14 @@ function edit_account(account_id, account_name, account_comment) {
 function get_transactions(account_id, account_name, page) {
     param = {
         method: "GET",
-        url: 'https://budget-buddy-finance-app.herokuapp.com/transactions?accountId=' + account_id + '&transactionTypeDto=EXPANSE&page=' + page + '&size=' + 20,
+        url: 'https://budget-buddy-finance-app.herokuapp.com/transactions?accountId=' + account_id + '&page=' + page + '&size=' + 20,
         token: localStorage.getItem('token'),
     }
     sendRequest(param).then(data => {
-        console.log(data)
+        // console.log(data)
         content = `
         <div class="transactions">
-            <div class="bank_name">
-                MONOBANK
-            </div>
-            <div class="card_num">
-                4444 3333 2222 1111
-            </div>
-            <div class="bank_desc">
-                description
-            </div>
             <div class="filter">
-                <div class="text">
-                    Filter
-                </div>
-                <button class="dd">
-                    <div class="text">
-                        Default
-                    </div>
-                    <img src="img/black_arrow_down.svg" alt="">
-                </button>
                 <button class="tr_add" onclick="add_transaction_input('`+ account_id + `', '` + account_name + `', '` + page + `')">
                     + add transaction
                 </button>
@@ -258,6 +279,8 @@ function add_transaction(account_id, category_id, type, transaction_amount, tran
             type: type,
             amount: transaction_amount,
             comment: transaction_comment,
+            executionDateTime: moment().format("YYYY-MM-DDTHH:mm:ss.000")
+
         }
     }
     sendRequest(param).then(data => {
@@ -309,7 +332,6 @@ function get_accounts() {
                             </div>
                         </div>
                     </div>`;
-                console.log(item)
             })
         })
 }

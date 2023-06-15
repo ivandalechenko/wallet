@@ -33,17 +33,20 @@
         <div class="stat_header">
             <div class="nav">
                 <div class="type">
-                    <button>
+                    <button id="btn_day">
                         Day
                     </button>
-                    <button>
+                    <button id="btn_week">
                         Week
                     </button>
-                    <button class="active">
+                    <button class="active" id="btn_mounth">
                         Mounth
                     </button>
-                    <button>
+                    <button id="btn_year">
                         Year
+                    </button>
+                    <button class="analyze">
+                        Analyze
                     </button>
                 </div>
                 <div class="date">
@@ -51,7 +54,7 @@
                         <img src="img/left_date_arrow.svg">
                     </button>
                     <div class="text">
-                        May 2023
+                        <span id="mounth_label">May</span> 2023
                     </div>
                     <button>
                         <img src="img/right_date_arrow.svg">
@@ -66,7 +69,7 @@
                     This month :
                 </div>
                 <div class="income">
-                    Income : <span>99999₴</span>
+                    Income : <span>12000₴</span>
                 </div>
                 <div class="bar">
                     <div class="income">
@@ -74,7 +77,7 @@
                     </div>
                 </div>
                 <div class="expanse">
-                    Expanse : <span>99999₴</span>
+                    Expanse : <span>10000₴</span>
                 </div>
                 <div class="bar">
                     <div class="expanse">
@@ -101,10 +104,10 @@
                         Average sum for category (month)
                     </div>
                     <div class="inc">
-                        1
+                        12000.00
                     </div>
                     <div class="exp">
-                        1
+                        2000.00
                     </div>
                 </div>
                 <div class="cash_flow_desc_element">
@@ -112,10 +115,10 @@
                         Min. sum for category (month)
                     </div>
                     <div class="inc">
-                        1
+                        12000.00
                     </div>
                     <div class="exp">
-                        1
+                        600.00
                     </div>
                 </div>
                 <div class="cash_flow_desc_element">
@@ -123,10 +126,10 @@
                         Max. sum for category (month)
                     </div>
                     <div class="inc">
-                        1
+                        12000.00
                     </div>
                     <div class="exp">
-                        1
+                        4200.00
                     </div>
                 </div>
                 <div class="cf">
@@ -134,7 +137,7 @@
                         Cash flow :
                     </div>
                     <div class="sum">
-                        999,99
+                        + 2000.00
                     </div>
                 </div>
 
@@ -201,85 +204,382 @@
         <div id="am_by_cat_block" class="stat_elements_block">
             <div class="stat_element">
                 <div class="stat_element_inner left color_1">
-                    Category name
+                    Entertainment Travel
                 </div>
                 <div class="stat_element_inner center color_1">
-                    20%
+                    42%
                 </div>
                 <div class="stat_element_inner right color_1">
-                    UAH 20.00
+                    UAH 4200.00
                 </div>
             </div>
             <div class="stat_element">
                 <div class="stat_element_inner left color_2">
-                    Category name
+                    Vehicle Salary
                 </div>
                 <div class="stat_element_inner center color_2">
-                    30%
+                    21%
                 </div>
                 <div class="stat_element_inner right color_2">
-                    UAH 30.00
+                    UAH 2100.00
                 </div>
             </div>
             <div class="stat_element">
                 <div class="stat_element_inner left color_3">
-                    Category name
+                    Food and drinks
                 </div>
                 <div class="stat_element_inner center color_3">
-                    50%
+                    18%
                 </div>
                 <div class="stat_element_inner right color_3">
-                    UAH 50.00
+                    UAH 1800.00
                 </div>
             </div>
+            <div class="stat_element">
+                <div class="stat_element_inner left color_4">
+                    Others Phone
+                </div>
+                <div class="stat_element_inner center color_4">
+                    13%
+                </div>
+                <div class="stat_element_inner right color_4">
+                    UAH 1300.00
+                </div>
+            </div>
+            <div class="stat_element">
+                <div class="stat_element_inner left color_5">
+                    Haircut
+                </div>
+                <div class="stat_element_inner center color_5">
+                    6%
+                </div>
+                <div class="stat_element_inner right color_5">
+                    UAH 600.00
+                </div>
+            </div>
+
         </div>
         <div id="cat_leader_block" class="stat_elements_block dnone">
             <div class="stat_element">
                 <div class="stat_element_inner left">
-                    Category name
+                    Entertainment Travel
                 </div>
                 <div class="stat_element_inner center">
-                    month
+                    May
                 </div>
                 <div class="stat_element_inner right">
-                    UAH 00000000.00
+                    UAH 4200.00
+                </div>
+            </div>
+            <div class="stat_element">
+                <div class="stat_element_inner left">
+                    Internet and Phone
+                </div>
+                <div class="stat_element_inner center">
+                    Apr
+                </div>
+                <div class="stat_element_inner right">
+                    UAH 5600.00
+                </div>
+            </div>
+            <div class="stat_element">
+                <div class="stat_element_inner left">
+                    Entertainment Travel
+                </div>
+                <div class="stat_element_inner center">
+                    Mrch
+                </div>
+                <div class="stat_element_inner right">
+                    UAH 6900.00
+                </div>
+            </div>
+            <div class="stat_element">
+                <div class="stat_element_inner left">
+                    Entertainment Travel
+                </div>
+                <div class="stat_element_inner center">
+                    Feb
+                </div>
+                <div class="stat_element_inner right">
+                    UAH 1800.00
+                </div>
+            </div>
+            <div class="stat_element">
+                <div class="stat_element_inner left">
+                    Food and drinks
+                </div>
+                <div class="stat_element_inner center">
+                    Jan
+                </div>
+                <div class="stat_element_inner right">
+                    UAH 1200.00
+                </div>
+            </div>
+            <div class="stat_element">
+                <div class="stat_element_inner left">
+                    Food and drinks
+                </div>
+                <div class="stat_element_inner center">
+                    Dec
+                </div>
+                <div class="stat_element_inner right">
+                    UAH 1800.00
+                </div>
+            </div>
+            <div class="stat_element">
+                <div class="stat_element_inner left">
+                    Entertainment Travel
+                </div>
+                <div class="stat_element_inner center">
+                    Nov
+                </div>
+                <div class="stat_element_inner right">
+                    UAH 8900.00
+                </div>
+            </div>
+            <div class="stat_element">
+                <div class="stat_element_inner left">
+                    Food and drinks
+                </div>
+                <div class="stat_element_inner center">
+                    Oct
+                </div>
+                <div class="stat_element_inner right">
+                    UAH 1300.00
+                </div>
+            </div>
+            <div class="stat_element">
+                <div class="stat_element_inner left">
+                    Internet and Phone
+                </div>
+                <div class="stat_element_inner center">
+                    Sep
+                </div>
+                <div class="stat_element_inner right">
+                    UAH 4100.00
+                </div>
+            </div>
+            <div class="stat_element">
+                <div class="stat_element_inner left">
+                    Food and drinks
+                </div>
+                <div class="stat_element_inner center">
+                    Aug
+                </div>
+                <div class="stat_element_inner right">
+                    UAH 2300.00
+                </div>
+            </div>
+            <div class="stat_element">
+                <div class="stat_element_inner left">
+                    Food and drinks
+                </div>
+                <div class="stat_element_inner center">
+                    Jul
+                </div>
+                <div class="stat_element_inner right">
+                    UAH 2400.00
+                </div>
+            </div>
+            <div class="stat_element">
+                <div class="stat_element_inner left">
+                    Food and drinks
+                </div>
+                <div class="stat_element_inner center">
+                    Jun
+                </div>
+                <div class="stat_element_inner right">
+                    UAH 2000.00
                 </div>
             </div>
         </div>
         <div id="cat_dyn_block" class="stat_elements_block dnone">
             <div class="stat_element">
                 <div class="stat_element_inner left">
-                    Category name
+                    Internet and Phone
                 </div>
                 <div class="stat_element_inner center">
-                    month
+                    May
                 </div>
                 <div class="stat_element_inner right">
-                    UAH 00000000.00
+                    UAH 1200.00
+                </div>
+            </div>
+            <div class="stat_element">
+                <div class="stat_element_inner left">
+                    Internet and Phone
+                </div>
+                <div class="stat_element_inner center">
+                    Apr
+                </div>
+                <div class="stat_element_inner right">
+                    UAH 600.00
+                </div>
+            </div>
+            <div class="stat_element">
+                <div class="stat_element_inner left">
+                    Internet and Phone
+                </div>
+                <div class="stat_element_inner center">
+                    Mrch
+                </div>
+                <div class="stat_element_inner right">
+                    UAH 100.00
+                </div>
+            </div>
+            <div class="stat_element">
+                <div class="stat_element_inner left">
+                    Internet and Phone
+                </div>
+                <div class="stat_element_inner center">
+                    Feb
+                </div>
+                <div class="stat_element_inner right">
+                    UAH 900.00
+                </div>
+            </div>
+            <div class="stat_element">
+                <div class="stat_element_inner left">
+                    Internet and Phone
+                </div>
+                <div class="stat_element_inner center">
+                    Jan
+                </div>
+                <div class="stat_element_inner right">
+                    UAH 400.00
+                </div>
+            </div>
+            <div class="stat_element">
+                <div class="stat_element_inner left">
+                    Internet and Phone
+                </div>
+                <div class="stat_element_inner center">
+                    Dec
+                </div>
+                <div class="stat_element_inner right">
+                    UAH 400.00
+                </div>
+            </div>
+            <div class="stat_element">
+                <div class="stat_element_inner left">
+                    Internet and Phone
+                </div>
+                <div class="stat_element_inner center">
+                    Nov
+                </div>
+                <div class="stat_element_inner right">
+                    UAH 400.00
+                </div>
+            </div>
+            <div class="stat_element">
+                <div class="stat_element_inner left">
+                    Internet and Phone
+                </div>
+                <div class="stat_element_inner center">
+                    Oct
+                </div>
+                <div class="stat_element_inner right">
+                    UAH 1300.00
+                </div>
+            </div>
+            <div class="stat_element">
+                <div class="stat_element_inner left">
+                    Internet and Phone
+                </div>
+                <div class="stat_element_inner center">
+                    Sep
+                </div>
+                <div class="stat_element_inner right">
+                    UAH 4100.00
+                </div>
+            </div>
+            <div class="stat_element">
+                <div class="stat_element_inner left">
+                    Internet and Phone
+                </div>
+                <div class="stat_element_inner center">
+                    Aug
+                </div>
+                <div class="stat_element_inner right">
+                    UAH 100.00
+                </div>
+            </div>
+            <div class="stat_element">
+                <div class="stat_element_inner left">
+                    Internet and Phone
+                </div>
+                <div class="stat_element_inner center">
+                    Jul
+                </div>
+                <div class="stat_element_inner right">
+                    UAH 300.00
+                </div>
+            </div>
+            <div class="stat_element">
+                <div class="stat_element_inner left">
+                    Internet and Phone
+                </div>
+                <div class="stat_element_inner center">
+                    Jun
+                </div>
+                <div class="stat_element_inner right">
+                    UAH 200.00
                 </div>
             </div>
         </div>
         <div id="cash_flow_block" class="stat_elements_block dnone">
-            <div class="exp_header">
-                Expanse :
-            </div>
-            <div class="element exp">
-                <div class="name">
-                    Name
-                </div>
-                <div class="sum">
-                    UAH 00000000.00
-                </div>
-            </div>
             <div class="inc_header">
                 Income :
             </div>
             <div class="element inc">
                 <div class="name">
-                    Name
+                    Salary
                 </div>
                 <div class="sum">
-                    UAH 00000000.00
+                    UAH 12000.00
+                </div>
+            </div>
+            <div class="exp_header">
+                Expanse :
+            </div>
+            <div class="element exp">
+                <div class="name">
+                    Entertainment Travel
+                </div>
+                <div class="sum">
+                    UAH 4200.00
+                </div>
+            </div>
+            <div class="element exp">
+                <div class="name">
+                    Vehicle Salary
+                </div>
+                <div class="sum">
+                    UAH 2100.00
+                </div>
+            </div>
+            <div class="element exp">
+                <div class="name">
+                    Food and drinks
+                </div>
+                <div class="sum">
+                    UAH 1800.00
+                </div>
+            </div>
+            <div class="element exp">
+                <div class="name">
+                    Others Phone
+                </div>
+                <div class="sum">
+                    UAH 1300.00
+                </div>
+            </div>
+            <div class="element exp">
+                <div class="name">
+                    Haircut
+                </div>
+                <div class="sum">
+                    UAH 600.00
                 </div>
             </div>
         </div>

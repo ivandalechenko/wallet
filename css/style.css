@@ -725,6 +725,13 @@ header .container .user .arrow img {
   font-weight: 700;
   text-decoration-line: underline;
 }
+.stat .stat_header .nav .type .analyze {
+  font-weight: 700;
+  padding: 5px 20px;
+  color: white;
+  background: #00A068;
+  border-radius: 20px;
+}
 .stat .stat_header .nav .date {
   display: flex;
   justify-content: space-between;
@@ -735,7 +742,7 @@ header .container .user .arrow img {
 .stat .stat_header .nav .date button {
   background: none;
 }
-.stat .stat_header .nav .date .text {
+.stat .stat_header .nav .date .text, .stat .stat_header .nav .date span {
   font-weight: 500;
   font-size: 13.5px;
   line-height: 15.1875px;
@@ -778,13 +785,28 @@ header .container .user .arrow img {
   justify-content: right;
 }
 .stat .stat_element .color_1 {
-  color: #3C6053;
+  color: #26302c;
 }
 .stat .stat_element .color_2 {
-  color: #248A66;
+  color: #364b43;
 }
 .stat .stat_element .color_3 {
-  color: #00A068;
+  color: #416255;
+}
+.stat .stat_element .color_4 {
+  color: #4c856e;
+}
+.stat .stat_element .color_5 {
+  color: #49a982;
+}
+.stat .stat_element .color_6 {
+  color: #38c38b;
+}
+.stat .stat_element .color_7 {
+  color: #1fdf92;
+}
+.stat .stat_element .color_8 {
+  color: #00ffa6;
 }
 .stat .ct-label {
   fill: black !important;
@@ -795,13 +817,28 @@ header .container .user .arrow img {
   color: white !important;
 }
 .stat .pie .ct-series-a path {
-  fill: #3C6053 !important;
+  fill: #26302c !important;
 }
 .stat .pie .ct-series-b path {
-  fill: #248A66 !important;
+  fill: #364b43 !important;
 }
 .stat .pie .ct-series-c path {
-  fill: #00A068 !important;
+  fill: #416255 !important;
+}
+.stat .pie .ct-series-d path {
+  fill: #4c856e !important;
+}
+.stat .pie .ct-series-e path {
+  fill: #49a982 !important;
+}
+.stat .pie .ct-series-f path {
+  fill: #38c38b !important;
+}
+.stat .pie .ct-series-g path {
+  fill: #1fdf92 !important;
+}
+.stat .pie .ct-series-h path {
+  fill: #00ffa6 !important;
 }
 .stat .ct-series-a .ct-bar, .stat .ct-series-a .ct-line, .stat .ct-series-a .ct-point, .stat .ct-series-a .ct-slice-donut {
   stroke: #00A068;
@@ -847,11 +884,11 @@ header .container .user .arrow img {
 }
 .stat #cash_flow .bar .income {
   background: #00A068;
-  width: 30%;
+  width: 100%;
 }
 .stat #cash_flow .bar .expanse {
   background: #A54F50;
-  width: 50%;
+  width: 75%;
 }
 .stat #cash_flow .cash_flow_desc_element {
   width: 934px;
@@ -1139,6 +1176,10 @@ header .container .user .arrow img {
   width: 54.8%;
   color: black;
   text-align: center;
+}
+#popup_block .inner .content .add_some .label a {
+  color: black;
+  text-decoration: underline;
 }
 #popup_block .inner .content .add_some input {
   height: 55px;

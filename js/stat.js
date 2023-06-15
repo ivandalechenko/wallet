@@ -1,8 +1,22 @@
 new Chartist.Pie('#chart', {
-    series: [20, 30, 50]
+    series: [42, 21, 18, 13, 6]
 });
 
 function redraw() {
+
+    document.getElementById('btn_day').classList.add('dnone')
+    document.getElementById('btn_week').classList.add('dnone')
+    document.getElementById('btn_mounth').classList.add('dnone')
+    document.getElementById('btn_year').classList.add('dnone')
+
+    document.getElementById('btn_day').classList.remove('active')
+    document.getElementById('btn_week').classList.remove('active')
+    document.getElementById('btn_mounth').classList.remove('active')
+    document.getElementById('btn_year').classList.remove('active')
+
+    document.getElementById('mounth_label').classList.add('dnone')
+
+
     btns = document.getElementsByClassName("stat_nav_btn");
     for (var i = 0; i < btns.length; i++) {
         btns[i].classList.remove('active');
@@ -21,6 +35,15 @@ function redraw() {
 
 document.getElementById('am_by_cat_btn').onclick = function () {
     redraw()
+
+    document.getElementById('btn_day').classList.remove('dnone')
+    document.getElementById('btn_week').classList.remove('dnone')
+    document.getElementById('btn_mounth').classList.remove('dnone')
+    document.getElementById('btn_year').classList.remove('dnone')
+
+    document.getElementById('btn_mounth').classList.add('active')
+    document.getElementById('mounth_label').classList.remove('dnone')
+
     document.getElementById('am_by_cat_btn').classList.add('active')
     document.getElementById('am_by_cat_block').classList.remove('dnone')
 
@@ -28,7 +51,7 @@ document.getElementById('am_by_cat_btn').onclick = function () {
     document.getElementById('chart').classList.remove("dnone");
 
     new Chartist.Pie('#chart', {
-        series: [20, 30, 50]
+        series: [42, 21, 18, 13, 6]
     });
 }
 
@@ -39,14 +62,19 @@ document.getElementById('am_by_cat_btn').onclick = function () {
 document.getElementById('cat_leader_btn').onclick = function () {
     redraw()
 
+
+
+    document.getElementById('btn_year').classList.remove('dnone')
+    document.getElementById('btn_year').classList.add('active')
+
     document.getElementById('cat_leader_block').classList.remove('dnone')
     document.getElementById('cat_leader_btn').classList.add('active')
     document.getElementById('chart').classList.remove("dnone");
 
     new Chartist.Bar('#chart', {
-        labels: ['Dec', 'Dec', 'Dec', 'Dec', 'Dec', 'Dec', 'Dec', 'Dec', 'Dec', 'Dec', 'Dec', 'Dec'],
+        labels: ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mrch', 'Apr', 'May'],
         series: [
-            [5, 4, 3, 7, 5, 10, 3, 5, 4, 3, 7, 5],
+            [2.0, 2.4, 2.3, 4.1, 1.3, 8.9, 1.8, 1.2, 1.8, 6.9, 5.6, 4.9],
         ]
     }, {
         axisX: {
@@ -63,14 +91,18 @@ document.getElementById('cat_leader_btn').onclick = function () {
 document.getElementById('cat_dyn_btn').onclick = function () {
     redraw()
 
+
+    document.getElementById('btn_year').classList.remove('dnone')
+    document.getElementById('btn_year').classList.add('active')
+
     document.getElementById('cat_dyn_btn').classList.add('active')
     document.getElementById('cat_dyn_block').classList.remove('dnone')
     document.getElementById('chart').classList.remove("dnone");
 
     new Chartist.Line('#chart', {
-        labels: ['Dec', 'Dec', 'Dec', 'Dec', 'Dec', 'Dec', 'Dec', 'Dec', 'Dec', 'Dec', 'Dec', 'Dec'],
+        labels: ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mrch', 'Apr', 'May'],
         series: [
-            [5, 4, 3, 7, 5, 10, 3, 5, 4, 3, 7, 5],
+            [0.2, 0.3, 0.1, 4.1, 1.3, 0.4, 0.4, 0.4, 0.9, 0.1, 0.6, 1.2],
         ]
     }, {
         axisX: {
@@ -98,6 +130,12 @@ document.getElementById('cat_dyn_btn').onclick = function () {
 document.getElementById('cash_flow_btn').onclick = function () {
 
     redraw()
+
+
+    document.getElementById('btn_mounth').classList.remove('dnone')
+    document.getElementById('btn_mounth').classList.add('active')
+
+
     document.getElementById('cash_flow_btn').classList.add('active')
     document.getElementById('cash_flow').classList.remove('dnone')
     document.getElementById('cash_flow_block').classList.remove('dnone')

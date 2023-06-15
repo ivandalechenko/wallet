@@ -153,3 +153,4 @@ function show_popup(header, content) {
     </div>
 `;
 }
+
