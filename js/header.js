@@ -37,9 +37,9 @@ if (localStorage.getItem('token') !== null) {
     }
     sendRequest(param)
         .then(data => {
-            if (window.location.pathname == '/reg.html' || window.location.pathname == '/log.html' || window.location.pathname == '/index.html') {
-                window.location.href = '/wallet/account.html';
-            }
+            // if (window.location.pathname == '/reg.html' || window.location.pathname == '/log.html' || window.location.pathname == '/index.html') {
+            //     window.location.href = '/wallet/account.html';
+            // }
             active_list = {}
             if (window.location.pathname == '/account.html') {
                 active_list.account = "class='active'";
@@ -93,9 +93,9 @@ if (localStorage.getItem('token') !== null) {
     unauthenticated();
 }
 function unauthenticated() {
-    if (window.location.pathname != '/reg.html' && window.location.pathname != '/log.html') {
-        window.location.href = '/wallet/reg.html';
-    }
+    // if (window.location.pathname != '/reg.html' && window.location.pathname != '/log.html') {
+    //     window.location.href = '/wallet/reg.html';
+    // }
     document.getElementById('header').innerHTML = `
         <div class="container">
             <div class="logo_and_text">
