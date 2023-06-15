@@ -93,9 +93,9 @@ if (localStorage.getItem('token') !== null) {
     unauthenticated();
 }
 function unauthenticated() {
-    if (window.location.pathname != '/reg.html' && window.location.pathname != '/log.html') {
-        window.location.href = '/reg.html';
-    }
+    // if (window.location.pathname != '/reg.html' && window.location.pathname != '/log.html') {
+    //     window.location.href = '/reg.html';
+    // }
     document.getElementById('header').innerHTML = `
         <div class="container">
             <div class="logo_and_text">
