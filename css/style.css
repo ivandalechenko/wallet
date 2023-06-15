@@ -38,10 +38,6 @@ a:hover, button:hover {
   opacity: 0.6;
 }
 
-.dnone {
-  display: none;
-}
-
 a {
   text-decoration: none;
 }
@@ -732,6 +728,20 @@ header .container .user .arrow img {
   background: #00A068;
   border-radius: 20px;
 }
+.stat .stat_header .nav .type .dd {
+  border: 2px solid #00A068;
+  display: flex;
+  border-radius: 90px;
+  padding: 4px 12px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.stat .stat_header .nav .type .dd .text, .stat .stat_header .nav .type .dd img {
+  margin: auto 0;
+}
+.stat .stat_header .nav .type .dd .text {
+  color: black;
+}
 .stat .stat_header .nav .date {
   display: flex;
   justify-content: space-between;
@@ -1394,4 +1404,8 @@ header .container .user .arrow img {
 }
 #popup_block .inner .content .pagination .arrow img {
   margin: auto;
+}
+
+.dnone {
+  display: none !important;
 }

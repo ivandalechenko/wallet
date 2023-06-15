@@ -32,8 +32,6 @@ a:hover, button:hover
     cursor: pointer
     opacity: .6
 
-.dnone
-    display: none
 a
     text-decoration: none
 
@@ -671,6 +669,16 @@ header
                     color: white
                     background: $primary_color
                     border-radius: 20px
+                .dd
+                    border: 2px solid $primary_color
+                    display: flex
+                    border-radius: 90px
+                    padding: 4px 12px
+                    column-gap: 10px
+                    .text, img
+                        margin: auto 0
+                    .text
+                        color: black
 
             .date
                 display: flex
@@ -1251,3 +1259,6 @@ header
                     display: flex
                     img
                         margin: auto
+
+.dnone
+    display: none !important

@@ -8,6 +8,7 @@ function redraw() {
     document.getElementById('btn_week').classList.add('dnone')
     document.getElementById('btn_mounth').classList.add('dnone')
     document.getElementById('btn_year').classList.add('dnone')
+    document.getElementById('dd_cat').classList.add('dnone')
 
     document.getElementById('btn_day').classList.remove('active')
     document.getElementById('btn_week').classList.remove('active')
@@ -63,7 +64,6 @@ document.getElementById('cat_leader_btn').onclick = function () {
     redraw()
 
 
-
     document.getElementById('btn_year').classList.remove('dnone')
     document.getElementById('btn_year').classList.add('active')
 
@@ -92,6 +92,7 @@ document.getElementById('cat_dyn_btn').onclick = function () {
     redraw()
 
 
+    document.getElementById('dd_cat').classList.remove('dnone')
     document.getElementById('btn_year').classList.remove('dnone')
     document.getElementById('btn_year').classList.add('active')
 
